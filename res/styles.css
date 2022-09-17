@@ -1,0 +1,21 @@
+div {
+    text-shadow: 0 0 0 transparent;
+}
+
+span {
+    white-space: pre-line;
+    text-shadow: 0 0 0 transparent;
+}
+
+.green {
+    color: #66ff33
+}
+
+.red {
+    color: #ff0066
+}
+
+.textshadow { 
+    color: transparent;
+    text-shadow: 0 0 1em white;
+}
