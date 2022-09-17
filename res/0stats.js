@@ -1,4 +1,4 @@
-window.ageMap = new Map([
+window.statMap = new Map([
     [0, "fodder"],
     [1, "minion"],
     [2, "mob"],
@@ -7,7 +7,7 @@ window.ageMap = new Map([
     [5, "mid-boss"],
     [6, "final boss"],
     [7, "hidden boss"],
-    [8, "imba"]
+    [8, "imba"],
     [9, "OP"],
     [10, "broken"]
 ]);
@@ -18,6 +18,10 @@ setup.initializeStats = function() {
     state.active.variables.atk = 0;
     state.active.variables.def = 0;
     state.active.variables.spd = 0;
+}
+
+setup.getStatString = function(val) {
+    return statMap.get(val);
 }
 
 setup.changeStat = function(change, stat) {

@@ -13,12 +13,15 @@ Monster of the Week
 A CYOA Game
 
 :: StoryCaption {"position":"600,0"}
-Attack
-Defense
-Speed
+<span class="red">Attack</span>: <<print setup.getStatString($atk)>>
+
+<span class="blue">Defense</span>: <<print setup.getStatString($def)>>
+
+<span class="green">Speed</span>: <<print setup.getStatString($spd)>>
 
 :: Start {"position":"100,200"}
 [[Start New Game|Intro]]
+<<script>> setup.initializeStats(); <</script>>
 
 :: Intro {"position":"300,200"}
 A group of people wearing black shades and trenchcoats barge into your laboratory. A man steps forward and addresses you.

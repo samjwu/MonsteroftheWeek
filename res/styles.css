@@ -15,6 +15,10 @@ span {
     color: #ff0066
 }
 
+.blue {
+    color: #00ffff
+}
+
 .textshadow { 
     color: transparent;
     text-shadow: 0 0 1em white;
