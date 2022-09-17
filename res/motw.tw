@@ -1,0 +1,27 @@
+:: StoryData {"position":"0,0"}
+{
+  "ifid": "03F9E1E3-1DC4-42F9-AB11-BBC3434C59A4",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "zoom": 0.25
+}
+
+:: StoryTitle {"position":"200,0"}
+Villain of the Week
+
+:: StorySubtitle {"position":"400,0"}
+A CYOA Game
+
+:: StoryCaption {"position":"600,0"}
+Attack
+Defense
+Speed
+
+:: Start {"position":"100,200"}
+[[Start New Game|Intro]]
+
+:: Intro {"position":"300,200"}
+Times are tough, and you're desperate.
+
+You sign on to work for an organization intent on controlling the world through force.
+
