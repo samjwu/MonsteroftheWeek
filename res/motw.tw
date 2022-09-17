@@ -21,17 +21,21 @@ Speed
 [[Start New Game|Intro]]
 
 :: Intro {"position":"300,200"}
-A group of people wearing black shades and trenchcoats barge into your laboratory. A man lead steps forward and addresses you.
+A group of people wearing black shades and trenchcoats barge into your laboratory. A man steps forward and addresses you.
 
 <span class="red">"I'm sorry, <span class="textshadow">Harlowe</span>, but given the high cost and relative lack of success of your research, the Illuminati has decided to stop your funding."</span>
 
 You spin around and try to reason with them.
 
 <span class="green">"Wait, I'm so close! Just give me another week, and I'll show you my latest work! It's my magnum opus! Better than anything you've seen before!"</span>
-<<script>> 
-  if (Modernizr.textshadow) {
-    console.log("has text shadow");
-  } else {
-    console.log("no text shadow");
-  }
-<</script>>
+
+The man in black simply shakes his head.
+
+[[You have until the end of today to clear out.|Intro2]]
+
+:: Intro2 {"position":"500,200"}
+
+<span class="green">"They're all fools! The whole lot of them! Well, I'll show them; I'll show them all!"</span>
+
+You vow to have your revenge on the Illuminati for snubbing you and your research.
+
