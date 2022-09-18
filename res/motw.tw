@@ -1,4 +1,4 @@
-:: StoryData {"position":"0,0"}
+:: StoryData {"position":"100,0"}
 {
   "ifid": "03F9E1E3-1DC4-42F9-AB11-BBC3434C59A4",
   "format": "SugarCube",
@@ -6,13 +6,13 @@
   "zoom": 0.25
 }
 
-:: StoryTitle {"position":"200,0"}
+:: StoryTitle {"position":"300,0"}
 Monster of the Week
 
-:: StorySubtitle {"position":"400,0"}
+:: StorySubtitle {"position":"500,0"}
 A CYOA Game
 
-:: StoryCaption {"position":"600,0"}
+:: StoryCaption {"position":"700,0"}
 <span class="red">Attack</span>: <<print setup.getStatString($atk)>>
 
 <span class="blue">Defense</span>: <<print setup.getStatString($def)>>
@@ -48,18 +48,37 @@ Without the support of the Illuminati, you do not have access to any test subjec
 
 What is your specialty?
 
-[Mammals]
-[Birds]
-[Reptiles]
-[Amphibians]
-[Fish]
+[[Mammals]]
 
-:: Mammals
+[[Birds]]
 
-:: Birds
+[[Reptiles]]
 
-:: Reptiles
+[[Amphibians]]
 
-:: Amphibians
+[[Fish]]
 
-:: Fish
+:: Mammals {"position":"100,400"}
+As a mammal-based monster, you would become an all-rounder, with no particular strengths or weaknesses.
+
+This base form would give you decent strength, toughness, and agility.
+
+[[Choose this form|Mammals Yes]]
+
+[[Pick another form|Intro2]]
+
+:: Mammals Yes
+You become a mammal-based monster.
+<<script>>
+  setup.changeStat(state.active.variables.atk, window.mammal.atk);
+  setup.changeStat(state.active.variables.def, window.mammal.def);
+  setup.changeStat(state.active.variables.spd, window.mammal.spd);
+<</script>>
+
+:: Birds {"position":"300,400"}
+
+:: Reptiles {"position":"500,400"}
+
+:: Amphibians {"position":"700,400"}
+
+:: Fish {"position":"900,400"}

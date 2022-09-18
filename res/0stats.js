@@ -12,6 +12,12 @@ window.statMap = new Map([
     [10, "broken"]
 ]);
 
+window.mammal = {
+    atk: 2,
+    def: 2,
+    spd: 2
+};
+
 setup.initializeStats = function() {
     state.active.variables.fame = 0;
 
@@ -24,6 +30,6 @@ setup.getStatString = function(val) {
     return statMap.get(val);
 }
 
-setup.changeStat = function(change, stat) {
+setup.changeStat = function(stat, change) {
     stat += change;
 }
