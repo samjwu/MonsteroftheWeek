@@ -24,6 +24,12 @@ window.bird = {
     spd: 3
 };
 
+window.reptile = {
+    atk: 3,
+    def: 2,
+    spd: 1
+};
+
 setup.initializeStats = function() {
     state.active.variables.fame = 0;
 
