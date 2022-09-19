@@ -76,6 +76,21 @@ You become a mammal-based monster.
 <</script>>
 
 :: Birds {"position":"300,400"}
+As a bird-based monster, you would become a speedster, with good mobility but fragile and a smaller health pool.
+
+This base form would give you decent strength, low toughness, and high agility.
+
+[[Choose this form|Mammals Yes]]
+
+[[Pick another form|Intro2]]
+
+:: Birds Yes
+You become a bird-based monster.
+<<script>>
+  setup.changeStat(state.active.variables.atk, window.bird.atk);
+  setup.changeStat(state.active.variables.def, window.bird.def);
+  setup.changeStat(state.active.variables.spd, window.bird.spd);
+<</script>>
 
 :: Reptiles {"position":"500,400"}
 

@@ -18,6 +18,12 @@ window.mammal = {
     spd: 2
 };
 
+window.bird = {
+    atk: 2,
+    def: 1,
+    spd: 3
+};
+
 setup.initializeStats = function() {
     state.active.variables.fame = 0;
 
