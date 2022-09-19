@@ -116,9 +116,9 @@ You become a reptile-based monster.
 <</script>>
 
 :: Amphibians {"position":"700,400"}
-As an amphibian-based monster, you would become a glass cannon, with good offensive capabilities but poor defensive capabilities.
+As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
 
-This base form would give you high strength, low toughness, and decent agility.
+This base form would give you low strength, decent toughness, and high agility.
 
 [[Choose this form|Amphibians Yes]]
 
@@ -135,7 +135,7 @@ You become an amphibian-based monster.
 <</script>>
 
 :: Fish {"position":"900,400"}
-As a fish-based monster, you would become a tank, with good defensive capabilities but slow movement.
+As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
 
 This base form would give you decent strength, high toughness, and low agility.
 
@@ -154,3 +154,45 @@ You become a fish-based monster.
 <</script>>
 
 :: Pick Flaw {"position":"100,800"}
+
+Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
+
+What is your flaw?
+
+[[Inefficient amylase production]]
+
+[[Inefficient protease production]]
+
+[[Inefficient lipase production]]
+
+[[Blinding rage]]
+
+[[Hyperactive metabolism]]
+
+:: Inefficient amylase production {"position":"100,1000"}
+
+Your new body is unable to produce enough amylase needed to properly digest carbohydrates.
+
+The energy available to your body is lower than normal.
+
+As a result, your speed is reduced by one level.
+<<script>> setup.changeStat(state.active.variables.spd, -1); <</script>>
+
+:: Inefficient protease production {"position":"300,1000"}
+
+Your new body is unable to produce enough protease needed to properly digest proteins.
+
+The amino acids levels your body needs to build muscle are lower than normal.
+
+As a result, your strength is reduced by one level.
+<<script>> setup.changeStat(state.active.variables.atk, -1); <</script>>
+
+:: Inefficient lipase production {"position":"500,1000"}
+
+Your new body is unable to produce enough lipase needed to properly digest fats.
+
+Your body's fat stores are lower than normal.
+
+As a result, your defense is reduced by one level.
+<<script>> setup.changeStat(state.active.variables.def, -1); <</script>>
+
