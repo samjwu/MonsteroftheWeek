@@ -23,7 +23,7 @@ A CYOA Game
 [[Start New Game|Intro]]
 <<script>> setup.initializeStats(); <</script>>
 
-:: Intro {"position":"300,200"}
+:: Intro [story] {"position":"300,200"}
 A group of people wearing black shades and trenchcoats barge into your laboratory. A man steps forward and addresses you.
 
 <span class="red">"I'm sorry, <span class="textshadow">Harlowe</span>, but given the high cost and relative lack of success of your research, the Illuminati has decided to stop your funding."</span>
@@ -34,9 +34,9 @@ You spin around and try to reason with them.
 
 The man in black simply shakes his head.
 
-[[You have until the end of today to clear out.|Intro2]]
+[[You have until the end of today to clear out.|Pick Race]]
 
-:: Intro2 {"position":"500,200"}
+:: Pick Race {"position":"500,200"}
 
 <span class="green">"They're all fools! The whole lot of them! Well, I'll show them; I'll show them all!"</span>
 
@@ -65,10 +65,12 @@ This base form would give you decent strength, toughness, and agility.
 
 [[Choose this form|Mammals Yes]]
 
-[[Pick another form|Intro2]]
+[[Pick another form|Pick Race]]
 
 :: Mammals Yes {"position":"100,600"}
 You become a mammal-based monster.
+
+[[Continue|Pick Flaw]]
 <<script>>
   setup.changeStat(state.active.variables.atk, window.mammal.atk);
   setup.changeStat(state.active.variables.def, window.mammal.def);
@@ -82,10 +84,12 @@ This base form would give you decent strength, low toughness, and high agility.
 
 [[Choose this form|Birds Yes]]
 
-[[Pick another form|Intro2]]
+[[Pick another form|Pick Race]]
 
 :: Birds Yes {"position":"300,600"}
 You become a bird-based monster.
+
+[[Continue|Pick Flaw]]
 <<script>>
   setup.changeStat(state.active.variables.atk, window.bird.atk);
   setup.changeStat(state.active.variables.def, window.bird.def);
@@ -99,10 +103,12 @@ This base form would give you high strength, decent toughness, and low agility.
 
 [[Choose this form|Reptiles Yes]]
 
-[[Pick another form|Intro2]]
+[[Pick another form|Pick Race]]
 
 :: Reptiles Yes {"position":"500,600"}
 You become a reptile-based monster.
+
+[[Continue|Pick Flaw]]
 <<script>>
   setup.changeStat(state.active.variables.atk, window.reptile.atk);
   setup.changeStat(state.active.variables.def, window.reptile.def);
@@ -116,10 +122,12 @@ This base form would give you high strength, low toughness, and decent agility.
 
 [[Choose this form|Amphibians Yes]]
 
-[[Pick another form|Intro2]]
+[[Pick another form|Pick Race]]
 
 :: Amphibians Yes {"position":"700,600"}
 You become an amphibian-based monster.
+
+[[Continue|Pick Flaw]]
 <<script>>
   setup.changeStat(state.active.variables.atk, window.amphibian.atk);
   setup.changeStat(state.active.variables.def, window.amphibian.def);
@@ -133,12 +141,16 @@ This base form would give you decent strength, high toughness, and low agility.
 
 [[Choose this form|Fish Yes]]
 
-[[Pick another form|Intro2]]
+[[Pick another form|Pick Race]]
 
 :: Fish Yes {"position":"900,600"}
 You become a fish-based monster.
+
+[[Continue|Pick Flaw]]
 <<script>>
   setup.changeStat(state.active.variables.atk, window.fish.atk);
   setup.changeStat(state.active.variables.def, window.fish.def);
   setup.changeStat(state.active.variables.spd, window.fish.spd);
 <</script>>
+
+:: Pick Flaw {"position":"100,800"}
