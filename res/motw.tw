@@ -67,7 +67,7 @@ This base form would give you decent strength, toughness, and agility.
 
 [[Pick another form|Intro2]]
 
-:: Mammals Yes
+:: Mammals Yes {"position":"100,600"}
 You become a mammal-based monster.
 <<script>>
   setup.changeStat(state.active.variables.atk, window.mammal.atk);
@@ -84,7 +84,7 @@ This base form would give you decent strength, low toughness, and high agility.
 
 [[Pick another form|Intro2]]
 
-:: Birds Yes
+:: Birds Yes {"position":"300,600"}
 You become a bird-based monster.
 <<script>>
   setup.changeStat(state.active.variables.atk, window.bird.atk);
@@ -101,7 +101,7 @@ This base form would give you high strength, decent toughness, and low agility.
 
 [[Pick another form|Intro2]]
 
-:: Reptiles Yes
+:: Reptiles Yes {"position":"500,600"}
 You become a reptile-based monster.
 <<script>>
   setup.changeStat(state.active.variables.atk, window.reptile.atk);
@@ -110,7 +110,7 @@ You become a reptile-based monster.
 <</script>>
 
 :: Amphibians {"position":"700,400"}
-As an amphibian-based monster, you would become a glass cannon, with good offensive capabilities, but poor defensive capabilities.
+As an amphibian-based monster, you would become a glass cannon, with good offensive capabilities but poor defensive capabilities.
 
 This base form would give you high strength, low toughness, and decent agility.
 
@@ -118,7 +118,7 @@ This base form would give you high strength, low toughness, and decent agility.
 
 [[Pick another form|Intro2]]
 
-:: Amphibians Yes
+:: Amphibians Yes {"position":"700,600"}
 You become an amphibian-based monster.
 <<script>>
   setup.changeStat(state.active.variables.atk, window.amphibian.atk);
@@ -127,3 +127,18 @@ You become an amphibian-based monster.
 <</script>>
 
 :: Fish {"position":"900,400"}
+As a fish-based monster, you would become a tank, with good defensive capabilities but slow movement.
+
+This base form would give you decent strength, high toughness, and low agility.
+
+[[Choose this form|Fish Yes]]
+
+[[Pick another form|Intro2]]
+
+:: Fish Yes {"position":"900,600"}
+You become a fish-based monster.
+<<script>>
+  setup.changeStat(state.active.variables.atk, window.fish.atk);
+  setup.changeStat(state.active.variables.def, window.fish.def);
+  setup.changeStat(state.active.variables.spd, window.fish.spd);
+<</script>>
