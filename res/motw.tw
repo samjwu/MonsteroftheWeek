@@ -110,5 +110,20 @@ You become a reptile-based monster.
 <</script>>
 
 :: Amphibians {"position":"700,400"}
+As an amphibian-based monster, you would become a glass cannon, with good offensive capabilities, but poor defensive capabilities.
+
+This base form would give you high strength, low toughness, and decent agility.
+
+[[Choose this form|Amphibians Yes]]
+
+[[Pick another form|Intro2]]
+
+:: Amphibians Yes
+You become an amphibian-based monster.
+<<script>>
+  setup.changeStat(state.active.variables.atk, window.amphibian.atk);
+  setup.changeStat(state.active.variables.def, window.amphibian.def);
+  setup.changeStat(state.active.variables.spd, window.amphibian.spd);
+<</script>>
 
 :: Fish {"position":"900,400"}

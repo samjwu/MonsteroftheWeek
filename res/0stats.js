@@ -30,6 +30,18 @@ window.reptile = {
     spd: 1
 };
 
+window.amphibian = {
+    atk: 3,
+    def: 1,
+    spd: 2
+};
+
+window.fish = {
+    atk: 2,
+    def: 3,
+    spd: 1
+};
+
 setup.initializeStats = function() {
     state.active.variables.fame = 0;
 
