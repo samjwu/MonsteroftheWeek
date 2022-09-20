@@ -24,6 +24,8 @@ setup.getStatString = function(val) {
     return statMap.get(val);
 }
 
-setup.changeStat = function(stat, change) {
-    stat += change;
+setup.changeStats = function(atk, def, spd) {
+    state.active.variables.atk += atk;
+    state.active.variables.def += def;
+    state.active.variables.spd += spd;
 }

@@ -71,11 +71,7 @@ This base form would give you decent strength, toughness, and agility.
 You become a mammal-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>>
-  setup.changeStat(state.active.variables.atk, window.mammal.atk);
-  setup.changeStat(state.active.variables.def, window.mammal.def);
-  setup.changeStat(state.active.variables.spd, window.mammal.spd);
-<</script>>
+<<script>> setup.changeStats(window.mammal.atk, window.mammal.def, window.mammal.spd); <</script>>
 
 :: Birds {"position":"300,400"}
 As a bird-based monster, you would become a speedster, with good mobility and the ability to fly, but be fragile and have a smaller health pool.
@@ -90,11 +86,7 @@ This base form would give you decent strength, low toughness, and high agility.
 You become a bird-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>>
-  setup.changeStat(state.active.variables.atk, window.bird.atk);
-  setup.changeStat(state.active.variables.def, window.bird.def);
-  setup.changeStat(state.active.variables.spd, window.bird.spd);
-<</script>>
+<<script>> setup.changeStats(window.bird.atk, window.bird.def, window.bird.spd); <</script>>
 
 :: Reptiles {"position":"500,400"}
 As a reptile-based monster, you would become a burst damage-dealer, with good offensive capabilities but slower movement.
@@ -109,11 +101,7 @@ This base form would give you high strength, decent toughness, and low agility.
 You become a reptile-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>>
-  setup.changeStat(state.active.variables.atk, window.reptile.atk);
-  setup.changeStat(state.active.variables.def, window.reptile.def);
-  setup.changeStat(state.active.variables.spd, window.reptile.spd);
-<</script>>
+<<script>> setup.changeStats(window.reptile.atk, window.reptile.def, window.reptile.spd); <</script>>
 
 :: Amphibians {"position":"700,400"}
 As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
@@ -128,11 +116,7 @@ This base form would give you low strength, decent toughness, and high agility.
 You become an amphibian-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>>
-  setup.changeStat(state.active.variables.atk, window.amphibian.atk);
-  setup.changeStat(state.active.variables.def, window.amphibian.def);
-  setup.changeStat(state.active.variables.spd, window.amphibian.spd);
-<</script>>
+<<script>> setup.changeStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); <</script>>
 
 :: Fish {"position":"900,400"}
 As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
@@ -147,11 +131,7 @@ This base form would give you decent strength, high toughness, and low agility.
 You become a fish-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>>
-  setup.changeStat(state.active.variables.atk, window.fish.atk);
-  setup.changeStat(state.active.variables.def, window.fish.def);
-  setup.changeStat(state.active.variables.spd, window.fish.spd);
-<</script>>
+<<script>> setup.changeStats(window.fish.atk, window.fish.def, window.fish.spd); <</script>>
 
 :: Pick Flaw {"position":"100,800"}
 
@@ -175,7 +155,14 @@ Your new body is unable to produce enough amylase needed to properly digest carb
 
 The energy available to your body is lower than normal.
 
-As a result, your speed is reduced by one level.
+As a result, your speed will be reduced by one level.
+
+[[Pick this flaw|Accept Inefficient amylase production]]
+
+[[Pick another flaw|Pick Flaw]]
+
+:: Accept Inefficient amylase production {"position":"100,1200"}
+Your speed goes down by one level.
 <<script>> setup.changeStat(state.active.variables.spd, -1); <</script>>
 
 :: Inefficient protease production {"position":"300,1000"}
