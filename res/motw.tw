@@ -37,7 +37,6 @@ The man in black simply shakes his head.
 [[You have until the end of today to clear out.|Pick Race]]
 
 :: Pick Race {"position":"500,200"}
-
 <span class="green">"They're all fools! The whole lot of them! Well, I'll show them; I'll show them all!"</span>
 
 You vow to have your revenge on the Illuminati for snubbing you and your research.
@@ -134,7 +133,6 @@ You become a fish-based monster.
 <<script>> setup.changeStats(window.fish.atk, window.fish.def, window.fish.spd); <</script>>
 
 :: Pick Flaw {"position":"100,800"}
-
 Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
 
 What is your flaw?
@@ -150,7 +148,6 @@ What is your flaw?
 [[Hyperactive metabolism]]
 
 :: Inefficient amylase production {"position":"100,1000"}
-
 Your new body is unable to produce enough amylase needed to properly digest carbohydrates.
 
 The energy available to your body is lower than normal.
@@ -166,7 +163,6 @@ Your speed goes down by one level.
 <<script>> setup.changeStats(0, 0, -1); <</script>>
 
 :: Inefficient protease production {"position":"300,1000"}
-
 Your new body is unable to produce enough protease needed to properly digest proteins.
 
 The amino acids levels your body needs to build muscle are lower than normal.
@@ -182,7 +178,6 @@ Your strength goes down by one level.
 <<script>> setup.changeStats(-1, 0, 0); <</script>>
 
 :: Inefficient lipase production {"position":"500,1000"}
-
 Your new body is unable to produce enough lipase needed to properly digest fats.
 
 Your body's fat stores are lower than normal.
@@ -196,3 +191,27 @@ As a result, your defense will be reduced by one level.
 :: Accept Inefficient lipase production {"position":"500,1200"}
 Your defense goes down by one level.
 <<script>> setup.changeStats(0, -1, 0); <</script>>
+
+:: Blinding rage {"position":"700,1000"}
+Your brain chemistry was altered during the monsterization.
+
+You will become prone to fits of rage where you cannot control your actions.
+
+[[Pick this flaw|Accept Blinding rage]]
+
+[[Pick another flaw|Pick Flaw]]
+
+:: Accept Blinding rage {"position":"700,1200"}
+Sometimes you may lose control over your actions.
+
+:: Hyperactive metabolism {"position":"900,1000"}
+Your new body burns through your energy stores faster than normal.
+
+You will require more food to survive.
+
+[[Pick this flaw|Accept Hyperactive metabolism]]
+
+[[Pick another flaw|Pick Flaw]]
+
+:: Accept Hyperactive metabolism {"position":"900,1200"}
+Your metabolism requires you to consume more food to survive.
