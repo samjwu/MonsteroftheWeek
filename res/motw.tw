@@ -160,6 +160,8 @@ As a result, your speed will be reduced by one level.
 
 :: Accept Inefficient amylase production {"position":"100,1200"}
 Your speed goes down by one level.
+
+[[Continue|Extra Stat Points]]
 <<script>> setup.changeStats(0, 0, -1); <</script>>
 
 :: Inefficient protease production {"position":"300,1000"}
@@ -175,6 +177,8 @@ As a result, your strength will be reduced by one level.
 
 :: Accept Inefficient protease production {"position":"300,1200"}
 Your strength goes down by one level.
+
+[[Continue|Extra Stat Points]]
 <<script>> setup.changeStats(-1, 0, 0); <</script>>
 
 :: Inefficient lipase production {"position":"500,1000"}
@@ -190,6 +194,8 @@ As a result, your defense will be reduced by one level.
 
 :: Accept Inefficient lipase production {"position":"500,1200"}
 Your defense goes down by one level.
+
+[[Continue|Extra Stat Points]]
 <<script>> setup.changeStats(0, -1, 0); <</script>>
 
 :: Blinding rage {"position":"700,1000"}
@@ -204,6 +210,8 @@ You will become prone to fits of rage where you cannot control your actions.
 :: Accept Blinding rage {"position":"700,1200"}
 Sometimes you may lose control over your actions.
 
+[[Continue|Extra Stat Points]]
+
 :: Hyperactive metabolism {"position":"900,1000"}
 Your new body burns through your energy stores faster than normal.
 
@@ -215,3 +223,18 @@ You will require more food to survive.
 
 :: Accept Hyperactive metabolism {"position":"900,1200"}
 Your metabolism requires you to consume more food to survive.
+
+[[Continue|Extra Stat Points]]
+
+:: Extra Stat Points {"position":"100,1400"}
+Before you were cast away by the Illuminati, you were a fairly well-known scientist.
+
+The CIA, RAW, ISI, MI6, GRU, MSS, ..., etc. have all had their eyes on you since you entered the organization.
+
+Now that you no longer have their support and protection, they will all be after you.
+
+Fortunately, your fame was well-deserved. Your renown is directly proportional to your scientific acumen and brilliance in the field of monsters.
+
+<span class="yellow">The higher your notoriety, the more skill and ability points you have. However, your enemies will also be much stronger.</span>
+
+How notorious are you now?
