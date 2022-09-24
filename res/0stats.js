@@ -1,3 +1,7 @@
+window.fameMap = new Map([
+    [0, "nobody"]
+]);
+
 window.statMap = new Map([
     [0, "fodder"],
     [1, "minion"],
@@ -18,6 +22,10 @@ setup.initializeStats = function() {
     state.active.variables.atk = 0;
     state.active.variables.def = 0;
     state.active.variables.spd = 0;
+}
+
+setup.getFameString = function(val) {
+    return fameMap.get(val);
 }
 
 setup.getStatString = function(val) {
