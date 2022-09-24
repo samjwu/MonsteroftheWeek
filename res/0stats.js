@@ -1,5 +1,6 @@
 window.fameMap = new Map([
-    [0, "nobody"]
+    [0, "nobody"],
+    [1, "rando"]
 ]);
 
 window.statMap = new Map([
