@@ -45,6 +45,8 @@ You are a monster researcher with the knowledge to monsterize humans and improve
 
 Without the support of the Illuminati, you do not have access to any test subjects and must perform the experiment on yourself.
 
+<span class="yellow">Your specialty will determine you base stat distribution.</span>
+
 What is your specialty?
 
 [[Mammals]]
@@ -135,6 +137,8 @@ You become a fish-based monster.
 :: Pick Flaw {"position":"100,800"}
 Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
 
+<span class="yellow">Your flaw will give you a disadvantage. You must pick a flaw.</span>
+
 What is your flaw?
 
 [[Inefficient amylase production]]
@@ -161,7 +165,7 @@ As a result, your speed will be reduced by one level.
 :: Accept Inefficient amylase production {"position":"100,1200"}
 Your speed goes down by one level.
 
-[[Continue|Extra Stat Points]]
+[[Continue|Pick Fame]]
 <<script>> setup.changeStats(0, 0, -1); <</script>>
 
 :: Inefficient protease production {"position":"300,1000"}
@@ -178,7 +182,7 @@ As a result, your strength will be reduced by one level.
 :: Accept Inefficient protease production {"position":"300,1200"}
 Your strength goes down by one level.
 
-[[Continue|Extra Stat Points]]
+[[Continue|Pick Fame]]
 <<script>> setup.changeStats(-1, 0, 0); <</script>>
 
 :: Inefficient lipase production {"position":"500,1000"}
@@ -195,7 +199,7 @@ As a result, your defense will be reduced by one level.
 :: Accept Inefficient lipase production {"position":"500,1200"}
 Your defense goes down by one level.
 
-[[Continue|Extra Stat Points]]
+[[Continue|Pick Fame]]
 <<script>> setup.changeStats(0, -1, 0); <</script>>
 
 :: Blinding rage {"position":"700,1000"}
@@ -210,7 +214,7 @@ You will become prone to fits of rage where you cannot control your actions.
 :: Accept Blinding rage {"position":"700,1200"}
 Sometimes you may lose control over your actions.
 
-[[Continue|Extra Stat Points]]
+[[Continue|Pick Fame]]
 
 :: Hyperactive metabolism {"position":"900,1000"}
 Your new body burns through your energy stores faster than normal.
@@ -224,9 +228,9 @@ You will require more food to survive.
 :: Accept Hyperactive metabolism {"position":"900,1200"}
 Your metabolism requires you to consume more food to survive.
 
-[[Continue|Extra Stat Points]]
+[[Continue|Pick Fame]]
 
-:: Extra Stat Points {"position":"100,1400"}
+:: Pick Fame {"position":"100,1400"}
 Before you were cast away by the Illuminati, you were a fairly well-known scientist.
 
 The CIA, RAW, ISI, MI6, GRU, MSS, ..., etc. have all had their eyes on you since you entered the organization.
@@ -264,6 +268,15 @@ But hey! You somehow managed to succeed anyway, so maybe there's something to yo
 
 And the positive side of being a nobody is that nobody is looking for you, so you have plenty of time to improve.
 
+[[Pick this notoriety level|Accept Nobody]]
+
+[[Pick another notoriety level|Pick Fame]]
+
+:: Accept Nobody {"position":"100,1800"}
+Before joining the Illuminati, you were a nobody.
+
+And now, you are still a nobody. Good for you.
+
 :: Rando {"position":"300,1600"}
 So the Illuminati said you were "fairly well-known", but that was just a figure of speech.
 
@@ -274,6 +287,15 @@ Ergo, you're about as notorious as any other rando scientist of the street.
 In other words, you're barely better than a nobody.
 
 At least those government agencies won't be knocking on your door anytime soon.
+
+[[Pick this notoriety level|Accept Rando]]
+
+[[Pick another notoriety level|Pick Fame]]
+
+:: Accept Rando {"position":"300,1800"}
+Before joining the Illuminati, you were a rando.
+
+
 
 :: Mad Scientist {"position":"500,1600"}
 You are widely regarded as a mad scientist. 
@@ -318,3 +340,12 @@ You are capable of world domination, and in fact have achieved that already mult
 I wonder why you failed so hard this time around with the Illuminati. Better luck next time, eh?
 
 Due to your notoriety, everyone, and I mean EVERYONW, including your old organization(s), your mom, your dog, those interns that you still haven't paid the last time you took over the world, and maybe some of your clones, will be after you.
+
+[[Pick this notoriety level|Accept Super Mega Ultra Evil Genius]]
+
+[[Pick another notoriety level|Pick Fame]]
+
+:: Accept Super Mega Ultra Evil Genius {"position":"1100,1800"}
+Before joining the Illuminati, you were a Super Mega Ultra Evil Genius.
+
+Good luck. You'll be needing it.
