@@ -13,11 +13,11 @@ Monster of the Week
 A CYOA Game
 
 :: StoryCaption {"position":"700,0"}
-<span class="red">Attack</span>: <<print setup.getStatString(player.atk)>>
+<span class="red">Attack</span>: <<print statMap.get(player.atk)>>
 
-<span class="blue">Defense</span>: <<print setup.getStatString(player.def)>>
+<span class="blue">Defense</span>: <<print statMap.get(player.def)>>
 
-<span class="green">Speed</span>: <<print setup.getStatString(player.spd)>>
+<span class="green">Speed</span>: <<print statMap.get(player.spd)>>
 
 :: Start {"position":"100,200"}
 [[Start New Game|Intro]]
@@ -74,7 +74,7 @@ You become a mammal-based monster.
 [[Continue|Pick Flaw]]
 <<script>> 
   setup.changePlayerStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
-  state.active.variables.class = window.mammal.class;
+  player.class = window.mammal.class;
 <</script>>
 
 :: Birds {"position":"300,400"}
@@ -92,7 +92,7 @@ You become a bird-based monster.
 [[Continue|Pick Flaw]]
 <<script>>
   setup.changePlayerStats(window.bird.atk, window.bird.def, window.bird.spd);
-  state.active.variables.class = window.bird.class;
+  player.class = window.bird.class;
 <</script>>
 
 :: Reptiles {"position":"500,400"}
@@ -110,7 +110,7 @@ You become a reptile-based monster.
 [[Continue|Pick Flaw]]
 <<script>>
   setup.changePlayerStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
-  state.active.variables.class = window.reptile.class;
+  player.class = window.reptile.class;
 <</script>>
 
 :: Amphibians {"position":"700,400"}
@@ -128,7 +128,7 @@ You become an amphibian-based monster.
 [[Continue|Pick Flaw]]
 <<script>> 
   setup.changePlayerStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
-  state.active.variables.class = window.amphibian.class;
+  player.class = window.amphibian.class;
 <</script>>
 
 :: Fish {"position":"900,400"}
@@ -146,7 +146,7 @@ You become a fish-based monster.
 [[Continue|Pick Flaw]]
 <<script>>
   setup.changePlayerStats(window.fish.atk, window.fish.def, window.fish.spd);
-  state.active.variables.class = window.fish.class;
+  player.class = window.fish.class;
 <</script>>
 
 :: Pick Flaw {"position":"100,800"}
@@ -419,3 +419,10 @@ Ok, time for the fun part. It's time to pick your special abilities!
 
 What special abilities do you have?
 
+<<if player.class == mammal.class>>
+  [[Mammal Muscles]]
+<<else>>
+  [[todo]]
+<<endif>>
+
+:: Mammal Muscles {"position":"100,2200"}

@@ -23,17 +23,9 @@ window.statMap = new Map([
 
 window.player = new Object();
 
-setup.getFameString = function(val) {
-    return fameMap.get(val);
-}
-
-setup.getStatString = function(val) {
-    return statMap.get(val);
-}
-
 setup.initializeStats = function() {
     player.fame = 0;
-    
+
     player.atk = 0;
     player.def = 0;
     player.spd = 0;
