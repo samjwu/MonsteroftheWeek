@@ -279,6 +279,8 @@ Being a former member of the Illuminati would give you some street cred, if peop
 
 Guess you're doomed to obscurity. Sucks to be you.
 
+[[Continue|Pick Abilities]]
+
 :: Rando {"position":"300,1600"}
 So the Illuminati said you were "fairly well-known", but that was just a figure of speech.
 
@@ -299,6 +301,8 @@ Before joining the Illuminati, you were a rando.
 
 And since no one knows the Illuminati exists, you are still a rando. Good for you.
 
+[[Continue|Pick Abilities]]
+
 :: Mad Scientist {"position":"500,1600"}
 You are widely regarded as a mad scientist. 
 
@@ -316,6 +320,8 @@ Just try to stay alive long enough to get your revenge.
 Before joining the Illuminati, you were a mad scientist.
 
 Even before you joined the Illuminati, people knew you were bad news.
+
+[[Continue|Pick Abilities]]
 
 :: Mastermind {"position":"700,1600"}
 When it comes to you, the term "fairly well-known" is an understatement.
@@ -338,6 +344,8 @@ Before joining the Illuminati, you were a mastermind.
 You were too good for them anyways. Probably.
 
 In any case, now is your chance to find out.
+
+[[Continue|Pick Abilities]]
 
 :: Megamind {"position":"900,1600"}
 What's a Megamind you ask? A Megamind is a subset of masterminds.
@@ -365,6 +373,8 @@ The Illuminati? Seriously? You could have done better.
 
 Guess it's a good thing you went independent, eh?
 
+[[Continue|Pick Abilities]]
+
 :: Super Mega Ultra Evil Genius {"position":"1100,1600"}
 You are the greatest evil genius of all time. It's pretty much in the name, no?
 
@@ -384,3 +394,12 @@ Before joining the Illuminati, you were a Super Mega Ultra Evil Genius.
 The Illuminati is kiddy stuff. Something stupid to do to kill the time. Nothing short of world domination is good enough for you.
 
 Good luck. You'll be needing it.
+
+[[Continue|Pick Abilities]]
+
+:: Pick Abilities {"position":"100,2000"}
+Ok, time for the fun part. It's time to pick your special abilities!
+
+<span class="yellow">Your abilities will give you special advantages in battle.</span>
+
+What special abilities do you have?
