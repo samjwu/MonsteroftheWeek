@@ -420,17 +420,21 @@ Ok, time for the fun part. It's time to pick your special abilities!
 What special abilities do you have?
 
 <<if player.class == mammal.class>>
-  [[Gorilla Grip]]
-  [[Hippo Hide]]
-  [[Cheetah Speed]]
-  [[Eagle Eye]]
-  [[Puma Pounce]]
-  [[Mammal Rabies]]
+  <input type="checkbox"> Gorilla Grip
+  
+  You're as strong as a gorilla! And not just figuratively.
+
+  This ability will increase your attack by one level
+  
+  <input type="checkbox"> Hippo Hide
+  
+  <input type="checkbox"> Cheetah Speed
+  
+  <input type="checkbox"> Eagle Eye
+  
+  <input type="checkbox"> Puma Pounce
+  
+  <input type="checkbox"> Mammal Rabies
 <<else>>
   [[todo]]
 <<endif>>
-
-:: Gorilla Grip {"position":"100,2200"}
-You're as strong as a gorilla! And not just figuratively.
-
-This ability will increase your attack by one level
