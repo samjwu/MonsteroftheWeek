@@ -2,7 +2,8 @@ window.fameMap = new Map([
     [0, "nobody"],
     [1, "rando"],
     [2, "mad scientist"],
-    [3, "mastermind"]
+    [3, "mastermind"],
+    [4, "Megamind"]
 ]);
 
 window.statMap = new Map([
