@@ -13,11 +13,11 @@ Monster of the Week
 A CYOA Game
 
 :: StoryCaption {"position":"700,0"}
-<span class="red">Attack</span>: <<print setup.getStatString($atk)>>
+<span class="red">Attack</span>: <<print setup.getStatString(player.atk)>>
 
-<span class="blue">Defense</span>: <<print setup.getStatString($def)>>
+<span class="blue">Defense</span>: <<print setup.getStatString(player.def)>>
 
-<span class="green">Speed</span>: <<print setup.getStatString($spd)>>
+<span class="green">Speed</span>: <<print setup.getStatString(player.spd)>>
 
 :: Start {"position":"100,200"}
 [[Start New Game|Intro]]
@@ -73,7 +73,7 @@ You become a mammal-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>> 
-  setup.changeStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
+  setup.changePlayerStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
   state.active.variables.class = window.mammal.class;
 <</script>>
 
@@ -91,7 +91,7 @@ You become a bird-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>>
-  setup.changeStats(window.bird.atk, window.bird.def, window.bird.spd);
+  setup.changePlayerStats(window.bird.atk, window.bird.def, window.bird.spd);
   state.active.variables.class = window.bird.class;
 <</script>>
 
@@ -109,7 +109,7 @@ You become a reptile-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>>
-  setup.changeStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
+  setup.changePlayerStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
   state.active.variables.class = window.reptile.class;
 <</script>>
 
@@ -127,7 +127,7 @@ You become an amphibian-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>> 
-  setup.changeStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
+  setup.changePlayerStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
   state.active.variables.class = window.amphibian.class;
 <</script>>
 
@@ -145,7 +145,7 @@ You become a fish-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>>
-  setup.changeStats(window.fish.atk, window.fish.def, window.fish.spd);
+  setup.changePlayerStats(window.fish.atk, window.fish.def, window.fish.spd);
   state.active.variables.class = window.fish.class;
 <</script>>
 
@@ -181,7 +181,7 @@ As a result, your speed will be reduced by one level.
 Your speed goes down by one level.
 
 [[Continue|Pick Fame]]
-<<script>> setup.changeStats(0, 0, -1); <</script>>
+<<script>> setup.changePlayerStats(0, 0, -1); <</script>>
 
 :: Inefficient protease production {"position":"300,1000"}
 Your new body is unable to produce enough protease needed to properly digest proteins.
@@ -198,7 +198,7 @@ As a result, your strength will be reduced by one level.
 Your strength goes down by one level.
 
 [[Continue|Pick Fame]]
-<<script>> setup.changeStats(-1, 0, 0); <</script>>
+<<script>> setup.changePlayerStats(-1, 0, 0); <</script>>
 
 :: Inefficient lipase production {"position":"500,1000"}
 Your new body is unable to produce enough lipase needed to properly digest fats.
@@ -215,7 +215,7 @@ As a result, your defense will be reduced by one level.
 Your defense goes down by one level.
 
 [[Continue|Pick Fame]]
-<<script>> setup.changeStats(0, -1, 0); <</script>>
+<<script>> setup.changePlayerStats(0, -1, 0); <</script>>
 
 :: Blinding rage {"position":"700,1000"}
 Your brain chemistry was altered during the monsterization.
@@ -418,3 +418,4 @@ Ok, time for the fun part. It's time to pick your special abilities!
 <span class="yellow">Your abilities will give you special advantages in battle.</span>
 
 What special abilities do you have?
+

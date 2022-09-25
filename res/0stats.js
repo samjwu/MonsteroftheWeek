@@ -21,13 +21,7 @@ window.statMap = new Map([
     [10, "broken"]
 ]);
 
-setup.initializeStats = function() {
-    state.active.variables.fame = 0;
-
-    state.active.variables.atk = 0;
-    state.active.variables.def = 0;
-    state.active.variables.spd = 0;
-}
+window.player = new Object();
 
 setup.getFameString = function(val) {
     return fameMap.get(val);
@@ -37,8 +31,18 @@ setup.getStatString = function(val) {
     return statMap.get(val);
 }
 
-setup.changeStats = function(atk, def, spd) {
-    state.active.variables.atk += atk;
-    state.active.variables.def += def;
-    state.active.variables.spd += spd;
+setup.initializeStats = function() {
+    player.fame = 0;
+    
+    player.atk = 0;
+    player.def = 0;
+    player.spd = 0;
+
+    player.abilities = new Set();
+}
+
+setup.changePlayerStats = function(atk, def, spd) {
+    player.atk += atk;
+    player.def += def;
+    player.spd += spd;
 }
