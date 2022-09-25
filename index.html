@@ -173,47 +173,63 @@ setup.changeStats = function(atk, def, spd) {
 }
 /* twine-user-script #2: "1races.js" */
 window.mammal = {
+    class: "mammal",
     atk: 2,
     def: 2,
     spd: 2
 };
 
 window.bird = {
+    class: "bird",
     atk: 2,
     def: 1,
     spd: 3
 };
 
 window.reptile = {
+    class: "reptile",
     atk: 3,
     def: 2,
     spd: 1
 };
 
 window.amphibian = {
+    class: "amphibian",
     atk: 1,
     def: 2,
     spd: 3
 };
 
 window.fish = {
+    class: "fish",
     atk: 2,
     def: 3,
     spd: 1
 };
 
 window.insect = {
+    class: "insect",
     atk: 1,
     def: 3,
     spd: 2
 };
 
 window.mollusk = {
+    class: "mollusk",
     atk: 3,
     def: 2,
     spd: 1
 };
-/* twine-user-script #3: "modernizr-custom.js" */
+/* twine-user-script #3: "2abilities.js" */
+window.abilityMap = new Map([
+    ["muscles", "Gorilla grip"],
+    ["blubber", "Hippo hide"],
+    ["running", "Cheetah speed"],
+    ["eyesight", "Eagle eye"],
+    ["jumping", "Puma pounce"],
+    ["rabies", "Mammal rabies"],
+]);
+/* twine-user-script #4: "modernizr-custom.js" */
 /*! modernizr 3.6.0 (Custom Build) | MIT *
  * https://modernizr.com/download/?-boxshadow-textshadow-setclasses !*/
 !function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,a;for(var l in w)if(w.hasOwnProperty(l)){if(e=[],n=w[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=o:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=o),C.push((o?"":"no-")+a.join("-"))}}function s(e){var n=S.className,t=Modernizr._config.classPrefix||"";if(_&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),_?S.className.baseVal=n:S.className=n)}function i(e,n){return!!~(""+e).indexOf(n)}function a(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):_?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function l(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(e,n){return function(){return e.apply(n,arguments)}}function f(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?u(o,t||n):o);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var s=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(s){var i=s.error?"error":"log";s[i].call(s,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function c(){var e=n.body;return e||(e=a(_?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var s,i,l,u,f="modernizr",d=a("div"),p=c();if(parseInt(r,10))for(;r--;)l=a("div"),l.id=o?o[r]:f+(r+1),d.appendChild(l);return s=a("style"),s.type="text/css",s.id="s"+f,(p.fake?p:d).appendChild(s),p.appendChild(d),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),d.id=f,p.fake&&(p.style.background="",p.style.overflow="hidden",u=S.style.overflow,S.style.overflow="hidden",S.appendChild(p)),i=t(d,e),p.fake?(p.parentNode.removeChild(p),S.style.overflow=u,S.offsetHeight):d.parentNode.removeChild(d),!!i}function h(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+d(n[o])+":"+r+")");return s=s.join(" or "),m("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==p(e,null,"position")})}return t}function y(e,n,o,s){function u(){d&&(delete N.style,delete N.modElem)}if(s=r(s,"undefined")?!1:s,!r(o,"undefined")){var f=h(e,o);if(!r(f,"undefined"))return f}for(var d,p,c,m,y,v=["modernizr","tspan","samp"];!N.style&&v.length;)d=!0,N.modElem=a(v.shift()),N.style=N.modElem.style;for(c=e.length,p=0;c>p;p++)if(m=e[p],y=N.style[m],i(m,"-")&&(m=l(m)),N.style[m]!==t){if(s||r(o,"undefined"))return u(),"pfx"==n?m:!0;try{N.style[m]=o}catch(g){}if(N.style[m]!=y)return u(),"pfx"==n?m:!0}return u(),!1}function v(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+P.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?y(a,n,o,s):(a=(e+" "+z.join(i+" ")+i).split(" "),f(a,n,t))}function g(e,n,r){return v(e,t,t,n,r)}var C=[],w=[],x={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){w.push({name:e,fn:n,options:t})},addAsyncTest:function(e){w.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=x,Modernizr=new Modernizr;var S=n.documentElement,_="svg"===S.nodeName.toLowerCase(),b="Moz O ms Webkit",P=x._config.usePrefixes?b.split(" "):[];x._cssomPrefixes=P;var z=x._config.usePrefixes?b.toLowerCase().split(" "):[];x._domPrefixes=z;var E={elem:a("modernizr")};Modernizr._q.push(function(){delete E.elem});var N={style:E.elem.style};Modernizr._q.unshift(function(){delete N.style});var T=x.testProp=function(e,n,r){return y([e],t,n,r)};Modernizr.addTest("textshadow",T("textShadow","1px 1px")),x.testAllProps=v,x.testAllProps=g,Modernizr.addTest("boxshadow",g("boxShadow","1px 1px",!0)),o(),s(C),delete x.addTest,delete x.addAsyncTest;for(var j=0;j<Modernizr._q.length;j++)Modernizr._q[j]();e.Modernizr=Modernizr}(window,document);</script><tw-passagedata pid="1" name="StorySubtitle" tags="" position="500,0" size="100,100">A CYOA Game</tw-passagedata><tw-passagedata pid="2" name="StoryCaption" tags="" position="700,0" size="100,100">&lt;span class=&quot;red&quot;&gt;Attack&lt;/span&gt;: &lt;&lt;print setup.getStatString($atk)&gt;&gt;
@@ -260,7 +276,10 @@ This base form would give you decent strength, toughness, and agility.
 [[Pick another form|Pick Race]]</tw-passagedata><tw-passagedata pid="7" name="Mammals Yes" tags="" position="100,600" size="100,100">You become a mammal-based monster.
 
 [[Continue|Pick Flaw]]
-&lt;&lt;script&gt;&gt; setup.changeStats(window.mammal.atk, window.mammal.def, window.mammal.spd); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Birds" tags="" position="300,400" size="100,100">As a bird-based monster, you would become a speedster, with good mobility and the ability to fly, but be fragile and have a smaller health pool.
+&lt;&lt;script&gt;&gt; 
+  setup.changeStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
+  state.active.variables.class = window.mammal.class;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Birds" tags="" position="300,400" size="100,100">As a bird-based monster, you would become a speedster, with good mobility and the ability to fly, but be fragile and have a smaller health pool.
 
 This base form would give you decent strength, low toughness, and high agility.
 
@@ -269,7 +288,10 @@ This base form would give you decent strength, low toughness, and high agility.
 [[Pick another form|Pick Race]]</tw-passagedata><tw-passagedata pid="9" name="Birds Yes" tags="" position="300,600" size="100,100">You become a bird-based monster.
 
 [[Continue|Pick Flaw]]
-&lt;&lt;script&gt;&gt; setup.changeStats(window.bird.atk, window.bird.def, window.bird.spd); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Reptiles" tags="" position="500,400" size="100,100">As a reptile-based monster, you would become a burst damage-dealer, with good offensive capabilities but slower movement.
+&lt;&lt;script&gt;&gt;
+  setup.changeStats(window.bird.atk, window.bird.def, window.bird.spd);
+  state.active.variables.class = window.bird.class;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Reptiles" tags="" position="500,400" size="100,100">As a reptile-based monster, you would become a burst damage-dealer, with good offensive capabilities but slower movement.
 
 This base form would give you high strength, decent toughness, and low agility.
 
@@ -278,7 +300,10 @@ This base form would give you high strength, decent toughness, and low agility.
 [[Pick another form|Pick Race]]</tw-passagedata><tw-passagedata pid="11" name="Reptiles Yes" tags="" position="500,600" size="100,100">You become a reptile-based monster.
 
 [[Continue|Pick Flaw]]
-&lt;&lt;script&gt;&gt; setup.changeStats(window.reptile.atk, window.reptile.def, window.reptile.spd); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Amphibians" tags="" position="700,400" size="100,100">As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
+&lt;&lt;script&gt;&gt;
+  setup.changeStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
+  state.active.variables.class = window.reptile.class;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Amphibians" tags="" position="700,400" size="100,100">As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
 
 This base form would give you low strength, decent toughness, and high agility.
 
@@ -287,7 +312,10 @@ This base form would give you low strength, decent toughness, and high agility.
 [[Pick another form|Pick Race]]</tw-passagedata><tw-passagedata pid="13" name="Amphibians Yes" tags="" position="700,600" size="100,100">You become an amphibian-based monster.
 
 [[Continue|Pick Flaw]]
-&lt;&lt;script&gt;&gt; setup.changeStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Fish" tags="" position="900,400" size="100,100">As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
+&lt;&lt;script&gt;&gt; 
+  setup.changeStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
+  state.active.variables.class = window.amphibian.class;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Fish" tags="" position="900,400" size="100,100">As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
 
 This base form would give you decent strength, high toughness, and low agility.
 
@@ -296,7 +324,10 @@ This base form would give you decent strength, high toughness, and low agility.
 [[Pick another form|Pick Race]]</tw-passagedata><tw-passagedata pid="15" name="Fish Yes" tags="" position="900,600" size="100,100">You become a fish-based monster.
 
 [[Continue|Pick Flaw]]
-&lt;&lt;script&gt;&gt; setup.changeStats(window.fish.atk, window.fish.def, window.fish.spd); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Pick Flaw" tags="" position="100,800" size="100,100">Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
+&lt;&lt;script&gt;&gt;
+  setup.changeStats(window.fish.atk, window.fish.def, window.fish.spd);
+  state.active.variables.class = window.fish.class;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Pick Flaw" tags="" position="100,800" size="100,100">Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
 
 &lt;span class=&quot;yellow&quot;&gt;Your flaw will give you a disadvantage. You must pick a flaw.&lt;/span&gt;
 

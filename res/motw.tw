@@ -72,7 +72,10 @@ This base form would give you decent strength, toughness, and agility.
 You become a mammal-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>> setup.changeStats(window.mammal.atk, window.mammal.def, window.mammal.spd); <</script>>
+<<script>> 
+  setup.changeStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
+  state.active.variables.class = window.mammal.class;
+<</script>>
 
 :: Birds {"position":"300,400"}
 As a bird-based monster, you would become a speedster, with good mobility and the ability to fly, but be fragile and have a smaller health pool.
@@ -87,7 +90,10 @@ This base form would give you decent strength, low toughness, and high agility.
 You become a bird-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>> setup.changeStats(window.bird.atk, window.bird.def, window.bird.spd); <</script>>
+<<script>>
+  setup.changeStats(window.bird.atk, window.bird.def, window.bird.spd);
+  state.active.variables.class = window.bird.class;
+<</script>>
 
 :: Reptiles {"position":"500,400"}
 As a reptile-based monster, you would become a burst damage-dealer, with good offensive capabilities but slower movement.
@@ -102,7 +108,10 @@ This base form would give you high strength, decent toughness, and low agility.
 You become a reptile-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>> setup.changeStats(window.reptile.atk, window.reptile.def, window.reptile.spd); <</script>>
+<<script>>
+  setup.changeStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
+  state.active.variables.class = window.reptile.class;
+<</script>>
 
 :: Amphibians {"position":"700,400"}
 As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
@@ -117,7 +126,10 @@ This base form would give you low strength, decent toughness, and high agility.
 You become an amphibian-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>> setup.changeStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); <</script>>
+<<script>> 
+  setup.changeStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
+  state.active.variables.class = window.amphibian.class;
+<</script>>
 
 :: Fish {"position":"900,400"}
 As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
@@ -132,7 +144,10 @@ This base form would give you decent strength, high toughness, and low agility.
 You become a fish-based monster.
 
 [[Continue|Pick Flaw]]
-<<script>> setup.changeStats(window.fish.atk, window.fish.def, window.fish.spd); <</script>>
+<<script>>
+  setup.changeStats(window.fish.atk, window.fish.def, window.fish.spd);
+  state.active.variables.class = window.fish.class;
+<</script>>
 
 :: Pick Flaw {"position":"100,800"}
 Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
