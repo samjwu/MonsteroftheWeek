@@ -419,8 +419,8 @@ Ok, time for the fun part. It's time to pick your special abilities!
 
 What special abilities do you have?
 
-<<if player.class == mammal.class>>
-  <input type="checkbox"> Gorilla Grip
+<<if player.class != mammal.class>>
+  <label><input type="checkbox"> Gorilla Grip</label>
   
   You're as strong as a gorilla! And not just figuratively.
 
@@ -438,3 +438,20 @@ What special abilities do you have?
 <<else>>
   [[todo]]
 <<endif>>
+
+
+<<script>>
+  $(document).on(':passagedisplay', function (ev) {
+    var checks = document.querySelectorAll("input");
+    console.log(checks.length);
+    var max = 2;
+    for (var i = 0; i < checks.length; i++) {
+      checks[i].onclick = selectiveCheck;
+    }
+    function selectiveCheck (event) {
+      var checkedChecks = document.querySelectorAll("input:checked");
+      if (checkedChecks.length >= max + 1)
+        return false;
+    }
+  });
+<</script>>
