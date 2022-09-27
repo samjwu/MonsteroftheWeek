@@ -538,7 +538,7 @@ Good luck. You&#39;ll be needing it.
 
 What special abilities do you have?
 
-&lt;&lt;if player.class != mammal.class&gt;&gt;
+&lt;&lt;if player.class == mammal.class&gt;&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Gorilla Grip&lt;/label&gt;
   
   You&#39;re as strong as a gorilla! And not just figuratively.
@@ -547,17 +547,34 @@ What special abilities do you have?
   
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Hippo Hide&lt;/label&gt;
 
+  You&#39;re as heavy as a hippo! And your skin is tough too.
+  
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
   
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Cheetah Speed&lt;/label&gt;
 
+  You&#39;re as fast as a cheetah! No animal on Earth can run faster! You still only get one level faster though.
+
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
   
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Eagle Eye&lt;/label&gt;
+
+  Your eyes are as sharp as an eagle&#39;s! But not as sharp as Hawkeye&#39;s.
+
+  &lt;span class=&quot;yellow&quot;&gt;With this ability, you will never miss&lt;/span&gt;
   
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Puma Pounce&lt;/label&gt;
+
+  You can pounce like a puma! But not quite as well as Black Panther.
+
+  &lt;span class=&quot;yellow&quot;&gt;This ability allows you to hit harder&lt;/span&gt;
   
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Mammal Rabies&lt;/label&gt;
+
+  You have rabies! Fortunately, you are immune to its negative effects, but you can still infect and harm others.
+
+  &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
+&lt;&lt;elseif player.class == bird.class&gt;&gt;
 &lt;&lt;else&gt;&gt;
   [[todo]]
 &lt;&lt;endif&gt;&gt;

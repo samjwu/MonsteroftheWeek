@@ -419,7 +419,7 @@ Ok, time for the fun part. It's time to pick your special abilities!
 
 What special abilities do you have?
 
-<<if player.class != mammal.class>>
+<<if player.class == mammal.class>>
   <label><input type="checkbox">Gorilla Grip</label>
   
   You're as strong as a gorilla! And not just figuratively.
@@ -428,17 +428,34 @@ What special abilities do you have?
   
   <label><input type="checkbox">Hippo Hide</label>
 
+  You're as heavy as a hippo! And your skin is tough too.
+  
   <span class="yellow">This ability will increase your defense by one level</span>
   
   <label><input type="checkbox">Cheetah Speed</label>
 
+  You're as fast as a cheetah! No animal on Earth can run faster! You still only get one level faster though.
+
   <span class="yellow">This ability will increase your speed by one level</span>
   
   <label><input type="checkbox">Eagle Eye</label>
+
+  Your eyes are as sharp as an eagle's! But not as sharp as Hawkeye's.
+
+  <span class="yellow">With this ability, you will never miss</span>
   
   <label><input type="checkbox">Puma Pounce</label>
+
+  You can pounce like a puma! But not quite as well as Black Panther.
+
+  <span class="yellow">This ability allows you to hit harder</span>
   
   <label><input type="checkbox">Mammal Rabies</label>
+
+  You have rabies! Fortunately, you are immune to its negative effects, but you can still infect and harm others.
+
+  <span class="yellow">Your attacks will deal additional damage</span>
+<<elseif player.class == bird.class>>
 <<else>>
   [[todo]]
 <<endif>>
