@@ -221,9 +221,10 @@ window.abilityMap = new Map([
     ["muscles", "Gorilla grip"],
     ["blubber", "Hippo hide"],
     ["running", "Cheetah speed"],
-    ["eyesight", "Eagle eye"],
     ["jumping", "Puma pounce"],
     ["rabies", "Mammal rabies"],
+    
+    ["eyesight", "Eagle eye"],
 ]);
 
 setup.restrictAbilities = function () {
@@ -398,7 +399,7 @@ Your body&#39;s fat stores are lower than normal.
 
 [[Continue|Pick Fame]]</tw-passagedata><tw-passagedata pid="25" name="Hyperactive metabolism" tags="" position="900,1000" size="100,100">Your new body burns through your energy stores faster than normal.
 
-&lt;span class=&quot;yellow&quot;&gt;You will require more food to survive.&lt;/span&gt;
+&lt;span class=&quot;yellow&quot;&gt;You will run out of stamina faster than normal.&lt;/span&gt;
 
 [[Pick this flaw|Accept Hyperactive metabolism]]
 
@@ -557,12 +558,6 @@ What special abilities do you have?
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Eagle Eye&lt;/label&gt;
-
-  Your eyes are as sharp as an eagle&#39;s! But not as sharp as Hawkeye&#39;s.
-
-  &lt;span class=&quot;yellow&quot;&gt;With this ability, you will never miss&lt;/span&gt;
-  
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Puma Pounce&lt;/label&gt;
 
   You can pounce like a puma! But not quite as well as Black Panther.
@@ -575,6 +570,41 @@ What special abilities do you have?
 
   &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
 &lt;&lt;elseif player.class == bird.class&gt;&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Peak Beak&lt;/label&gt;
+
+  You are a master at destroying your enemies with verbal abuse. And the sharp beak on your face.
+
+  &lt;span class=&quot;yellow&quot;&gt;This ability will increase your strength by one level&lt;/span&gt;
+
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Carbon Fiber Feathers&lt;/label&gt;
+
+  Feathers are light, but strong. They may or may not be stronger than carbon fiber.
+  
+  If you were actually a scientist, you&#39;d probably know this. Maybe.
+
+  Plausible deniability and all that.
+
+  &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
+
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Jet-Black Wings&lt;/label&gt;
+
+  To defeat the &lt;s&gt;Dark Reunion&lt;/s&gt; Illuminati, you have grown wings to increase your mobility.
+
+  &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
+
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Eagle Eye&lt;/label&gt;
+
+  Your eyes are as sharp as an eagle&#39;s! But not as sharp as Hawkeye&#39;s.
+
+  &lt;span class=&quot;yellow&quot;&gt;With this ability, you will never miss&lt;/span&gt;
+
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Eleven Lungs&lt;/label&gt;
+
+  You don&#39;t run out of breath. Ever.
+
+  Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
+
+  &lt;span class=&quot;yellow&quot;&gt;You will have better stamina and recovery&lt;/span&gt;
 &lt;&lt;else&gt;&gt;
   [[todo]]
 &lt;&lt;endif&gt;&gt;

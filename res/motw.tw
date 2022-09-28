@@ -234,7 +234,7 @@ Sometimes you may lose control over your actions.
 :: Hyperactive metabolism {"position":"900,1000"}
 Your new body burns through your energy stores faster than normal.
 
-<span class="yellow">You will require more food to survive.</span>
+<span class="yellow">You will run out of stamina faster than normal.</span>
 
 [[Pick this flaw|Accept Hyperactive metabolism]]
 
@@ -438,12 +438,6 @@ What special abilities do you have?
 
   <span class="yellow">This ability will increase your speed by one level</span>
   
-  <label><input type="checkbox">Eagle Eye</label>
-
-  Your eyes are as sharp as an eagle's! But not as sharp as Hawkeye's.
-
-  <span class="yellow">With this ability, you will never miss</span>
-  
   <label><input type="checkbox">Puma Pounce</label>
 
   You can pounce like a puma! But not quite as well as Black Panther.
@@ -456,6 +450,41 @@ What special abilities do you have?
 
   <span class="yellow">Your attacks will deal additional damage</span>
 <<elseif player.class == bird.class>>
+  <label><input type="checkbox">Peak Beak</label>
+
+  You are a master at destroying your enemies with verbal abuse. And the sharp beak on your face.
+
+  <span class="yellow">This ability will increase your strength by one level</span>
+
+  <label><input type="checkbox">Carbon Fiber Feathers</label>
+
+  Feathers are light, but strong. They may or may not be stronger than carbon fiber.
+  
+  If you were actually a scientist, you'd probably know this. Maybe.
+
+  Plausible deniability and all that.
+
+  <span class="yellow">This ability will increase your defense by one level</span>
+
+  <label><input type="checkbox">Jet-Black Wings</label>
+
+  To defeat the <s>Dark Reunion</s> Illuminati, you have grown wings to increase your mobility.
+
+  <span class="yellow">This ability will increase your speed by one level</span>
+
+  <label><input type="checkbox">Eagle Eye</label>
+
+  Your eyes are as sharp as an eagle's! But not as sharp as Hawkeye's.
+
+  <span class="yellow">With this ability, you will never miss</span>
+
+  <label><input type="checkbox">Eleven Lungs</label>
+
+  You don't run out of breath. Ever.
+
+  Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
+
+  <span class="yellow">You will have better stamina and recovery</span>
 <<else>>
   [[todo]]
 <<endif>>
