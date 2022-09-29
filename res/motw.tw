@@ -454,7 +454,7 @@ What special abilities do you have?
 
   You are a master at destroying your enemies with verbal abuse. And the sharp beak on your face.
 
-  <span class="yellow">This ability will increase your strength by one level</span>
+  <span class="yellow">This ability will increase your attack by one level</span>
 
   <label><input type="checkbox">Carbon Fiber Feathers</label>
 
@@ -485,6 +485,46 @@ What special abilities do you have?
   Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
 
   <span class="yellow">You will have better stamina and recovery</span>
+<<elseif player.class == reptile.class>>
+  <label><input type="checkbox">Snake Fangs</label>
+
+  Fangs, also known as "long pointy teeth".
+
+  <span class="yellow">This ability will increase your attack by one level</span>
+  
+  <label><input type="checkbox">King Cobra Cape</label>
+
+  Technically, it's a hood, but cape sounds cooler.
+
+  <span class="yellow">This ability will increase your defense by one level</span>
+
+  <label><input type="checkbox">Slithering Snake</label>
+
+  Because Slytherin snake was a bit too easy.
+
+  <span class="yellow">This ability will increase your speed by one level</span>
+
+  <label><input type="checkbox">Pit Organs</label>
+
+  Pit organs allow snakes to essentially "see" radiant heat.
+  
+  No, they're not located near your armpits.
+
+  Think <s>Mark</s> <span class="textshadow">Harlowe</span>, think! Snakes don't have armpits!
+  
+  <span class="yellow">With this ability, you will never miss</span>
+
+  <label><input type="checkbox">Viper Venom</label>
+
+  Venom is a toxic substance, but it's technically not poison.
+
+  What's the difference?
+
+  If you bite it to deliver the toxin, then it's venom.
+
+  If you bite it and you receive the toxin, then it's poise, son!
+
+  <span class="yellow">Your attacks will deal additional damage</span>
 <<else>>
   [[todo]]
 <<endif>>
