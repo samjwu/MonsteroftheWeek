@@ -525,6 +525,38 @@ What special abilities do you have?
   If you bite it and you receive the toxin, then it's poise, son!
 
   <span class="yellow">Your attacks will deal additional damage</span>
+<<elseif player.class == amphibian.class>>
+  <label><input type="checkbox">Swole Sacs</label>
+
+  Some frogs inflate their throats to intimidate their enemies.
+
+  In your case, your muscles swell up. You're swole, bro.
+
+  <span class="yellow">This ability will increase your attack by one level</span>
+  
+  <label><input type="checkbox">Slimy Skin</label>
+
+  You think you're pretty slick, don't you? You think nobody can touch you, don't you?
+
+  Well, you're right, you slimy amphibian.
+
+  <span class="yellow">This ability will increase your defense by one level</span>
+
+  <label><input type="checkbox">Frog Legs</label>
+
+  You got mad hops. Even His Airness himself couldn't reach your toes, literally. 
+
+  It's said that frog legs taste like chicken. Wonder what yours would taste like...
+
+  <span class="yellow">This ability will increase your speed by one level</span>
+
+  <label><input type="checkbox">Poison Skin</label>
+
+  Everyone knows not to touch poison dart frogs. And if you didn't, you do now!
+
+  You got poise, son!
+
+  <span class="yellow">Your attacks will deal additional damage</span>
 <<else>>
   [[todo]]
 <<endif>>
