@@ -550,6 +550,12 @@ What special abilities do you have?
 
   <span class="yellow">This ability will increase your speed by one level</span>
 
+  <label><input type="checkbox">Cutaneous Respiration</label>
+
+  Many amphibians can breathe through their skin. And now, so can you!
+
+  <span class="yellow">You will have better stamina and recovery</span>
+
   <label><input type="checkbox">Poison Skin</label>
 
   Everyone knows not to touch poison dart frogs. And if you didn't, you do now!
@@ -557,8 +563,49 @@ What special abilities do you have?
   You got poise, son!
 
   <span class="yellow">Your attacks will deal additional damage</span>
+
+<<elseif player.class == fish.class>>
+  <label><input type="checkbox">Jaws</label>
+
+  Sharks have scary-looking teeth, but some fish do too.
+
+  Piranhas, angler fish, even salmon and tuna!
+
+  <span class="yellow">This ability will increase your attack by one level</span>
+  
+  <label><input type="checkbox">Scale Mail</label>
+
+  Alive without breath,
+
+  As cold as death;
+
+  Never thirsty, ever drinking,
+
+  All in mail, never clinking.
+
+  <span class="yellow">This ability will increase your defense by one level</span>
+
+  <label><input type="checkbox">Fish Fins</label>
+
+  You're really fast... in the water.
+
+  <span class="yellow">This ability will increase your speed by one level</span>
+
+  <label><input type="checkbox">Cold Blooded</label>
+
+  This ability will allow you to murder without remorse.
+
+  Just kidding. Your cold blood reduces the amount of food you need.
+
+  <span class="yellow">You use less stamina than normal</span>
+
+  <label><input type="checkbox">No Eyelids</label>
+
+  Not being able to blink sounds like a disadvantage, but at least you'll always be able to see your enemies.
+
+  <span class="yellow">With this ability, you will never miss</span>
 <<else>>
-  [[todo]]
+  [[Pick Race]]
 <<endif>>
 
 <<script>> setup.restrictAbilities(); <</script>>
