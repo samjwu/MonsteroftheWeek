@@ -171,8 +171,8 @@ setup.changePlayerCoreStats = function(atk, def, spd) {
     player.spd += spd;
 }
 
-setup.changePlayerStaminaStats = function(max, drain) {
-    player.maxStamina += max;
+setup.changePlayerStaminaStats = function(maxStaminaChange, drain) {
+    player.maxStamina += maxStaminaChange;
     player.staminaDrain += drain;
 }
 /* twine-user-script #2: "1races.js" */
@@ -226,13 +226,13 @@ window.mollusk = {
 };
 /* twine-user-script #3: "2abilities.js" */
 window.abilityMap = new Map([
-    ["muscles", "Gorilla grip"],
-    ["blubber", "Hippo hide"],
-    ["running", "Cheetah speed"],
-    ["jumping", "Puma pounce"],
+    ["gorilla", "Gorilla grip"],
+    ["hippo", "Hippo hide"],
+    ["cheetah", "Cheetah speed"],
+    ["puma", "Puma pounce"],
     ["rabies", "Mammal rabies"],
+
     
-    ["eyesight", "Eagle eye"],
 ]);
 
 window.maxAbilities = 2;
@@ -252,6 +252,10 @@ setup.restrictAbilities = function () {
             checks[i].onclick = isValidSelection;
         }
     });
+}
+
+setup.addPlayerAbilities = function(abilityName) {
+    player.abilities.add(abilityName);
 }
 /* twine-user-script #4: "modernizr-custom.js" */
 /*! modernizr 3.6.0 (Custom Build) | MIT *
@@ -550,35 +554,55 @@ Good luck. You&#39;ll be needing it.
 What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt;.
 
 &lt;&lt;if player.class == mammal.class&gt;&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Gorilla Grip&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability1&quot;&gt;Gorilla Grip&lt;/label&gt;
   
   You&#39;re as strong as a gorilla! And not just figuratively.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your attack by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Hippo Hide&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability2&quot;&gt;Hippo Hide&lt;/label&gt;
 
   You&#39;re as heavy as a hippo! And your skin is tough too.
   
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Cheetah Speed&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability3&quot;&gt;Cheetah Speed&lt;/label&gt;
 
   You&#39;re as fast as a cheetah! No animal on Earth can run faster! You still only get one level faster though.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Puma Pounce&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability4&quot;&gt;Puma Pounce&lt;/label&gt;
 
   You can pounce like a puma! But not quite as well as Black Panther.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability allows you to hit harder&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Mammal Rabies&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Mammal Rabies&lt;/label&gt;
 
   You have rabies! Fortunately, you are immune to its negative effects, but you can still infect and harm others.
 
   &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
+
+  &lt;&lt;link &quot;Continue&quot; &quot;Accept Abilities&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;gorilla&quot;);
+      }
+      if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;hippo&quot;);
+      }
+      if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;cheetah&quot;);
+      }
+      if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;puma&quot;);
+      }
+      if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;rabies&quot;);
+      }
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif player.class == bird.class&gt;&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Peak Beak&lt;/label&gt;
 

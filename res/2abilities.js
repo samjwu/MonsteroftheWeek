@@ -1,11 +1,11 @@
 window.abilityMap = new Map([
-    ["muscles", "Gorilla grip"],
-    ["blubber", "Hippo hide"],
-    ["running", "Cheetah speed"],
-    ["jumping", "Puma pounce"],
+    ["gorilla", "Gorilla grip"],
+    ["hippo", "Hippo hide"],
+    ["cheetah", "Cheetah speed"],
+    ["puma", "Puma pounce"],
     ["rabies", "Mammal rabies"],
+
     
-    ["eyesight", "Eagle eye"],
 ]);
 
 window.maxAbilities = 2;
@@ -25,4 +25,8 @@ setup.restrictAbilities = function () {
             checks[i].onclick = isValidSelection;
         }
     });
+}
+
+setup.addPlayerAbilities = function(abilityName) {
+    player.abilities.add(abilityName);
 }

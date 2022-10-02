@@ -421,35 +421,55 @@ Ok, time for the fun part. It's time to pick your special abilities!
 What special abilities do you have? Pick up to <<print maxAbilities>>.
 
 <<if player.class == mammal.class>>
-  <label><input type="checkbox">Gorilla Grip</label>
+  <label><input type="checkbox" id="ability1">Gorilla Grip</label>
   
   You're as strong as a gorilla! And not just figuratively.
 
   <span class="yellow">This ability will increase your attack by one level</span>
   
-  <label><input type="checkbox">Hippo Hide</label>
+  <label><input type="checkbox" id="ability2">Hippo Hide</label>
 
   You're as heavy as a hippo! And your skin is tough too.
   
   <span class="yellow">This ability will increase your defense by one level</span>
   
-  <label><input type="checkbox">Cheetah Speed</label>
+  <label><input type="checkbox" id="ability3">Cheetah Speed</label>
 
   You're as fast as a cheetah! No animal on Earth can run faster! You still only get one level faster though.
 
   <span class="yellow">This ability will increase your speed by one level</span>
   
-  <label><input type="checkbox">Puma Pounce</label>
+  <label><input type="checkbox" id="ability4">Puma Pounce</label>
 
   You can pounce like a puma! But not quite as well as Black Panther.
 
   <span class="yellow">This ability allows you to hit harder</span>
   
-  <label><input type="checkbox">Mammal Rabies</label>
+  <label><input type="checkbox" id="ability5">Mammal Rabies</label>
 
   You have rabies! Fortunately, you are immune to its negative effects, but you can still infect and harm others.
 
   <span class="yellow">Your attacks will deal additional damage</span>
+
+  <<link "Continue" "Accept Abilities">>
+    <<script>>
+      if ($("#ability1").prop("checked")) {
+        setup.addPlayerAbilities("gorilla");
+      }
+      if ($("#ability2").prop("checked")) {
+        setup.addPlayerAbilities("hippo");
+      }
+      if ($("#ability3").prop("checked")) {
+        setup.addPlayerAbilities("cheetah");
+      }
+      if ($("#ability4").prop("checked")) {
+        setup.addPlayerAbilities("puma");
+      }
+      if ($("#ability5").prop("checked")) {
+        setup.addPlayerAbilities("rabies");
+      }
+    <</script>>
+  <</link>>
 <<elseif player.class == bird.class>>
   <label><input type="checkbox">Peak Beak</label>
 

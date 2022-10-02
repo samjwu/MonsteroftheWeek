@@ -42,7 +42,7 @@ setup.changePlayerCoreStats = function(atk, def, spd) {
     player.spd += spd;
 }
 
-setup.changePlayerStaminaStats = function(max, drain) {
-    player.maxStamina += max;
+setup.changePlayerStaminaStats = function(maxStaminaChange, drain) {
+    player.maxStamina += maxStaminaChange;
     player.staminaDrain += drain;
 }
