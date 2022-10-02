@@ -472,11 +472,11 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("puma");
-        setup.changePlayerDamage(0.1);
+        setup.changePlayerDamage(10);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("rabies");
-        setup.changePlayerDamage(0.1);
+        setup.changePlayerDamage(10);
       }
     <</script>>
   <</link>>
@@ -585,18 +585,23 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <<script>>
       if ($("#ability1").prop("checked")) {
         setup.addPlayerAbilities("fangs");
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($("#ability2").prop("checked")) {
         setup.addPlayerAbilities("cape");
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($("#ability3").prop("checked")) {
         setup.addPlayerAbilities("snake");
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("pit");
+        setup.changePlayerAccuracy(100);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("venom");
+        setup.changePlayerDamage(10);
       }
     <</script>>
   <</link>>

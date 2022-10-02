@@ -159,11 +159,11 @@ setup.initializeStats = function() {
     player.def = 0;
     player.spd = 0;
 
-    player.maxStamina = 100;
-    player.staminaDrain = 100;
+    player.maxStamina = 100; 
+    player.staminaDrainPercent = 100;
 
-    player.accuracy = 100;
-    player.damageMultiplier = 1;
+    player.accuracyPercent = 100;
+    player.damageMultiplierPercent = 100;
 
     player.abilities = new Array();
 }
@@ -176,15 +176,15 @@ setup.changePlayerCoreStats = function(atk, def, spd) {
 
 setup.changePlayerStaminaStats = function(maxStaminaChange, drain) {
     player.maxStamina += maxStaminaChange;
-    player.staminaDrain += drain;
+    player.staminaDrainPercent += drain;
 }
 
 setup.changePlayerAccuracy = function(change) {
-    player.accuracy += change;
+    player.accuracyPercent += change;
 }
 
 setup.changePlayerDamage = function(change) {
-    player.damageMultiplier += change;
+    player.damageMultiplierPercent += change;
 }
 /* twine-user-script #2: "1races.js" */
 window.mammal = {
@@ -638,11 +638,11 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;puma&quot;);
-        setup.changePlayerDamage(0.1);
+        setup.changePlayerDamage(10);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;rabies&quot;);
-        setup.changePlayerDamage(0.1);
+        setup.changePlayerDamage(10);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
@@ -751,18 +751,23 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
     &lt;&lt;script&gt;&gt;
       if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;fangs&quot;);
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;cape&quot;);
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;snake&quot;);
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;pit&quot;);
+        setup.changePlayerAccuracy(100);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;venom&quot;);
+        setup.changePlayerDamage(10);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;

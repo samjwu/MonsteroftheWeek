@@ -30,11 +30,11 @@ setup.initializeStats = function() {
     player.def = 0;
     player.spd = 0;
 
-    player.maxStamina = 100;
-    player.staminaDrain = 100;
+    player.maxStamina = 100; 
+    player.staminaDrainPercent = 100;
 
-    player.accuracy = 100;
-    player.damageMultiplier = 1;
+    player.accuracyPercent = 100;
+    player.damageMultiplierPercent = 100;
 
     player.abilities = new Array();
 }
@@ -47,13 +47,13 @@ setup.changePlayerCoreStats = function(atk, def, spd) {
 
 setup.changePlayerStaminaStats = function(maxStaminaChange, drain) {
     player.maxStamina += maxStaminaChange;
-    player.staminaDrain += drain;
+    player.staminaDrainPercent += drain;
 }
 
 setup.changePlayerAccuracy = function(change) {
-    player.accuracy += change;
+    player.accuracyPercent += change;
 }
 
 setup.changePlayerDamage = function(change) {
-    player.damageMultiplier += change;
+    player.damageMultiplierPercent += change;
 }
