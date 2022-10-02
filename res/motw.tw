@@ -476,6 +476,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("rabies");
+        setup.changePlayerDamage(0.1);
       }
     <</script>>
   <</link>>
@@ -520,18 +521,23 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <<script>>
       if ($("#ability1").prop("checked")) {
         setup.addPlayerAbilities("beak");
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($("#ability2").prop("checked")) {
         setup.addPlayerAbilities("feathers");
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($("#ability3").prop("checked")) {
         setup.addPlayerAbilities("wings");
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("eagle");
+        setup.changePlayerAccuracy(100);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("eleven");
+        setup.changePlayerStaminaStats(50, -25);
       }
     <</script>>
   <</link>>

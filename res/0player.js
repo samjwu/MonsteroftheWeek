@@ -31,9 +31,9 @@ setup.initializeStats = function() {
     player.spd = 0;
 
     player.maxStamina = 100;
-    player.staminaDrain = 1;
+    player.staminaDrain = 100;
 
-    player.accuracy = 1;
+    player.accuracy = 100;
     player.damageMultiplier = 1;
 
     player.abilities = new Array();
