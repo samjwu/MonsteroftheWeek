@@ -714,3 +714,9 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
 :: Accept Abilities {"position":"100,2200"}
 
+Congratulations! You now have the following abilities:
+<span class="yellow">
+  <<for _i to 0; _i lt player.abilities.length; _i++>>
+    <<print abilityMap.get(player.abilities[_i])>>
+  <</for>>
+</span>
