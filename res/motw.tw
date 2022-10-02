@@ -460,15 +460,19 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <<script>>
       if ($("#ability1").prop("checked")) {
         setup.addPlayerAbilities("gorilla");
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($("#ability2").prop("checked")) {
         setup.addPlayerAbilities("hippo");
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($("#ability3").prop("checked")) {
         setup.addPlayerAbilities("cheetah");
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("puma");
+        setup.changePlayerDamage(0.1);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("rabies");

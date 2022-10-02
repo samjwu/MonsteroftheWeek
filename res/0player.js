@@ -33,6 +33,9 @@ setup.initializeStats = function() {
     player.maxStamina = 100;
     player.staminaDrain = 1;
 
+    player.accuracy = 1;
+    player.damageMultiplier = 1;
+
     player.abilities = new Array();
 }
 
@@ -45,4 +48,12 @@ setup.changePlayerCoreStats = function(atk, def, spd) {
 setup.changePlayerStaminaStats = function(maxStaminaChange, drain) {
     player.maxStamina += maxStaminaChange;
     player.staminaDrain += drain;
+}
+
+setup.changePlayerAccuracy = function(change) {
+    player.accuracy += change;
+}
+
+setup.changePlayerDamage = function(change) {
+    player.damageMultiplier += change;
 }

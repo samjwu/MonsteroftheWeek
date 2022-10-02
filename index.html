@@ -162,6 +162,9 @@ setup.initializeStats = function() {
     player.maxStamina = 100;
     player.staminaDrain = 1;
 
+    player.accuracy = 1;
+    player.damageMultiplier = 1;
+
     player.abilities = new Array();
 }
 
@@ -174,6 +177,14 @@ setup.changePlayerCoreStats = function(atk, def, spd) {
 setup.changePlayerStaminaStats = function(maxStaminaChange, drain) {
     player.maxStamina += maxStaminaChange;
     player.staminaDrain += drain;
+}
+
+setup.changePlayerAccuracy = function(change) {
+    player.accuracy += change;
+}
+
+setup.changePlayerDamage = function(change) {
+    player.damageMultiplier += change;
 }
 /* twine-user-script #2: "1races.js" */
 window.mammal = {
@@ -615,15 +626,19 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
     &lt;&lt;script&gt;&gt;
       if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;gorilla&quot;);
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;hippo&quot;);
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;cheetah&quot;);
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;puma&quot;);
+        setup.changePlayerDamage(0.1);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;rabies&quot;);
