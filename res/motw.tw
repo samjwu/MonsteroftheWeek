@@ -711,18 +711,23 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <<script>>
       if ($("#ability1").prop("checked")) {
         setup.addPlayerAbilities("jaws");
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($("#ability2").prop("checked")) {
         setup.addPlayerAbilities("scales");
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($("#ability3").prop("checked")) {
         setup.addPlayerAbilities("fins");
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("cold");
+        setup.changePlayerStaminaStats(0, 100);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("eyelids");
+        setup.changePlayerAccuracy(100);
       }
     <</script>>
   <</link>>

@@ -877,18 +877,23 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
     &lt;&lt;script&gt;&gt;
       if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;jaws&quot;);
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;scales&quot;);
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;fins&quot;);
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;cold&quot;);
+        setup.changePlayerStaminaStats(0, 100);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;eyelids&quot;);
+        setup.changePlayerAccuracy(100);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
