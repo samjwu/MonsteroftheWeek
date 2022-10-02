@@ -10,6 +10,12 @@ window.abilityMap = new Map([
     ["wings", "Jet-Black Wings"],
     ["eagle", "Eagle Eye"],
     ["eleven", "Eleven Lungs"],
+
+    ["fangs", "Snake Fangs"],
+    ["cape", "King Cobra Cape"],
+    ["snake", "Slithering Snake"],
+    ["pit", "Pit Organs"],
+    ["venom", "Viper Venom"],
 ]);
 
 window.maxAbilities = 2;
