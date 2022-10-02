@@ -21,7 +21,7 @@ A CYOA Game
 
 <span class="yellow">Abilities</span>:
 <<for _i to 0; _i lt player.abilities.length; _i++>>
-  <<print player.abilities[_i]>>
+  <<print abilityMap.get(player.abilities[_i])>>
 <</for>>
 
 :: Start {"position":"100,200"}
@@ -711,3 +711,6 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 <<endif>>
 
 <<script>> setup.restrictAbilities(); <</script>>
+
+:: Accept Abilities {"position":"100,2200"}
+

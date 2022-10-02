@@ -1,9 +1,9 @@
 window.abilityMap = new Map([
-    ["gorilla", "Gorilla grip"],
-    ["hippo", "Hippo hide"],
-    ["cheetah", "Cheetah speed"],
-    ["puma", "Puma pounce"],
-    ["rabies", "Mammal rabies"],
+    ["gorilla", "Gorilla Grip"],
+    ["hippo", "Hippo Hide"],
+    ["cheetah", "Cheetah Speed"],
+    ["puma", "Puma Pounce"],
+    ["rabies", "Mammal Rabies"],
 
     ["beak", "Peak Beak"],
     ["feathers", "Carbon Fiber Feathers"],
