@@ -243,6 +243,12 @@ window.abilityMap = new Map([
     ["snake", "Slithering Snake"],
     ["pit", "Pit Organs"],
     ["venom", "Viper Venom"],
+
+    ["swole", "Swole Sacs"],
+    ["slimy", "Slimy Skin"],
+    ["frog", "Frog Legs"],
+    ["respiration", "Cutaneous Respiration"],
+    ["poison", "Poison Skin"],
 ]);
 
 window.maxAbilities = 2;
@@ -734,7 +740,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif player.class == amphibian.class&gt;&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Swole Sacs&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability1&quot;&gt;Swole Sacs&lt;/label&gt;
 
   Some frogs inflate their throats to intimidate their enemies.
 
@@ -742,7 +748,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your attack by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Slimy Skin&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability2&quot;&gt;Slimy Skin&lt;/label&gt;
 
   You think you&#39;re pretty slick, don&#39;t you? You think nobody can touch you, don&#39;t you?
 
@@ -750,7 +756,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Frog Legs&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability3&quot;&gt;Frog Legs&lt;/label&gt;
 
   You got mad hops. Even His Airness himself couldn&#39;t reach your toes, literally. 
 
@@ -758,19 +764,38 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Cutaneous Respiration&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability4&quot;&gt;Cutaneous Respiration&lt;/label&gt;
 
   Many amphibians can breathe through their skin. And now, so can you!
 
   &lt;span class=&quot;yellow&quot;&gt;You will have better stamina and recovery&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Poison Skin&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Poison Skin&lt;/label&gt;
 
   Everyone knows not to touch poison dart frogs. And if you didn&#39;t, you do now!
 
   You got poise, son!
 
   &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
+  &lt;&lt;link &quot;Continue&quot; &quot;Accept Abilities&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;swole&quot;);
+      }
+      if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;slimy&quot;);
+      }
+      if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;frog&quot;);
+      }
+      if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;respiration&quot;);
+      }
+      if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;poison&quot;);
+      }
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif player.class == fish.class&gt;&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Jaws&lt;/label&gt;
 

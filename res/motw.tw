@@ -591,7 +591,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <</script>>
   <</link>>
 <<elseif player.class == amphibian.class>>
-  <label><input type="checkbox" id="ability">Swole Sacs</label>
+  <label><input type="checkbox" id="ability1">Swole Sacs</label>
 
   Some frogs inflate their throats to intimidate their enemies.
 
@@ -599,7 +599,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">This ability will increase your attack by one level</span>
   
-  <label><input type="checkbox" id="ability">Slimy Skin</label>
+  <label><input type="checkbox" id="ability2">Slimy Skin</label>
 
   You think you're pretty slick, don't you? You think nobody can touch you, don't you?
 
@@ -607,7 +607,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">This ability will increase your defense by one level</span>
 
-  <label><input type="checkbox" id="ability">Frog Legs</label>
+  <label><input type="checkbox" id="ability3">Frog Legs</label>
 
   You got mad hops. Even His Airness himself couldn't reach your toes, literally. 
 
@@ -615,19 +615,38 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">This ability will increase your speed by one level</span>
 
-  <label><input type="checkbox" id="ability">Cutaneous Respiration</label>
+  <label><input type="checkbox" id="ability4">Cutaneous Respiration</label>
 
   Many amphibians can breathe through their skin. And now, so can you!
 
   <span class="yellow">You will have better stamina and recovery</span>
 
-  <label><input type="checkbox" id="ability">Poison Skin</label>
+  <label><input type="checkbox" id="ability5">Poison Skin</label>
 
   Everyone knows not to touch poison dart frogs. And if you didn't, you do now!
 
   You got poise, son!
 
   <span class="yellow">Your attacks will deal additional damage</span>
+  <<link "Continue" "Accept Abilities">>
+    <<script>>
+      if ($("#ability1").prop("checked")) {
+        setup.addPlayerAbilities("swole");
+      }
+      if ($("#ability2").prop("checked")) {
+        setup.addPlayerAbilities("slimy");
+      }
+      if ($("#ability3").prop("checked")) {
+        setup.addPlayerAbilities("frog");
+      }
+      if ($("#ability4").prop("checked")) {
+        setup.addPlayerAbilities("respiration");
+      }
+      if ($("#ability5").prop("checked")) {
+        setup.addPlayerAbilities("poison");
+      }
+    <</script>>
+  <</link>>
 <<elseif player.class == fish.class>>
   <label><input type="checkbox" id="ability">Jaws</label>
 

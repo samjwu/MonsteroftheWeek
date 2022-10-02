@@ -16,6 +16,12 @@ window.abilityMap = new Map([
     ["snake", "Slithering Snake"],
     ["pit", "Pit Organs"],
     ["venom", "Viper Venom"],
+
+    ["swole", "Swole Sacs"],
+    ["slimy", "Slimy Skin"],
+    ["frog", "Frog Legs"],
+    ["respiration", "Cutaneous Respiration"],
+    ["poison", "Poison Skin"],
 ]);
 
 window.maxAbilities = 2;
