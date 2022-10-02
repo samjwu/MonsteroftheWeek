@@ -30,11 +30,19 @@ setup.initializeStats = function() {
     player.def = 0;
     player.spd = 0;
 
+    player.maxStamina = 100;
+    player.staminaDrain = 1;
+
     player.abilities = new Set();
 }
 
-setup.changePlayerStats = function(atk, def, spd) {
+setup.changePlayerCoreStats = function(atk, def, spd) {
     player.atk += atk;
     player.def += def;
     player.spd += spd;
+}
+
+setup.changePlayerStaminaStats = function(max, drain) {
+    player.maxStamina += max;
+    player.staminaDrain += drain;
 }

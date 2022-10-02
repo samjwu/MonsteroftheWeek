@@ -73,7 +73,7 @@ You become a mammal-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>> 
-  setup.changePlayerStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
+  setup.changePlayerCoreStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
   player.class = window.mammal.class;
 <</script>>
 
@@ -91,7 +91,7 @@ You become a bird-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>>
-  setup.changePlayerStats(window.bird.atk, window.bird.def, window.bird.spd);
+  setup.changePlayerCoreStats(window.bird.atk, window.bird.def, window.bird.spd);
   player.class = window.bird.class;
 <</script>>
 
@@ -109,7 +109,7 @@ You become a reptile-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>>
-  setup.changePlayerStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
+  setup.changePlayerCoreStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
   player.class = window.reptile.class;
 <</script>>
 
@@ -127,7 +127,7 @@ You become an amphibian-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>> 
-  setup.changePlayerStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
+  setup.changePlayerCoreStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
   player.class = window.amphibian.class;
 <</script>>
 
@@ -145,7 +145,7 @@ You become a fish-based monster.
 
 [[Continue|Pick Flaw]]
 <<script>>
-  setup.changePlayerStats(window.fish.atk, window.fish.def, window.fish.spd);
+  setup.changePlayerCoreStats(window.fish.atk, window.fish.def, window.fish.spd);
   player.class = window.fish.class;
 <</script>>
 
@@ -181,7 +181,7 @@ The energy available to your body is lower than normal.
 Your speed goes down by one level.
 
 [[Continue|Pick Fame]]
-<<script>> setup.changePlayerStats(0, 0, -1); <</script>>
+<<script>> setup.changePlayerCoreStats(0, 0, -1); <</script>>
 
 :: Inefficient protease production {"position":"300,1000"}
 Your new body is unable to produce enough protease needed to properly digest proteins.
@@ -198,7 +198,7 @@ The amino acids levels your body needs to build muscle are lower than normal.
 Your attack goes down by one level.
 
 [[Continue|Pick Fame]]
-<<script>> setup.changePlayerStats(-1, 0, 0); <</script>>
+<<script>> setup.changePlayerCoreStats(-1, 0, 0); <</script>>
 
 :: Inefficient lipase production {"position":"500,1000"}
 Your new body is unable to produce enough lipase needed to properly digest fats.
@@ -215,7 +215,7 @@ Your body's fat stores are lower than normal.
 Your defense goes down by one level.
 
 [[Continue|Pick Fame]]
-<<script>> setup.changePlayerStats(0, -1, 0); <</script>>
+<<script>> setup.changePlayerCoreStats(0, -1, 0); <</script>>
 
 :: Blinding rage {"position":"700,1000"}
 Your brain chemistry was altered during the monsterization.
@@ -244,6 +244,7 @@ Your new body burns through your energy stores faster than normal.
 Your metabolism requires you to consume more food to survive.
 
 [[Continue|Pick Fame]]
+<<script>> setup.changePlayerStaminaStats(0, 1); <</script>>
 
 :: Pick Fame {"position":"100,1400"}
 Before you were cast away by the Illuminati, you were a fairly well-known scientist.
@@ -417,7 +418,7 @@ Ok, time for the fun part. It's time to pick your special abilities!
 
 <span class="yellow">Your abilities will give you special advantages in battle.</span>
 
-What special abilities do you have?
+What special abilities do you have? Pick up to <<print maxAbilities>>.
 
 <<if player.class == mammal.class>>
   <label><input type="checkbox">Gorilla Grip</label>
@@ -563,7 +564,6 @@ What special abilities do you have?
   You got poise, son!
 
   <span class="yellow">Your attacks will deal additional damage</span>
-
 <<elseif player.class == fish.class>>
   <label><input type="checkbox">Jaws</label>
 

@@ -126,7 +126,7 @@ span {
 .textshadow { 
     color: transparent;
     text-shadow: 0 0 1em white;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "0stats.js" */
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "0player.js" */
 window.fameMap = new Map([
     [0, "nobody"],
     [1, "rando"],
@@ -159,13 +159,21 @@ setup.initializeStats = function() {
     player.def = 0;
     player.spd = 0;
 
+    player.maxStamina = 100;
+    player.staminaDrain = 1;
+
     player.abilities = new Set();
 }
 
-setup.changePlayerStats = function(atk, def, spd) {
+setup.changePlayerCoreStats = function(atk, def, spd) {
     player.atk += atk;
     player.def += def;
     player.spd += spd;
+}
+
+setup.changePlayerStaminaStats = function(max, drain) {
+    player.maxStamina += max;
+    player.staminaDrain += drain;
 }
 /* twine-user-script #2: "1races.js" */
 window.mammal = {
@@ -227,9 +235,10 @@ window.abilityMap = new Map([
     ["eyesight", "Eagle eye"],
 ]);
 
+window.maxAbilities = 2;
+
 setup.restrictAbilities = function () {
     $(document).on(':passagedisplay', function () {
-        var maxAbilities = 2;
         function isValidSelection () {
             var checkedChecks = document.querySelectorAll("input:checked");
             if (checkedChecks.length >= maxAbilities + 1) {
@@ -292,7 +301,7 @@ What is your specialty?
 
 [[Continue|Pick Flaw]]
 &lt;&lt;script&gt;&gt; 
-  setup.changePlayerStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
+  setup.changePlayerCoreStats(window.mammal.atk, window.mammal.def, window.mammal.spd); 
   player.class = window.mammal.class;
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Birds" tags="" position="300,400" size="100,100">As a bird-based monster, you would become a speedster, with good mobility and the ability to fly, but be fragile and have a smaller health pool.
 
@@ -304,7 +313,7 @@ What is your specialty?
 
 [[Continue|Pick Flaw]]
 &lt;&lt;script&gt;&gt;
-  setup.changePlayerStats(window.bird.atk, window.bird.def, window.bird.spd);
+  setup.changePlayerCoreStats(window.bird.atk, window.bird.def, window.bird.spd);
   player.class = window.bird.class;
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Reptiles" tags="" position="500,400" size="100,100">As a reptile-based monster, you would become a burst damage-dealer, with good offensive capabilities but slower movement.
 
@@ -316,7 +325,7 @@ What is your specialty?
 
 [[Continue|Pick Flaw]]
 &lt;&lt;script&gt;&gt;
-  setup.changePlayerStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
+  setup.changePlayerCoreStats(window.reptile.atk, window.reptile.def, window.reptile.spd);
   player.class = window.reptile.class;
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Amphibians" tags="" position="700,400" size="100,100">As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
 
@@ -328,7 +337,7 @@ What is your specialty?
 
 [[Continue|Pick Flaw]]
 &lt;&lt;script&gt;&gt; 
-  setup.changePlayerStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
+  setup.changePlayerCoreStats(window.amphibian.atk, window.amphibian.def, window.amphibian.spd); 
   player.class = window.amphibian.class;
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Fish" tags="" position="900,400" size="100,100">As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
 
@@ -340,7 +349,7 @@ What is your specialty?
 
 [[Continue|Pick Flaw]]
 &lt;&lt;script&gt;&gt;
-  setup.changePlayerStats(window.fish.atk, window.fish.def, window.fish.spd);
+  setup.changePlayerCoreStats(window.fish.atk, window.fish.def, window.fish.spd);
   player.class = window.fish.class;
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Pick Flaw" tags="" position="100,800" size="100,100">Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
 
@@ -367,7 +376,7 @@ The energy available to your body is lower than normal.
 [[Pick another flaw|Pick Flaw]]</tw-passagedata><tw-passagedata pid="18" name="Accept Inefficient amylase production" tags="" position="100,1200" size="100,100">Your speed goes down by one level.
 
 [[Continue|Pick Fame]]
-&lt;&lt;script&gt;&gt; setup.changePlayerStats(0, 0, -1); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Inefficient protease production" tags="" position="300,1000" size="100,100">Your new body is unable to produce enough protease needed to properly digest proteins.
+&lt;&lt;script&gt;&gt; setup.changePlayerCoreStats(0, 0, -1); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Inefficient protease production" tags="" position="300,1000" size="100,100">Your new body is unable to produce enough protease needed to properly digest proteins.
 
 The amino acids levels your body needs to build muscle are lower than normal.
 
@@ -378,7 +387,7 @@ The amino acids levels your body needs to build muscle are lower than normal.
 [[Pick another flaw|Pick Flaw]]</tw-passagedata><tw-passagedata pid="20" name="Accept Inefficient protease production" tags="" position="300,1200" size="100,100">Your attack goes down by one level.
 
 [[Continue|Pick Fame]]
-&lt;&lt;script&gt;&gt; setup.changePlayerStats(-1, 0, 0); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Inefficient lipase production" tags="" position="500,1000" size="100,100">Your new body is unable to produce enough lipase needed to properly digest fats.
+&lt;&lt;script&gt;&gt; setup.changePlayerCoreStats(-1, 0, 0); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Inefficient lipase production" tags="" position="500,1000" size="100,100">Your new body is unable to produce enough lipase needed to properly digest fats.
 
 Your body&#39;s fat stores are lower than normal.
 
@@ -389,7 +398,7 @@ Your body&#39;s fat stores are lower than normal.
 [[Pick another flaw|Pick Flaw]]</tw-passagedata><tw-passagedata pid="22" name="Accept Inefficient lipase production" tags="" position="500,1200" size="100,100">Your defense goes down by one level.
 
 [[Continue|Pick Fame]]
-&lt;&lt;script&gt;&gt; setup.changePlayerStats(0, -1, 0); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Blinding rage" tags="" position="700,1000" size="100,100">Your brain chemistry was altered during the monsterization.
+&lt;&lt;script&gt;&gt; setup.changePlayerCoreStats(0, -1, 0); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Blinding rage" tags="" position="700,1000" size="100,100">Your brain chemistry was altered during the monsterization.
 
 &lt;span class=&quot;yellow&quot;&gt;You will become prone to fits of rage where you cannot control your actions.&lt;/span&gt;
 
@@ -405,7 +414,8 @@ Your body&#39;s fat stores are lower than normal.
 
 [[Pick another flaw|Pick Flaw]]</tw-passagedata><tw-passagedata pid="26" name="Accept Hyperactive metabolism" tags="" position="900,1200" size="100,100">Your metabolism requires you to consume more food to survive.
 
-[[Continue|Pick Fame]]</tw-passagedata><tw-passagedata pid="27" name="Pick Fame" tags="" position="100,1400" size="100,100">Before you were cast away by the Illuminati, you were a fairly well-known scientist.
+[[Continue|Pick Fame]]
+&lt;&lt;script&gt;&gt; setup.changePlayerStaminaStats(0, 1); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Pick Fame" tags="" position="100,1400" size="100,100">Before you were cast away by the Illuminati, you were a fairly well-known scientist.
 
 The CIA, RAW, ISI, MI6, GRU, MSS, ..., etc. have all had their eyes on you since you entered the organization.
 
@@ -537,7 +547,7 @@ Good luck. You&#39;ll be needing it.
 
 &lt;span class=&quot;yellow&quot;&gt;Your abilities will give you special advantages in battle.&lt;/span&gt;
 
-What special abilities do you have?
+What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt;.
 
 &lt;&lt;if player.class == mammal.class&gt;&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Gorilla Grip&lt;/label&gt;
@@ -683,7 +693,6 @@ What special abilities do you have?
   You got poise, son!
 
   &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
-
 &lt;&lt;elseif player.class == fish.class&gt;&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Jaws&lt;/label&gt;
 

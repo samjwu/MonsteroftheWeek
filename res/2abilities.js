@@ -8,9 +8,10 @@ window.abilityMap = new Map([
     ["eyesight", "Eagle eye"],
 ]);
 
+window.maxAbilities = 2;
+
 setup.restrictAbilities = function () {
     $(document).on(':passagedisplay', function () {
-        var maxAbilities = 2;
         function isValidSelection () {
             var checkedChecks = document.querySelectorAll("input:checked");
             if (checkedChecks.length >= maxAbilities + 1) {
