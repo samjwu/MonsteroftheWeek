@@ -669,25 +669,25 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif player.class == reptile.class&gt;&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Snake Fangs&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability1&quot;&gt;Snake Fangs&lt;/label&gt;
 
   Fangs, also known as &quot;long pointy teeth&quot;.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your attack by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;King Cobra Cape&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability2&quot;&gt;King Cobra Cape&lt;/label&gt;
 
   Technically, it&#39;s a hood, but cape sounds cooler.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Slithering Snake&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability3&quot;&gt;Slithering Snake&lt;/label&gt;
 
   Because Slytherin snake was a bit too easy.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Pit Organs&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability4&quot;&gt;Pit Organs&lt;/label&gt;
 
   Pit organs allow snakes to essentially &quot;see&quot; radiant heat.
   
@@ -697,7 +697,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
   
   &lt;span class=&quot;yellow&quot;&gt;With this ability, you will never miss&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Viper Venom&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Viper Venom&lt;/label&gt;
 
   Venom is a toxic substance, but it&#39;s technically not poison.
 
@@ -708,8 +708,27 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
   If you bite it and you receive the toxin, then it&#39;s poise, son!
 
   &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
+  &lt;&lt;link &quot;Continue&quot; &quot;Accept Abilities&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;fangs&quot;);
+      }
+      if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;cape&quot;);
+      }
+      if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;snake&quot;);
+      }
+      if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;pit&quot;);
+      }
+      if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;venom&quot;);
+      }
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif player.class == amphibian.class&gt;&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Swole Sacs&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Swole Sacs&lt;/label&gt;
 
   Some frogs inflate their throats to intimidate their enemies.
 
@@ -717,7 +736,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your attack by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Slimy Skin&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Slimy Skin&lt;/label&gt;
 
   You think you&#39;re pretty slick, don&#39;t you? You think nobody can touch you, don&#39;t you?
 
@@ -725,7 +744,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Frog Legs&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Frog Legs&lt;/label&gt;
 
   You got mad hops. Even His Airness himself couldn&#39;t reach your toes, literally. 
 
@@ -733,13 +752,13 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Cutaneous Respiration&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Cutaneous Respiration&lt;/label&gt;
 
   Many amphibians can breathe through their skin. And now, so can you!
 
   &lt;span class=&quot;yellow&quot;&gt;You will have better stamina and recovery&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Poison Skin&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Poison Skin&lt;/label&gt;
 
   Everyone knows not to touch poison dart frogs. And if you didn&#39;t, you do now!
 
@@ -747,7 +766,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
 &lt;&lt;elseif player.class == fish.class&gt;&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Jaws&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Jaws&lt;/label&gt;
 
   Sharks have scary-looking teeth, but some fish do too.
 
@@ -755,7 +774,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your attack by one level&lt;/span&gt;
   
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Scale Mail&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Scale Mail&lt;/label&gt;
 
   Alive without breath,
 
@@ -767,13 +786,13 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Fish Fins&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Fish Fins&lt;/label&gt;
 
   You&#39;re really fast... in the water.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Cold Blooded&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;Cold Blooded&lt;/label&gt;
 
   This ability will allow you to murder without remorse.
 
@@ -781,7 +800,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;You use less stamina than normal&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;No Eyelids&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability&quot;&gt;No Eyelids&lt;/label&gt;
 
   Not being able to blink sounds like a disadvantage, but at least you&#39;ll always be able to see your enemies.
 
