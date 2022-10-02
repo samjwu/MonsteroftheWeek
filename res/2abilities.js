@@ -22,6 +22,12 @@ window.abilityMap = new Map([
     ["frog", "Frog Legs"],
     ["respiration", "Cutaneous Respiration"],
     ["poison", "Poison Skin"],
+
+    ["jaws", "Jaws"],
+    ["scales", "Scale Mail"],
+    ["fins", "Fish Fins"],
+    ["cold", "Cold Blooded"],
+    ["eyelids", "No Eyelids"]
 ]);
 
 window.maxAbilities = 2;

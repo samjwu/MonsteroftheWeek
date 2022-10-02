@@ -648,7 +648,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <</script>>
   <</link>>
 <<elseif player.class == fish.class>>
-  <label><input type="checkbox" id="ability">Jaws</label>
+  <label><input type="checkbox" id="ability1">Jaws</label>
 
   Sharks have scary-looking teeth, but some fish do too.
 
@@ -656,7 +656,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">This ability will increase your attack by one level</span>
   
-  <label><input type="checkbox" id="ability">Scale Mail</label>
+  <label><input type="checkbox" id="ability2">Scale Mail</label>
 
   Alive without breath,
 
@@ -668,13 +668,13 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">This ability will increase your defense by one level</span>
 
-  <label><input type="checkbox" id="ability">Fish Fins</label>
+  <label><input type="checkbox" id="ability3">Fish Fins</label>
 
   You're really fast... in the water.
 
   <span class="yellow">This ability will increase your speed by one level</span>
 
-  <label><input type="checkbox" id="ability">Cold Blooded</label>
+  <label><input type="checkbox" id="ability4">Cold Blooded</label>
 
   This ability will allow you to murder without remorse.
 
@@ -682,11 +682,30 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">You use less stamina than normal</span>
 
-  <label><input type="checkbox" id="ability">No Eyelids</label>
+  <label><input type="checkbox" id="ability5">No Eyelids</label>
 
   Not being able to blink sounds like a disadvantage, but at least you'll always be able to see your enemies.
 
   <span class="yellow">With this ability, you will never miss</span>
+  <<link "Continue" "Accept Abilities">>
+    <<script>>
+      if ($("#ability1").prop("checked")) {
+        setup.addPlayerAbilities("jaws");
+      }
+      if ($("#ability2").prop("checked")) {
+        setup.addPlayerAbilities("scales");
+      }
+      if ($("#ability3").prop("checked")) {
+        setup.addPlayerAbilities("fins");
+      }
+      if ($("#ability4").prop("checked")) {
+        setup.addPlayerAbilities("cold");
+      }
+      if ($("#ability5").prop("checked")) {
+        setup.addPlayerAbilities("eyelids");
+      }
+    <</script>>
+  <</link>>
 <<else>>
   [[Pick Race]]
 <<endif>>
