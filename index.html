@@ -609,13 +609,13 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif player.class == bird.class&gt;&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Peak Beak&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability1&quot;&gt;Peak Beak&lt;/label&gt;
 
   You are a master at destroying your enemies with verbal abuse. And the sharp beak on your face.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your attack by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Carbon Fiber Feathers&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability2&quot;&gt;Carbon Fiber Feathers&lt;/label&gt;
 
   Feathers are light, but strong. They may or may not be stronger than carbon fiber.
   
@@ -625,25 +625,45 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Jet-Black Wings&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability3&quot;&gt;Jet-Black Wings&lt;/label&gt;
 
   To defeat the &lt;s&gt;Dark Reunion&lt;/s&gt; Illuminati, you have grown wings to increase your mobility.
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Eagle Eye&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability4&quot;&gt;Eagle Eye&lt;/label&gt;
 
   Your eyes are as sharp as an eagle&#39;s! But not as sharp as Hawkeye&#39;s.
 
   &lt;span class=&quot;yellow&quot;&gt;With this ability, you will never miss&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Eleven Lungs&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Eleven Lungs&lt;/label&gt;
 
   You don&#39;t run out of breath. Ever.
 
   Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
 
   &lt;span class=&quot;yellow&quot;&gt;You will have better stamina and recovery&lt;/span&gt;
+
+  &lt;&lt;link &quot;Continue&quot; &quot;Accept Abilities&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;beak&quot;);
+      }
+      if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;feathers&quot;);
+      }
+      if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;wings&quot;);
+      }
+      if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;eagle&quot;);
+      }
+      if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
+        setup.addPlayerAbilities(&quot;eleven&quot;);
+      }
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif player.class == reptile.class&gt;&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Snake Fangs&lt;/label&gt;
 

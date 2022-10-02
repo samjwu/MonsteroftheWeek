@@ -476,13 +476,13 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <</script>>
   <</link>>
 <<elseif player.class == bird.class>>
-  <label><input type="checkbox">Peak Beak</label>
+  <label><input type="checkbox" id="ability1">Peak Beak</label>
 
   You are a master at destroying your enemies with verbal abuse. And the sharp beak on your face.
 
   <span class="yellow">This ability will increase your attack by one level</span>
 
-  <label><input type="checkbox">Carbon Fiber Feathers</label>
+  <label><input type="checkbox" id="ability2">Carbon Fiber Feathers</label>
 
   Feathers are light, but strong. They may or may not be stronger than carbon fiber.
   
@@ -492,25 +492,45 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">This ability will increase your defense by one level</span>
 
-  <label><input type="checkbox">Jet-Black Wings</label>
+  <label><input type="checkbox" id="ability3">Jet-Black Wings</label>
 
   To defeat the <s>Dark Reunion</s> Illuminati, you have grown wings to increase your mobility.
 
   <span class="yellow">This ability will increase your speed by one level</span>
 
-  <label><input type="checkbox">Eagle Eye</label>
+  <label><input type="checkbox" id="ability4">Eagle Eye</label>
 
   Your eyes are as sharp as an eagle's! But not as sharp as Hawkeye's.
 
   <span class="yellow">With this ability, you will never miss</span>
 
-  <label><input type="checkbox">Eleven Lungs</label>
+  <label><input type="checkbox" id="ability5">Eleven Lungs</label>
 
   You don't run out of breath. Ever.
 
   Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
 
   <span class="yellow">You will have better stamina and recovery</span>
+
+  <<link "Continue" "Accept Abilities">>
+    <<script>>
+      if ($("#ability1").prop("checked")) {
+        setup.addPlayerAbilities("beak");
+      }
+      if ($("#ability2").prop("checked")) {
+        setup.addPlayerAbilities("feathers");
+      }
+      if ($("#ability3").prop("checked")) {
+        setup.addPlayerAbilities("wings");
+      }
+      if ($("#ability4").prop("checked")) {
+        setup.addPlayerAbilities("eagle");
+      }
+      if ($("#ability5").prop("checked")) {
+        setup.addPlayerAbilities("eleven");
+      }
+    <</script>>
+  <</link>>
 <<elseif player.class == reptile.class>>
   <label><input type="checkbox">Snake Fangs</label>
 
