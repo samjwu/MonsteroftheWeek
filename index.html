@@ -162,7 +162,7 @@ setup.initializeStats = function() {
     player.maxStamina = 100;
     player.staminaDrain = 1;
 
-    player.abilities = new Set();
+    player.abilities = new Array();
 }
 
 setup.changePlayerCoreStats = function(atk, def, spd) {
@@ -232,7 +232,7 @@ window.abilityMap = new Map([
     ["puma", "Puma pounce"],
     ["rabies", "Mammal rabies"],
 
-    
+
 ]);
 
 window.maxAbilities = 2;
@@ -255,7 +255,7 @@ setup.restrictAbilities = function () {
 }
 
 setup.addPlayerAbilities = function(abilityName) {
-    player.abilities.add(abilityName);
+    player.abilities.push(abilityName);
 }
 /* twine-user-script #4: "modernizr-custom.js" */
 /*! modernizr 3.6.0 (Custom Build) | MIT *
@@ -264,7 +264,12 @@ setup.addPlayerAbilities = function(abilityName) {
 
 &lt;span class=&quot;blue&quot;&gt;Defense&lt;/span&gt;: &lt;&lt;print statMap.get(player.def)&gt;&gt;
 
-&lt;span class=&quot;green&quot;&gt;Speed&lt;/span&gt;: &lt;&lt;print statMap.get(player.spd)&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Start" tags="" position="100,200" size="100,100">[[Start New Game|Intro]]
+&lt;span class=&quot;green&quot;&gt;Speed&lt;/span&gt;: &lt;&lt;print statMap.get(player.spd)&gt;&gt;
+
+&lt;span class=&quot;yellow&quot;&gt;Abilities&lt;/span&gt;:
+&lt;&lt;for _i to 0; _i lt player.abilities.length; _i++&gt;&gt;
+  &lt;&lt;print player.abilities[_i]&gt;&gt;
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Start" tags="" position="100,200" size="100,100">[[Start New Game|Intro]]
 &lt;&lt;script&gt;&gt; setup.initializeStats(); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="story" position="300,200" size="100,100">A group of people wearing black shades and trenchcoats barge into your laboratory. A man steps forward and addresses you.
 
 &lt;span class=&quot;red&quot;&gt;&quot;I&#39;m sorry, &lt;span class=&quot;textshadow&quot;&gt;Harlowe&lt;/span&gt;, but given the high cost and relative lack of success of your research, the Illuminati has decided to stop your funding.&quot;&lt;/span&gt;

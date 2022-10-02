@@ -33,7 +33,7 @@ setup.initializeStats = function() {
     player.maxStamina = 100;
     player.staminaDrain = 1;
 
-    player.abilities = new Set();
+    player.abilities = new Array();
 }
 
 setup.changePlayerCoreStats = function(atk, def, spd) {

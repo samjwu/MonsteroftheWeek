@@ -5,7 +5,7 @@ window.abilityMap = new Map([
     ["puma", "Puma pounce"],
     ["rabies", "Mammal rabies"],
 
-    
+
 ]);
 
 window.maxAbilities = 2;
@@ -28,5 +28,5 @@ setup.restrictAbilities = function () {
 }
 
 setup.addPlayerAbilities = function(abilityName) {
-    player.abilities.add(abilityName);
+    player.abilities.push(abilityName);
 }

@@ -19,6 +19,11 @@ A CYOA Game
 
 <span class="green">Speed</span>: <<print statMap.get(player.spd)>>
 
+<span class="yellow">Abilities</span>:
+<<for _i to 0; _i lt player.abilities.length; _i++>>
+  <<print player.abilities[_i]>>
+<</for>>
+
 :: Start {"position":"100,200"}
 [[Start New Game|Intro]]
 <<script>> setup.initializeStats(); <</script>>
