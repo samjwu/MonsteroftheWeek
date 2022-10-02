@@ -249,7 +249,7 @@ Your new body burns through your energy stores faster than normal.
 Your metabolism requires you to consume more food to survive.
 
 [[Continue|Pick Fame]]
-<<script>> setup.changePlayerStaminaStats(0, 1); <</script>>
+<<script>> setup.changePlayerStaminaStats(0, 50); <</script>>
 
 :: Pick Fame {"position":"100,1400"}
 Before you were cast away by the Illuminati, you were a fairly well-known scientist.
@@ -634,7 +634,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Many amphibians can breathe through their skin. And now, so can you!
 
-  <span class="yellow">You will have better stamina and recovery</span>
+  <span class="yellow">You will have better stamina recovery</span>
 
   <label><input type="checkbox" id="ability5">Poison Skin</label>
 
@@ -647,18 +647,23 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
     <<script>>
       if ($("#ability1").prop("checked")) {
         setup.addPlayerAbilities("swole");
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($("#ability2").prop("checked")) {
         setup.addPlayerAbilities("slimy");
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($("#ability3").prop("checked")) {
         setup.addPlayerAbilities("frog");
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("respiration");
+        setup.changePlayerStaminaStats(0, 100);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("poison");
+        setup.changePlayerDamage(10);
       }
     <</script>>
   <</link>>

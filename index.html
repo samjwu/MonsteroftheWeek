@@ -457,7 +457,7 @@ Your body&#39;s fat stores are lower than normal.
 [[Pick another flaw|Pick Flaw]]</tw-passagedata><tw-passagedata pid="26" name="Accept Hyperactive metabolism" tags="" position="900,1200" size="100,100">Your metabolism requires you to consume more food to survive.
 
 [[Continue|Pick Fame]]
-&lt;&lt;script&gt;&gt; setup.changePlayerStaminaStats(0, 1); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Pick Fame" tags="" position="100,1400" size="100,100">Before you were cast away by the Illuminati, you were a fairly well-known scientist.
+&lt;&lt;script&gt;&gt; setup.changePlayerStaminaStats(0, 50); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Pick Fame" tags="" position="100,1400" size="100,100">Before you were cast away by the Illuminati, you were a fairly well-known scientist.
 
 The CIA, RAW, ISI, MI6, GRU, MSS, ..., etc. have all had their eyes on you since you entered the organization.
 
@@ -800,7 +800,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   Many amphibians can breathe through their skin. And now, so can you!
 
-  &lt;span class=&quot;yellow&quot;&gt;You will have better stamina and recovery&lt;/span&gt;
+  &lt;span class=&quot;yellow&quot;&gt;You will have better stamina recovery&lt;/span&gt;
 
   &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Poison Skin&lt;/label&gt;
 
@@ -813,18 +813,23 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
     &lt;&lt;script&gt;&gt;
       if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;swole&quot;);
+        setup.changePlayerCoreStats(1, 0, 0);
       }
       if ($(&quot;#ability2&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;slimy&quot;);
+        setup.changePlayerCoreStats(0, 1, 0);
       }
       if ($(&quot;#ability3&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;frog&quot;);
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;respiration&quot;);
+        setup.changePlayerStaminaStats(0, 100);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;poison&quot;);
+        setup.changePlayerDamage(10);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
