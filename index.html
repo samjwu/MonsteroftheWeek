@@ -305,11 +305,11 @@ setup.generateEnemy = function(playerFame) {
     enemy.def = getRandomIntInclusive(2, 2 + playerFame);
     enemy.spd = getRandomIntInclusive(2, 2 + playerFame);
 
-    enemy.maxStamina = 100; 
-    enemy.staminaDrainPercent = 100;
+    enemy.maxStamina = 100 + getRandomIntInclusive(0, playerFame);
+    enemy.staminaDrainPercent = 100 - getRandomIntInclusive(0, playerFame);
 
-    enemy.accuracyPercent = 100;
-    enemy.damageMultiplierPercent = 100;
+    enemy.accuracyPercent = 100 + getRandomIntInclusive(0, playerFame);
+    enemy.damageMultiplierPercent = 100 + getRandomIntInclusive(0, playerFame);
 
     return enemy;
 }
