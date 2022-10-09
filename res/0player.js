@@ -36,6 +36,7 @@ setup.initializeStats = function() {
     player.accuracyPercent = 100;
     player.damageMultiplierPercent = 100;
 
+    player.flaw = new String();
     player.abilities = new Array();
 }
 
