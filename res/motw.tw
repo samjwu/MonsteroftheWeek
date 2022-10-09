@@ -275,9 +275,7 @@ The CIA, RAW, ISI, MI6, GRU, MSS, ..., etc. have all had their eyes on you since
 
 Now that you no longer have their support and protection, they will all be after you.
 
-Fortunately, your fame was well-deserved. Your renown is directly proportional to your scientific acumen and brilliance in the field of monsters.
-
-<span class="yellow">The higher your notoriety, the more skill and ability points you have. However, your enemies will also be much stronger.</span>
+<span class="yellow">The higher your notoriety, stronger your enemies will be.</span>
 
 How notorious are you?
 
@@ -783,3 +781,8 @@ Upon completing your monsterization, you gained the the following abilities:
     <<print abilityMap.get(player.abilities[_i])>>
   <</for>>
 </span>
+
+[[Let's Get Started|Enemy Encounter]]
+
+:: Enemy Encounter {"position":"100,2600"}
+

@@ -32,7 +32,7 @@ window.abilityMap = new Map([
 
 window.maxAbilities = 2;
 
-setup.restrictAbilities = function () {
+setup.restrictAbilities = function() {
     $(document).on(':passagedisplay', function () {
         function isValidSelection () {
             var checkedChecks = document.querySelectorAll("input:checked");

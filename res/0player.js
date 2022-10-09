@@ -38,6 +38,8 @@ setup.initializeStats = function() {
 
     player.flaw = new String();
     player.abilities = new Array();
+
+    player.roundsSurvived = 0;
 }
 
 setup.changePlayerCoreStats = function(atk, def, spd) {
