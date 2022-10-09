@@ -318,6 +318,16 @@ var adjectives = new Array(
     "spooky"
 );
 
+var enemyOrgs = new Array(
+    "Illuminati",
+    "CIA",
+    "RAW",
+    "ISI",
+    "MI6",
+    "GRU",
+    "MSS"
+);
+
 setup.getRandomIntInclusive = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -325,6 +335,7 @@ setup.getRandomIntInclusive = function(min, max) {
 setup.generateEnemy = function(playerFame, enemyRace) {
     enemy = new Object();
 
+    enemy.org = enemyOrgs[setup.getRandomIntInclusive(0, enemyOrgs.length - 1)];
     enemy.name = adjectives[setup.getRandomIntInclusive(0, adjectives.length - 1)] + " " + enemyRace.class;
 
     enemy.atk = setup.getRandomIntInclusive(0, playerFame) + enemyRace.atk;
@@ -989,7 +1000,8 @@ Upon completing your monsterization, you gained the the following abilities:
   &lt;&lt;/for&gt;&gt;
 &lt;/span&gt;
 
-[[Let&#39;s Get Started|Enemy Encounter]]</tw-passagedata><tw-passagedata pid="43" name="Enemy Encounter" tags="" position="100,2600" size="100,100">&lt;&lt;script&gt;&gt; 
+[[Let&#39;s Get Started|Enemy Encounter]]</tw-passagedata><tw-passagedata pid="43" name="Enemy Encounter" tags="" position="100,2600" size="100,100">You meet a &lt;&lt;print window.currentEnemy.name&gt;&gt; sent by the &lt;&lt;print window.currentEnemy.org&gt;&gt; to kill you!
+&lt;&lt;script&gt;&gt;
   var randomRaceInt = setup.getRandomIntInclusive(0, window.races.length - 1);
   var randomRace = window.races[randomRaceInt];
   window.currentEnemy = setup.generateEnemy(window.player.fame, randomRace); 

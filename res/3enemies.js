@@ -12,6 +12,16 @@ var adjectives = new Array(
     "spooky"
 );
 
+var enemyOrgs = new Array(
+    "Illuminati",
+    "CIA",
+    "RAW",
+    "ISI",
+    "MI6",
+    "GRU",
+    "MSS"
+);
+
 setup.getRandomIntInclusive = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -19,6 +29,7 @@ setup.getRandomIntInclusive = function(min, max) {
 setup.generateEnemy = function(playerFame, enemyRace) {
     enemy = new Object();
 
+    enemy.org = enemyOrgs[setup.getRandomIntInclusive(0, enemyOrgs.length - 1)];
     enemy.name = adjectives[setup.getRandomIntInclusive(0, adjectives.length - 1)] + " " + enemyRace.class;
 
     enemy.atk = setup.getRandomIntInclusive(0, playerFame) + enemyRace.atk;
