@@ -46,3 +46,13 @@ window.mollusk = {
     def: 2,
     spd: 1
 };
+
+window.races = new Array(
+    window.mammal,
+    window.bird,
+    window.reptile,
+    window.amphibian,
+    window.fish,
+    window.insect,
+    window.mollusk
+);
