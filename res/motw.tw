@@ -28,7 +28,7 @@ A CYOA Game
 
 :: Start {"position":"100,200"}
 [[Start New Game|Intro]]
-[[Enemy Encounter]]
+[[Finish Creation]]
 <<script>> setup.initializeStats(); <</script>>
 
 :: Intro [story] {"position":"300,200"}
@@ -783,14 +783,14 @@ Upon completing your monsterization, you gained the the following abilities:
 </span>
 
 [[Let's Get Started|Enemy Encounter]]
-
-:: Enemy Encounter {"position":"100,2600"}
 <<script>>
   var randomRaceInt = setup.getRandomIntInclusive(0, window.races.length - 1);
   var randomRace = window.races[randomRaceInt];
   window.currentEnemy = setup.generateEnemy(window.player.fame, randomRace); 
   setup.prepareForEnemyEncounter();
 <</script>>
+
+:: Enemy Encounter {"position":"100,2600"}
 You meet a <<print window.currentEnemy.name>> sent by the <<print window.currentEnemy.org>> to eliminate you!
 
 [[Fight!|Combat]]

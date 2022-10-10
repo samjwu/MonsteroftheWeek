@@ -374,7 +374,7 @@ setup.generateEnemy = function(playerFame, enemyRace) {
 &lt;&lt;for _i to 0; _i lt player.abilities.length; _i++&gt;&gt;
   &lt;&lt;print abilityMap.get(player.abilities[_i])&gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Start" tags="" position="100,200" size="100,100">[[Start New Game|Intro]]
-[[Enemy Encounter]]
+[[Finish Creation]]
 &lt;&lt;script&gt;&gt; setup.initializeStats(); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="story" position="300,200" size="100,100">A group of people wearing black shades and trenchcoats barge into your laboratory. A man steps forward and addresses you.
 
 &lt;span class=&quot;red&quot;&gt;&quot;I&#39;m sorry, &lt;span class=&quot;textshadow&quot;&gt;Harlowe&lt;/span&gt;, but given the high cost and relative lack of success of your research, the Illuminati has decided to stop your funding.&quot;&lt;/span&gt;
@@ -1010,13 +1010,13 @@ Upon completing your monsterization, you gained the the following abilities:
   &lt;&lt;/for&gt;&gt;
 &lt;/span&gt;
 
-[[Let&#39;s Get Started|Enemy Encounter]]</tw-passagedata><tw-passagedata pid="43" name="Enemy Encounter" tags="" position="100,2600" size="100,100">&lt;&lt;script&gt;&gt;
+[[Let&#39;s Get Started|Enemy Encounter]]
+&lt;&lt;script&gt;&gt;
   var randomRaceInt = setup.getRandomIntInclusive(0, window.races.length - 1);
   var randomRace = window.races[randomRaceInt];
   window.currentEnemy = setup.generateEnemy(window.player.fame, randomRace); 
   setup.prepareForEnemyEncounter();
-&lt;&lt;/script&gt;&gt;
-You meet a &lt;&lt;print window.currentEnemy.name&gt;&gt; sent by the &lt;&lt;print window.currentEnemy.org&gt;&gt; to eliminate you!
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Enemy Encounter" tags="" position="100,2600" size="100,100">You meet a &lt;&lt;print window.currentEnemy.name&gt;&gt; sent by the &lt;&lt;print window.currentEnemy.org&gt;&gt; to eliminate you!
 
 [[Fight!|Combat]]</tw-passagedata><tw-passagedata pid="44" name="Combat" tags="" position="100,2800" size="100,100">&lt;div class=&quot;cols&quot;&gt;
   &lt;div class=&quot;col1&quot;&gt;
