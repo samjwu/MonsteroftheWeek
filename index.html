@@ -375,18 +375,24 @@ function determineIfHit(spd, accuracy, move) {
     return hitChance >= dodgeChance;
 }
 
+function calculateStaminaDrain(drain) {
+    return 2 * drain;
+}
+
 setup.calculateTurn = function(player, enemy, move) {
     var damageDealt = calculateDamage(player.atk, player.damageMultiplierPercent / 100, move);
-    var finalDamageDealt = damageDealt - calculateMitigation(enemy.def);
+    var finalDamageDealt = Math.max(damageDealt - calculateMitigation(enemy.def), 1);
     if (determineIfHit(enemy.spd, player.accuracyPercent, move)) {
         enemy.currentStamina -= finalDamageDealt;
     }
+    enemy.currentStamina -= calculateStaminaDrain(enemy.staminaDrainPercent);
 
     var damageTaken  = calculateDamage(enemy.atk, enemy.damageMultiplierPercent / 100, move);
-    var finalDamageTaken = damageTaken - calculateMitigation(player.def);
+    var finalDamageTaken = Math.max(damageTaken - calculateMitigation(player.def), 1);
     if (determineIfHit(player.spd, enemy.accuracyPercent, 0)) {
         player.currentStamina -= finalDamageTaken;
     }
+    player.currentStamina -= calculateStaminaDrain(player.staminaDrainPercent);
 }
 /* twine-user-script #6: "modernizr-custom.js" */
 /*! modernizr 3.6.0 (Custom Build) | MIT *
