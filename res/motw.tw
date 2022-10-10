@@ -808,8 +808,20 @@ You meet a <<print window.currentEnemy.name>> sent by the <<print window.current
   </div>
 </div>
 
-[[Light Attack]]
+<<link "Light Attack" "Combat">>
+  <<script>>
+    setup.calculateTurn(window.player, window.currentEnemy, 0);
+  <</script>>
+<</link>>
 
-[[Normal Attack]]
+<<link "Normal Attack" "Combat">>
+  <<script>>
+    setup.calculateTurn(window.player, window.currentEnemy, 1);
+  <</script>>
+<</link>>
 
-[[Heavy Attack]]
+<<link "Heavy Attack" "Combat">>
+  <<script>>
+    setup.calculateTurn(window.player, window.currentEnemy, 2);
+  <</script>>
+<</link>>
