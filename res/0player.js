@@ -60,3 +60,7 @@ setup.changePlayerAccuracy = function(change) {
 setup.changePlayerDamage = function(change) {
     player.damageMultiplierPercent += change;
 }
+
+setup.prepareForEnemyEncounter = function() {
+    player.currentStamina = player.maxStamina;
+}

@@ -7,6 +7,10 @@ span {
     text-shadow: 0 0 0 transparent;
 }
 
+.cols { 
+    columns: 2;
+}
+
 .green {
     color: #66ff33
 }

@@ -28,6 +28,7 @@ A CYOA Game
 
 :: Start {"position":"100,200"}
 [[Start New Game|Intro]]
+[[Enemy Encounter]]
 <<script>> setup.initializeStats(); <</script>>
 
 :: Intro [story] {"position":"300,200"}
@@ -764,7 +765,6 @@ Congratulations! You now have the following abilities:
 [[Continue|Finish Creation]]
 
 :: Finish Creation {"position":"100,2400"}
-
 Ok, you're done. The picking and choosing phase, that is.
 
 Here's a review of what you picked:
@@ -785,10 +785,31 @@ Upon completing your monsterization, you gained the the following abilities:
 [[Let's Get Started|Enemy Encounter]]
 
 :: Enemy Encounter {"position":"100,2600"}
-
-You meet a <<print window.currentEnemy.name>> sent by the <<print window.currentEnemy.org>> to kill you!
 <<script>>
   var randomRaceInt = setup.getRandomIntInclusive(0, window.races.length - 1);
   var randomRace = window.races[randomRaceInt];
   window.currentEnemy = setup.generateEnemy(window.player.fame, randomRace); 
+  setup.prepareForEnemyEncounter();
 <</script>>
+You meet a <<print window.currentEnemy.name>> sent by the <<print window.currentEnemy.org>> to eliminate you!
+
+[[Fight!|Combat]]
+
+:: Combat {"position":"100,2800"}
+<div class="cols">
+  <div class="col1">
+    You
+    Stamina: <<print window.player.currentStamina>>
+  </div>
+  <br>
+  <div class="col2">
+    <<print window.currentEnemy.name>>
+    Stamina: <<print window.currentEnemy.currentStamina>>
+  </div>
+</div>
+
+[[Light Attack]]
+
+[[Normal Attack]]
+
+[[Heavy Attack]]

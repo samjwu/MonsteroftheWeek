@@ -27,7 +27,7 @@ setup.getRandomIntInclusive = function(min, max) {
 }
 
 setup.generateEnemy = function(playerFame, enemyRace) {
-    enemy = new Object();
+    var enemy = new Object();
 
     enemy.org = enemyOrgs[setup.getRandomIntInclusive(0, enemyOrgs.length - 1)];
     enemy.name = adjectives[setup.getRandomIntInclusive(0, adjectives.length - 1)] + " " + enemyRace.class;
@@ -37,6 +37,7 @@ setup.generateEnemy = function(playerFame, enemyRace) {
     enemy.spd = setup.getRandomIntInclusive(0, playerFame) + enemyRace.spd;
 
     enemy.maxStamina = 100 + setup.getRandomIntInclusive(0, playerFame);
+    enemy.currentStamina = enemy.maxStamina;
     enemy.staminaDrainPercent = 100 - setup.getRandomIntInclusive(0, playerFame);
 
     enemy.accuracyPercent = 100 + setup.getRandomIntInclusive(0, playerFame);
