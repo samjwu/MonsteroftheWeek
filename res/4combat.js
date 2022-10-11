@@ -17,10 +17,13 @@ function calculateStaminaDrain(drain) {
     return 2 * drain;
 }
 
+window.previousTurn = new Object();
+
 setup.calculateTurn = function(player, enemy, move) {
     var damageDealt = calculateDamage(player.atk, player.damageMultiplierPercent / 100, move);
     var finalDamageDealt = Math.max(damageDealt - calculateMitigation(enemy.def), 1);
-    if (determineIfHit(enemy.spd, player.accuracyPercent, move)) {
+    var hit = determineIfHit(enemy.spd, player.accuracyPercent, move);
+    if (hit == true) {
         enemy.currentStamina -= finalDamageDealt;
     }
     var enemyDrain = calculateStaminaDrain(enemy.staminaDrainPercent / 100);
@@ -28,16 +31,21 @@ setup.calculateTurn = function(player, enemy, move) {
 
     var damageTaken  = calculateDamage(enemy.atk, enemy.damageMultiplierPercent / 100, move);
     var finalDamageTaken = Math.max(damageTaken - calculateMitigation(player.def), 1);
-    if (determineIfHit(player.spd, enemy.accuracyPercent, 0)) {
+    var dodgeFailed = determineIfHit(player.spd, enemy.accuracyPercent, 0);
+    if (dodgeFailed == true) {
         player.currentStamina -= finalDamageTaken;
     }
     var playerDrain = calculateStaminaDrain(player.staminaDrainPercent / 100);
     player.currentStamina -= playerDrain;
 
     var turn = new Object();
+    turn.hit = hit;
     turn.dealt = finalDamageDealt;
+    turn.dodgeFailed = dodgeFailed;
     turn.taken = finalDamageTaken;
     turn.playerDrain = playerDrain;
     turn.enemyDrain = enemyDrain;
-    return turn;
+    window.previousTurn = turn;
+
+    window.player.turnNumber += 1;
 }

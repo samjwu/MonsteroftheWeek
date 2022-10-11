@@ -808,6 +808,20 @@ You meet a <<print window.currentEnemy.name>> sent by the <<print window.current
   </div>
 </div>
 
+Turn #<<print window.player.turnNumber>>:
+<<if window.player.turnNumber > 0>>
+  <<if window.previousTurn.hit == true>>
+    You hit the enemy for <<print window.previousTurn.dealt>> stamina.
+  <<else>>
+    You missed the enemy.
+  <<endif>>
+  <<if window.previousTurn.dodgeFailed == true>>
+    The enemy hit you for <<print window.previousTurn.taken>> stamina.
+  <<else>>
+    The enemy missed you.
+  <<endif>>
+<<endif>>
+
 <<link "Light Attack" "Combat">>
   <<script>>
     setup.calculateTurn(window.player, window.currentEnemy, 0);

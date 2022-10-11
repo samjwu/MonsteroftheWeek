@@ -172,6 +172,7 @@ setup.initializeStats = function() {
     player.flaw = new String();
     player.abilities = new Array();
 
+    player.turnNumber = 0;
     player.roundsSurvived = 0;
 }
 
@@ -379,10 +380,13 @@ function calculateStaminaDrain(drain) {
     return 2 * drain;
 }
 
+window.previousTurn = new Object();
+
 setup.calculateTurn = function(player, enemy, move) {
     var damageDealt = calculateDamage(player.atk, player.damageMultiplierPercent / 100, move);
     var finalDamageDealt = Math.max(damageDealt - calculateMitigation(enemy.def), 1);
-    if (determineIfHit(enemy.spd, player.accuracyPercent, move)) {
+    var hit = determineIfHit(enemy.spd, player.accuracyPercent, move);
+    if (hit == true) {
         enemy.currentStamina -= finalDamageDealt;
     }
     var enemyDrain = calculateStaminaDrain(enemy.staminaDrainPercent / 100);
@@ -390,18 +394,23 @@ setup.calculateTurn = function(player, enemy, move) {
 
     var damageTaken  = calculateDamage(enemy.atk, enemy.damageMultiplierPercent / 100, move);
     var finalDamageTaken = Math.max(damageTaken - calculateMitigation(player.def), 1);
-    if (determineIfHit(player.spd, enemy.accuracyPercent, 0)) {
+    var dodgeFailed = determineIfHit(player.spd, enemy.accuracyPercent, 0);
+    if (dodgeFailed == true) {
         player.currentStamina -= finalDamageTaken;
     }
     var playerDrain = calculateStaminaDrain(player.staminaDrainPercent / 100);
     player.currentStamina -= playerDrain;
 
     var turn = new Object();
+    turn.hit = hit;
     turn.dealt = finalDamageDealt;
+    turn.dodgeFailed = dodgeFailed;
     turn.taken = finalDamageTaken;
     turn.playerDrain = playerDrain;
     turn.enemyDrain = enemyDrain;
-    return turn;
+    window.previousTurn = turn;
+
+    window.player.turnNumber += 1;
 }
 /* twine-user-script #6: "modernizr-custom.js" */
 /*! modernizr 3.6.0 (Custom Build) | MIT *
@@ -1073,6 +1082,20 @@ Upon completing your monsterization, you gained the the following abilities:
     Stamina: &lt;&lt;print window.currentEnemy.currentStamina&gt;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+Turn #&lt;&lt;print window.player.turnNumber&gt;&gt;:
+&lt;&lt;if window.player.turnNumber &gt; 0&gt;&gt;
+  &lt;&lt;if window.previousTurn.hit == true&gt;&gt;
+    You hit the enemy for &lt;&lt;print window.previousTurn.dealt&gt;&gt; stamina.
+  &lt;&lt;else&gt;&gt;
+    You missed the enemy.
+  &lt;&lt;endif&gt;&gt;
+  &lt;&lt;if window.previousTurn.dodgeFailed == true&gt;&gt;
+    The enemy hit you for &lt;&lt;print window.previousTurn.taken&gt;&gt; stamina.
+  &lt;&lt;else&gt;&gt;
+    The enemy missed you.
+  &lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 
 &lt;&lt;link &quot;Light Attack&quot; &quot;Combat&quot;&gt;&gt;
   &lt;&lt;script&gt;&gt;

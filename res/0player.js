@@ -39,6 +39,7 @@ setup.initializeStats = function() {
     player.flaw = new String();
     player.abilities = new Array();
 
+    player.turnNumber = 0;
     player.roundsSurvived = 0;
 }
 
