@@ -23,12 +23,21 @@ setup.calculateTurn = function(player, enemy, move) {
     if (determineIfHit(enemy.spd, player.accuracyPercent, move)) {
         enemy.currentStamina -= finalDamageDealt;
     }
-    enemy.currentStamina -= calculateStaminaDrain(enemy.staminaDrainPercent);
+    var enemyDrain = calculateStaminaDrain(enemy.staminaDrainPercent / 100);
+    enemy.currentStamina -= enemyDrain;
 
     var damageTaken  = calculateDamage(enemy.atk, enemy.damageMultiplierPercent / 100, move);
     var finalDamageTaken = Math.max(damageTaken - calculateMitigation(player.def), 1);
     if (determineIfHit(player.spd, enemy.accuracyPercent, 0)) {
         player.currentStamina -= finalDamageTaken;
     }
-    player.currentStamina -= calculateStaminaDrain(player.staminaDrainPercent);
+    var playerDrain = calculateStaminaDrain(player.staminaDrainPercent / 100);
+    player.currentStamina -= playerDrain;
+
+    var turn = new Object();
+    turn.dealt = finalDamageDealt;
+    turn.taken = finalDamageTaken;
+    turn.playerDrain = playerDrain;
+    turn.enemyDrain = enemyDrain;
+    return turn;
 }
