@@ -815,11 +815,13 @@ Turn #<<print window.player.turnNumber>>:
   <<else>>
     You missed the enemy.
   <<endif>>
+  Additionally, the enemy loses <<print window.previousTurn.enemyDrain>> stamina due to stamina drain.
   <<if window.previousTurn.dodgeFailed == true>>
     The enemy hit you for <<print window.previousTurn.taken>> stamina.
   <<else>>
     The enemy missed you.
   <<endif>>
+  Additionally, you lose <<print window.previousTurn.playerDrain>> stamina due to stamina drain.
 <<endif>>
 
 <<link "Light Attack" "Combat">>

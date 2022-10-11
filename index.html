@@ -1090,11 +1090,13 @@ Turn #&lt;&lt;print window.player.turnNumber&gt;&gt;:
   &lt;&lt;else&gt;&gt;
     You missed the enemy.
   &lt;&lt;endif&gt;&gt;
+  Additionally, the enemy loses &lt;&lt;print window.previousTurn.enemyDrain&gt;&gt; stamina due to stamina drain.
   &lt;&lt;if window.previousTurn.dodgeFailed == true&gt;&gt;
     The enemy hit you for &lt;&lt;print window.previousTurn.taken&gt;&gt; stamina.
   &lt;&lt;else&gt;&gt;
     The enemy missed you.
   &lt;&lt;endif&gt;&gt;
+  Additionally, you lose &lt;&lt;print window.previousTurn.playerDrain&gt;&gt; stamina due to stamina drain.
 &lt;&lt;endif&gt;&gt;
 
 &lt;&lt;link &quot;Light Attack&quot; &quot;Combat&quot;&gt;&gt;
