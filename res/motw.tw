@@ -798,13 +798,13 @@ You meet a <<print window.currentEnemy.name>> sent by the <<print window.current
 :: Combat {"position":"100,2800"}
 <div class="cols">
   <div class="col1">
-    You
-    Stamina: <<print window.player.currentStamina>>
+    <span class="green">You</span>
+    <span class="yellow">Stamina:</span> <<print window.player.currentStamina>>
   </div>
   <br>
   <div class="col2">
-    <<print window.currentEnemy.name>>
-    Stamina: <<print window.currentEnemy.currentStamina>>
+    <span class="red"><<print window.currentEnemy.name>></span>
+    <span class="yellow">Stamina:</span> <<print window.currentEnemy.currentStamina>>
   </div>
 </div>
 
