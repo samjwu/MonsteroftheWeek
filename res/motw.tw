@@ -841,3 +841,5 @@ Turn #<<print window.player.turnNumber>>:
     setup.calculateTurn(window.player, window.currentEnemy, 2);
   <</script>>
 <</link>>
+
+<span class="yellow">Lighter attacks have higher accuracy, but lower damage. The reverse is true for heavier attacks.</span>
