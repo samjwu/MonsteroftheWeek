@@ -793,6 +793,17 @@ Upon completing your monsterization, you gained the the following abilities:
 :: Enemy Encounter {"position":"100,2600"}
 You meet a <<print window.currentEnemy.name>> sent by the <<print window.currentEnemy.org>> to eliminate you!
 
+<span class="yellow">Combat Explanation:</span>
+
+In combat, you have 3 types of attacks: Light, Normal, and Heavy.
+
+Light attacks have the highest accuracy, but the least damage.
+Heavy attacks have the highest damage, but the least accuracy.
+Normal attacks have decent accuracy and damage.
+
+Each turn, both you and your enemy will lose some stamina due to stamina drain.
+Stamina drain is unavoidable, but can be mitigated by certain abilities specific to some classes.
+
 [[Fight!|Combat]]
 
 :: Combat {"position":"100,2800"}
