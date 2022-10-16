@@ -835,22 +835,28 @@ Turn #<<print window.player.turnNumber>>:
   Additionally, you lose <<print window.previousTurn.playerDrain>> stamina due to stamina drain.
 <<endif>>
 
-<<link "Light Attack" "Combat">>
-  <<script>>
-    setup.calculateTurn(window.player, window.currentEnemy, 0);
-  <</script>>
-<</link>>
+<<if window.currentEnemy.currentStamina <= 0>>
+  You win!
+<<elseif window.player.currentStamina <= 0>>
+  You lose!
+<<else>>
+  <<link "Light Attack" "Combat">>
+    <<script>>
+      setup.calculateTurn(window.player, window.currentEnemy, 0);
+    <</script>>
+  <</link>>
 
-<<link "Normal Attack" "Combat">>
-  <<script>>
-    setup.calculateTurn(window.player, window.currentEnemy, 1);
-  <</script>>
-<</link>>
+  <<link "Normal Attack" "Combat">>
+    <<script>>
+      setup.calculateTurn(window.player, window.currentEnemy, 1);
+    <</script>>
+  <</link>>
 
-<<link "Heavy Attack" "Combat">>
-  <<script>>
-    setup.calculateTurn(window.player, window.currentEnemy, 2);
-  <</script>>
-<</link>>
+  <<link "Heavy Attack" "Combat">>
+    <<script>>
+      setup.calculateTurn(window.player, window.currentEnemy, 2);
+    <</script>>
+  <</link>>
+<<endif>>
 
 <span class="yellow">Lighter attacks have higher accuracy, but lower damage. The reverse is true for heavier attacks.</span>

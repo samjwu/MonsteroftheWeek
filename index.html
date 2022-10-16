@@ -391,7 +391,7 @@ setup.calculateTurn = function(player, enemy, move) {
     }
     var enemyDrain = calculateStaminaDrain(enemy.staminaDrainPercent / 100);
     enemy.currentStamina -= enemyDrain;
-
+    
     var damageTaken  = calculateDamage(enemy.atk, enemy.damageMultiplierPercent / 100, move);
     var finalDamageTaken = Math.max(damageTaken - calculateMitigation(player.def), 1);
     var dodgeFailed = determineIfHit(player.spd, enemy.accuracyPercent, 0);
@@ -1110,23 +1110,29 @@ Turn #&lt;&lt;print window.player.turnNumber&gt;&gt;:
   Additionally, you lose &lt;&lt;print window.previousTurn.playerDrain&gt;&gt; stamina due to stamina drain.
 &lt;&lt;endif&gt;&gt;
 
-&lt;&lt;link &quot;Light Attack&quot; &quot;Combat&quot;&gt;&gt;
-  &lt;&lt;script&gt;&gt;
-    setup.calculateTurn(window.player, window.currentEnemy, 0);
-  &lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;
+&lt;&lt;if window.currentEnemy.currentStamina &lt;= 0&gt;&gt;
+  You win!
+&lt;&lt;elseif window.player.currentStamina &lt;= 0&gt;&gt;
+  You lose!
+&lt;&lt;else&gt;&gt;
+  &lt;&lt;link &quot;Light Attack&quot; &quot;Combat&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      setup.calculateTurn(window.player, window.currentEnemy, 0);
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
 
-&lt;&lt;link &quot;Normal Attack&quot; &quot;Combat&quot;&gt;&gt;
-  &lt;&lt;script&gt;&gt;
-    setup.calculateTurn(window.player, window.currentEnemy, 1);
-  &lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;
+  &lt;&lt;link &quot;Normal Attack&quot; &quot;Combat&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      setup.calculateTurn(window.player, window.currentEnemy, 1);
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
 
-&lt;&lt;link &quot;Heavy Attack&quot; &quot;Combat&quot;&gt;&gt;
-  &lt;&lt;script&gt;&gt;
-    setup.calculateTurn(window.player, window.currentEnemy, 2);
-  &lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;
+  &lt;&lt;link &quot;Heavy Attack&quot; &quot;Combat&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      setup.calculateTurn(window.player, window.currentEnemy, 2);
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 
 &lt;span class=&quot;yellow&quot;&gt;Lighter attacks have higher accuracy, but lower damage. The reverse is true for heavier attacks.&lt;/span&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">

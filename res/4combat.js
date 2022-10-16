@@ -28,7 +28,7 @@ setup.calculateTurn = function(player, enemy, move) {
     }
     var enemyDrain = calculateStaminaDrain(enemy.staminaDrainPercent / 100);
     enemy.currentStamina -= enemyDrain;
-
+    
     var damageTaken  = calculateDamage(enemy.atk, enemy.damageMultiplierPercent / 100, move);
     var finalDamageTaken = Math.max(damageTaken - calculateMitigation(player.def), 1);
     var dodgeFailed = determineIfHit(player.spd, enemy.accuracyPercent, 0);
