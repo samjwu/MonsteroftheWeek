@@ -290,7 +290,7 @@ window.abilityMap = new Map([
     ["bladder", "Swim Bladder"]
 ]);
 
-window.maxAbilities = 2;
+window.maxAbilities = 3;
 
 setup.restrictAbilities = function() {
     $(document).on(':passagedisplay', function () {
@@ -658,7 +658,10 @@ In other words, you&#39;re barely better than a nobody.
 
 And since no one knows the Illuminati exists, you are still a rando. Good for you.
 
-[[Continue|Pick Abilities]]</tw-passagedata><tw-passagedata pid="32" name="Mad Scientist" tags="" position="500,1600" size="100,100">You are widely regarded as a mad scientist. 
+[[Continue|Pick Abilities]]
+&lt;&lt;script&gt;&gt;
+  window.player.fame = 1;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Mad Scientist" tags="" position="500,1600" size="100,100">You are widely regarded as a mad scientist. 
 
 People fear you. Or at least you think they do. Maybe.
 
@@ -672,7 +675,10 @@ Whatever! Even if they don&#39;t fear you now, you&#39;ll give them a reason to 
 
 Even before you joined the Illuminati, people knew you were bad news.
 
-[[Continue|Pick Abilities]]</tw-passagedata><tw-passagedata pid="34" name="Mastermind" tags="" position="700,1600" size="100,100">When it comes to you, the term &quot;fairly well-known&quot; is an understatement.
+[[Continue|Pick Abilities]]
+&lt;&lt;script&gt;&gt;
+  window.player.fame = 2;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Mastermind" tags="" position="700,1600" size="100,100">When it comes to you, the term &quot;fairly well-known&quot; is an understatement.
 
 You are a mastermind. Your intellect is peerless, your logic is flawless, and you&#39;re one of the biggest names in science.
 
@@ -690,7 +696,10 @@ You were too good for them anyways. Probably.
 
 In any case, now is your chance to find out.
 
-[[Continue|Pick Abilities]]</tw-passagedata><tw-passagedata pid="36" name="Megamind" tags="" position="900,1600" size="100,100">What&#39;s a Megamind you ask? A Megamind is a subset of masterminds.
+[[Continue|Pick Abilities]]
+&lt;&lt;script&gt;&gt;
+  window.player.fame = 3;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Megamind" tags="" position="900,1600" size="100,100">What&#39;s a Megamind you ask? A Megamind is a subset of masterminds.
 
 What does THAT mean you ask? Are you sure you&#39;re smart?
 
@@ -712,7 +721,10 @@ The Illuminati? Seriously? You could have done better.
 
 Guess it&#39;s a good thing you went independent, eh?
 
-[[Continue|Pick Abilities]]</tw-passagedata><tw-passagedata pid="38" name="Super Mega Ultra Evil Genius" tags="" position="1100,1600" size="100,100">You are the greatest evil genius of all time. It&#39;s pretty much in the name, no?
+[[Continue|Pick Abilities]]
+&lt;&lt;script&gt;&gt;
+  window.player.fame = 4;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Super Mega Ultra Evil Genius" tags="" position="1100,1600" size="100,100">You are the greatest evil genius of all time. It&#39;s pretty much in the name, no?
 
 You are capable of world domination, and in fact have achieved that already multiple times in the past.
 
@@ -728,7 +740,10 @@ The Illuminati is kiddy stuff. Something stupid to do to kill the time. Nothing 
 
 Good luck. You&#39;ll be needing it.
 
-[[Continue|Pick Abilities]]</tw-passagedata><tw-passagedata pid="40" name="Pick Abilities" tags="" position="100,2000" size="100,100">Ok, time for the fun part. It&#39;s time to pick your special abilities!
+[[Continue|Pick Abilities]]
+&lt;&lt;script&gt;&gt;
+  window.player.fame = 5;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Pick Abilities" tags="" position="100,2000" size="100,100">Ok, time for the fun part. It&#39;s time to pick your special abilities!
 
 &lt;span class=&quot;yellow&quot;&gt;Your abilities will give you special advantages in battle.&lt;/span&gt;
 
@@ -1093,7 +1108,13 @@ Normal attacks have decent accuracy and damage.
 Each turn, both you and your enemy will lose some stamina due to stamina drain.
 Stamina drain is unavoidable, but can be mitigated by certain abilities specific to some classes.
 
-[[Fight!|Combat]]</tw-passagedata><tw-passagedata pid="44" name="Combat" tags="" position="100,2800" size="100,100">&lt;div class=&quot;cols&quot;&gt;
+Get ready to fight!
+
+[[Fight!|Combat]]
+
+Alternatively, you could give up. This will end the game and take you to the final score screen.
+
+[[Give Up|High Score]]</tw-passagedata><tw-passagedata pid="44" name="Combat" tags="" position="100,2800" size="100,100">&lt;div class=&quot;cols&quot;&gt;
   &lt;div class=&quot;col1&quot;&gt;
     &lt;span class=&quot;green&quot;&gt;You&lt;/span&gt;
     &lt;span class=&quot;yellow&quot;&gt;Stamina:&lt;/span&gt; &lt;&lt;print window.player.currentStamina&gt;&gt;

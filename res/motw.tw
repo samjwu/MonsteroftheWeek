@@ -344,6 +344,9 @@ Before joining the Illuminati, you were a rando.
 And since no one knows the Illuminati exists, you are still a rando. Good for you.
 
 [[Continue|Pick Abilities]]
+<<script>>
+  window.player.fame = 1;
+<</script>>
 
 :: Mad Scientist {"position":"500,1600"}
 You are widely regarded as a mad scientist. 
@@ -364,6 +367,9 @@ Before joining the Illuminati, you were a mad scientist.
 Even before you joined the Illuminati, people knew you were bad news.
 
 [[Continue|Pick Abilities]]
+<<script>>
+  window.player.fame = 2;
+<</script>>
 
 :: Mastermind {"position":"700,1600"}
 When it comes to you, the term "fairly well-known" is an understatement.
@@ -388,6 +394,9 @@ You were too good for them anyways. Probably.
 In any case, now is your chance to find out.
 
 [[Continue|Pick Abilities]]
+<<script>>
+  window.player.fame = 3;
+<</script>>
 
 :: Megamind {"position":"900,1600"}
 What's a Megamind you ask? A Megamind is a subset of masterminds.
@@ -416,6 +425,9 @@ The Illuminati? Seriously? You could have done better.
 Guess it's a good thing you went independent, eh?
 
 [[Continue|Pick Abilities]]
+<<script>>
+  window.player.fame = 4;
+<</script>>
 
 :: Super Mega Ultra Evil Genius {"position":"1100,1600"}
 You are the greatest evil genius of all time. It's pretty much in the name, no?
@@ -438,6 +450,9 @@ The Illuminati is kiddy stuff. Something stupid to do to kill the time. Nothing 
 Good luck. You'll be needing it.
 
 [[Continue|Pick Abilities]]
+<<script>>
+  window.player.fame = 5;
+<</script>>
 
 :: Pick Abilities {"position":"100,2000"}
 Ok, time for the fun part. It's time to pick your special abilities!
@@ -815,7 +830,13 @@ Normal attacks have decent accuracy and damage.
 Each turn, both you and your enemy will lose some stamina due to stamina drain.
 Stamina drain is unavoidable, but can be mitigated by certain abilities specific to some classes.
 
+Get ready to fight!
+
 [[Fight!|Combat]]
+
+Alternatively, you could give up. This will end the game and take you to the final score screen.
+
+[[Give Up|High Score]]
 
 :: Combat {"position":"100,2800"}
 <div class="cols">

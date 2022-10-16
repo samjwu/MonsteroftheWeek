@@ -30,7 +30,7 @@ window.abilityMap = new Map([
     ["bladder", "Swim Bladder"]
 ]);
 
-window.maxAbilities = 2;
+window.maxAbilities = 3;
 
 setup.restrictAbilities = function() {
     $(document).on(':passagedisplay', function () {
