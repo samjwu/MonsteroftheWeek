@@ -1116,6 +1116,8 @@ Turn #&lt;&lt;print window.player.turnNumber&gt;&gt;:
   [[Next Fight|Enemy Encounter]]
   &lt;&lt;script&gt;&gt;
     window.player.roundsSurvived += 1;
+    window.player.turnNumber = 0;
+    window.previousTurn = null;
 
     var randomRaceInt = setup.getRandomIntInclusive(0, window.races.length - 1);
     var randomRace = window.races[randomRaceInt];
@@ -1149,6 +1151,8 @@ Turn #&lt;&lt;print window.player.turnNumber&gt;&gt;:
 &lt;span class=&quot;yellow&quot;&gt;Lighter attacks have higher accuracy, but lower damage. The reverse is true for heavier attacks.&lt;/span&gt;</tw-passagedata><tw-passagedata pid="45" name="High Score" tags="" position="100,3000" size="100,100">You defeated &lt;&lt;print window.player.roundsSurvived&gt;&gt; opponents.
 
 Your final score is &lt;&lt;print (window.player.roundsSurvived * window.player.fame)&gt;&gt;.
+
+[[Play Again|Start]]
 
 &lt;&lt;if window.player.fame == 0&gt;&gt;
   &lt;span class=&quot;yellow&quot;&gt;Hint: Try playing on a higher fame level to get a nonzero score&lt;/span&gt;

@@ -841,6 +841,8 @@ Turn #<<print window.player.turnNumber>>:
   [[Next Fight|Enemy Encounter]]
   <<script>>
     window.player.roundsSurvived += 1;
+    window.player.turnNumber = 0;
+    window.previousTurn = null;
 
     var randomRaceInt = setup.getRandomIntInclusive(0, window.races.length - 1);
     var randomRace = window.races[randomRaceInt];
@@ -877,6 +879,8 @@ Turn #<<print window.player.turnNumber>>:
 You defeated <<print window.player.roundsSurvived>> opponents.
 
 Your final score is <<print (window.player.roundsSurvived * window.player.fame)>>.
+
+[[Play Again|Start]]
 
 <<if window.player.fame == 0>>
   <span class="yellow">Hint: Try playing on a higher fame level to get a nonzero score</span>
