@@ -427,7 +427,6 @@ setup.calculateTurn = function(player, enemy, move) {
 &lt;&lt;for _i to 0; _i lt player.abilities.length; _i++&gt;&gt;
   &lt;&lt;print abilityMap.get(player.abilities[_i])&gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Start" tags="" position="100,200" size="100,100">[[Start New Game|Intro]]
-[[Finish Creation]]
 &lt;&lt;script&gt;&gt; setup.initializeStats(); &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="story" position="300,200" size="100,100">A group of people wearing black shades and trenchcoats barge into your laboratory. A man steps forward and addresses you.
 
 &lt;span class=&quot;red&quot;&gt;&quot;I&#39;m sorry, &lt;span class=&quot;textshadow&quot;&gt;Harlowe&lt;/span&gt;, but given the high cost and relative lack of success of your research, the Illuminati has decided to stop your funding.&quot;&lt;/span&gt;
@@ -581,7 +580,9 @@ Your body&#39;s fat stores are lower than normal.
   player.flaw = &quot;Inefficient lipase production&quot;;
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Blinding rage" tags="" position="700,1000" size="100,100">Your brain chemistry was altered during the monsterization.
 
-&lt;span class=&quot;yellow&quot;&gt;You will become prone to fits of rage where you cannot control your actions.&lt;/span&gt;
+You become more reckless with your attacks, hitting harder at the cost of exposing yourself to retaliation.
+
+&lt;span class=&quot;yellow&quot;&gt;You will gain one level of attack, but lose two levels of defense.&lt;/span&gt;
 
 [[Pick this flaw|Accept Blinding rage]]
 
@@ -589,6 +590,7 @@ Your body&#39;s fat stores are lower than normal.
 
 [[Continue|Pick Fame]]
 &lt;&lt;script&gt;&gt;
+  setup.changePlayerCoreStats(1, -2, 0);
   player.flaw = &quot;Blinding rage&quot;;
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Hyperactive metabolism" tags="" position="900,1000" size="100,100">Your new body burns through your energy stores faster than normal.
 

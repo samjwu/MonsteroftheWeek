@@ -28,7 +28,6 @@ A CYOA Game
 
 :: Start {"position":"100,200"}
 [[Start New Game|Intro]]
-[[Finish Creation]]
 <<script>> setup.initializeStats(); <</script>>
 
 :: Intro [story] {"position":"300,200"}
@@ -242,7 +241,9 @@ Your defense goes down by one level.
 :: Blinding rage {"position":"700,1000"}
 Your brain chemistry was altered during the monsterization.
 
-<span class="yellow">You will become prone to fits of rage where you cannot control your actions.</span>
+You become more reckless with your attacks, hitting harder at the cost of exposing yourself to retaliation.
+
+<span class="yellow">You will gain one level of attack, but lose two levels of defense.</span>
 
 [[Pick this flaw|Accept Blinding rage]]
 
@@ -253,6 +254,7 @@ Sometimes you may lose control over your actions.
 
 [[Continue|Pick Fame]]
 <<script>>
+  setup.changePlayerCoreStats(1, -2, 0);
   player.flaw = "Blinding rage";
 <</script>>
 
