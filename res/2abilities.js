@@ -27,7 +27,7 @@ window.abilityMap = new Map([
     ["scales", "Scale Mail"],
     ["fins", "Fish Fins"],
     ["cold", "Cold Blooded"],
-    ["eyelids", "No Eyelids"]
+    ["bladder", "Swim Bladder"]
 ]);
 
 window.maxAbilities = 2;

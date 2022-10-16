@@ -725,11 +725,15 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">You will have stamina recovery instead of stamina drain</span>
 
-  <label><input type="checkbox" id="ability5">No Eyelids</label>
+  <label><input type="checkbox" id="ability5">Swim Bladder</label>
 
-  Not being able to blink sounds like a disadvantage, but at least you'll always be able to see your enemies.
+  Float like a butterfly, sting like a bee. Hands can't hit what the eyes can't see.
 
-  <span class="yellow">With this ability, you will never miss</span>
+  Or, in your case, float like fish, sting like a... stingray. Minus the part about stinging.
+
+  At least you will be faster, somehow.
+
+  <span class="yellow">This ability will increase your speed by one level</span>
   <<link "Continue" "Accept Abilities">>
     <<script>>
       if ($("#ability1").prop("checked")) {
@@ -749,8 +753,8 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
         setup.changePlayerStaminaStats(0, -200);
       }
       if ($("#ability5").prop("checked")) {
-        setup.addPlayerAbilities("eyelids");
-        setup.changePlayerAccuracy(100);
+        setup.addPlayerAbilities("bladder");
+        setup.changePlayerCoreStats(0, 0, 1);
       }
     <</script>>
   <</link>>

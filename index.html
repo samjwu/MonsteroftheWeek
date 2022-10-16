@@ -287,7 +287,7 @@ window.abilityMap = new Map([
     ["scales", "Scale Mail"],
     ["fins", "Fish Fins"],
     ["cold", "Cold Blooded"],
-    ["eyelids", "No Eyelids"]
+    ["bladder", "Swim Bladder"]
 ]);
 
 window.maxAbilities = 2;
@@ -1013,11 +1013,15 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;You will have stamina recovery instead of stamina drain&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;No Eyelids&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Swim Bladder&lt;/label&gt;
 
-  Not being able to blink sounds like a disadvantage, but at least you&#39;ll always be able to see your enemies.
+  Float like a butterfly, sting like a bee. Hands can&#39;t hit what the eyes can&#39;t see.
 
-  &lt;span class=&quot;yellow&quot;&gt;With this ability, you will never miss&lt;/span&gt;
+  Or, in your case, float like fish, sting like a... stingray. Minus the part about stinging.
+
+  At least you will be faster, somehow.
+
+  &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
   &lt;&lt;link &quot;Continue&quot; &quot;Accept Abilities&quot;&gt;&gt;
     &lt;&lt;script&gt;&gt;
       if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
@@ -1037,8 +1041,8 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
         setup.changePlayerStaminaStats(0, -200);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
-        setup.addPlayerAbilities(&quot;eyelids&quot;);
-        setup.changePlayerAccuracy(100);
+        setup.addPlayerAbilities(&quot;bladder&quot;);
+        setup.changePlayerCoreStats(0, 0, 1);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
