@@ -44,9 +44,9 @@ setup.initializeStats = function() {
 }
 
 setup.changePlayerCoreStats = function(atk, def, spd) {
-    player.atk += atk;
-    player.def += def;
-    player.spd += spd;
+    player.atk = Math.max(player.atk + atk, 0);
+    player.def = Math.max(player.def + def, 0);
+    player.spd = Math.max(player.spd + spd, 0);
 }
 
 setup.changePlayerStaminaStats = function(maxStaminaChange, drain) {
