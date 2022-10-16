@@ -446,7 +446,12 @@ You are a monster researcher with the knowledge to monsterize humans and improve
 
 Without the support of the Illuminati, you do not have access to any test subjects and must perform the experiment on yourself.
 
-&lt;span class=&quot;yellow&quot;&gt;Your specialty will determine you base stat distribution.&lt;/span&gt;
+&lt;span class=&quot;yellow&quot;&gt;
+  Your specialty will determine you base stat distribution.
+  Attack increases your damage.
+  Defense reduces damage taken.
+  Speed increases your chance to evade attacks.
+&lt;/span&gt;
 
 What is your specialty?
 
@@ -948,7 +953,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   You got poise, son!
 
-  &lt;span class=&quot;yellow&quot;&gt;Your attacks will deal additional damage&lt;/span&gt;
+  &lt;span class=&quot;yellow&quot;&gt;This ability will increase your defense by one level&lt;/span&gt;
   &lt;&lt;link &quot;Continue&quot; &quot;Accept Abilities&quot;&gt;&gt;
     &lt;&lt;script&gt;&gt;
       if ($(&quot;#ability1&quot;).prop(&quot;checked&quot;)) {
@@ -969,7 +974,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;poison&quot;);
-        setup.changePlayerDamage(25);
+        setup.changePlayerCoreStats(0, 1, 0);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
