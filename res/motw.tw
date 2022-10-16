@@ -531,7 +531,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
 
-  <span class="yellow">You will have better stamina and recovery</span>
+  <span class="yellow">You will have better max stamina and reduced stamina drain</span>
 
   <<link "Continue" "Accept Abilities">>
     <<script>>
@@ -553,7 +553,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("eleven");
-        setup.changePlayerStaminaStats(50, -25);
+        setup.changePlayerStaminaStats(50, -50);
       }
     <</script>>
   <</link>>
@@ -650,7 +650,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Many amphibians can breathe through their skin. And now, so can you!
 
-  <span class="yellow">You will have better stamina recovery</span>
+  <span class="yellow">You will have stamina recovery instead of stamina drain</span>
 
   <label><input type="checkbox" id="ability5">Poison Skin</label>
 
@@ -675,7 +675,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("respiration");
-        setup.changePlayerStaminaStats(0, 100);
+        setup.changePlayerStaminaStats(0, -200);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("poison");
@@ -716,7 +716,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Just kidding. Your cold blood reduces the amount of food you need.
 
-  <span class="yellow">You use less stamina than normal</span>
+  <span class="yellow">You will have stamina recovery instead of stamina drain</span>
 
   <label><input type="checkbox" id="ability5">No Eyelids</label>
 
@@ -739,7 +739,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("cold");
-        setup.changePlayerStaminaStats(0, 100);
+        setup.changePlayerStaminaStats(0, -200);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("eyelids");

@@ -819,7 +819,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
 
-  &lt;span class=&quot;yellow&quot;&gt;You will have better stamina and recovery&lt;/span&gt;
+  &lt;span class=&quot;yellow&quot;&gt;You will have better max stamina and reduced stamina drain&lt;/span&gt;
 
   &lt;&lt;link &quot;Continue&quot; &quot;Accept Abilities&quot;&gt;&gt;
     &lt;&lt;script&gt;&gt;
@@ -841,7 +841,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;eleven&quot;);
-        setup.changePlayerStaminaStats(50, -25);
+        setup.changePlayerStaminaStats(50, -50);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
@@ -938,7 +938,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   Many amphibians can breathe through their skin. And now, so can you!
 
-  &lt;span class=&quot;yellow&quot;&gt;You will have better stamina recovery&lt;/span&gt;
+  &lt;span class=&quot;yellow&quot;&gt;You will have stamina recovery instead of stamina drain&lt;/span&gt;
 
   &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Poison Skin&lt;/label&gt;
 
@@ -963,7 +963,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;respiration&quot;);
-        setup.changePlayerStaminaStats(0, 100);
+        setup.changePlayerStaminaStats(0, -200);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;poison&quot;);
@@ -1004,7 +1004,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   Just kidding. Your cold blood reduces the amount of food you need.
 
-  &lt;span class=&quot;yellow&quot;&gt;You use less stamina than normal&lt;/span&gt;
+  &lt;span class=&quot;yellow&quot;&gt;You will have stamina recovery instead of stamina drain&lt;/span&gt;
 
   &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;No Eyelids&lt;/label&gt;
 
@@ -1027,7 +1027,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;cold&quot;);
-        setup.changePlayerStaminaStats(0, 100);
+        setup.changePlayerStaminaStats(0, -200);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;eyelids&quot;);
