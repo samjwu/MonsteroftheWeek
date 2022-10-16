@@ -841,9 +841,16 @@ Turn #<<print window.player.turnNumber>>:
   [[Next Fight|Enemy Encounter]]
   <<script>>
     window.player.roundsSurvived += 1;
+
+    var randomRaceInt = setup.getRandomIntInclusive(0, window.races.length - 1);
+    var randomRace = window.races[randomRaceInt];
+    window.currentEnemy = setup.generateEnemy(window.player.fame, randomRace); 
+    setup.prepareForEnemyEncounter();
   <</script>>
 <<elseif window.player.currentStamina <= 0>>
   You lose!
+
+  [[Continue|High Score]]
 <<else>>
   <<link "Light Attack" "Combat">>
     <<script>>
@@ -865,3 +872,12 @@ Turn #<<print window.player.turnNumber>>:
 <<endif>>
 
 <span class="yellow">Lighter attacks have higher accuracy, but lower damage. The reverse is true for heavier attacks.</span>
+
+:: High Score {"position":"100,3000"}
+You defeated <<print window.player.roundsSurvived>> opponents.
+
+Your final score is <<print (window.player.roundsSurvived * window.player.fame)>>.
+
+<<if window.player.fame == 0>>
+  <span class="yellow">Hint: Try playing on a higher fame level to get a nonzero score</span>
+<<endif>>
