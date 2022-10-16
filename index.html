@@ -268,7 +268,7 @@ window.abilityMap = new Map([
     ["beak", "Peak Beak"],
     ["feathers", "Carbon Fiber Feathers"],
     ["wings", "Jet-Black Wings"],
-    ["eagle", "Eagle Eye"],
+    ["bones", "Hollow Bones"],
     ["eleven", "Eleven Lungs"],
 
     ["fangs", "Snake Fangs"],
@@ -776,11 +776,11 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;puma&quot;);
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;rabies&quot;);
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
@@ -807,11 +807,13 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
 
   &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
 
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability4&quot;&gt;Eagle Eye&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability4&quot;&gt;Hollow Bones&lt;/label&gt;
 
-  Your eyes are as sharp as an eagle&#39;s! But not as sharp as Hawkeye&#39;s.
+  Due to your light bones, you become faster and harder to catch, even if an enemy has a bone to pick with you.
 
-  &lt;span class=&quot;yellow&quot;&gt;With this ability, you will never miss&lt;/span&gt;
+  If you didn&#39;t find that humerus, it&#39;s because you&#39;re a birdbrain.
+
+  &lt;span class=&quot;yellow&quot;&gt;This ability will increase your speed by one level&lt;/span&gt;
 
   &lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ability5&quot;&gt;Eleven Lungs&lt;/label&gt;
 
@@ -836,8 +838,8 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
         setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($(&quot;#ability4&quot;).prop(&quot;checked&quot;)) {
-        setup.addPlayerAbilities(&quot;eagle&quot;);
-        setup.changePlayerAccuracy(100);
+        setup.addPlayerAbilities(&quot;bones&quot;);
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;eleven&quot;);
@@ -905,7 +907,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;venom&quot;);
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;
@@ -967,7 +969,7 @@ What special abilities do you have? Pick up to &lt;&lt;print maxAbilities&gt;&gt
       }
       if ($(&quot;#ability5&quot;).prop(&quot;checked&quot;)) {
         setup.addPlayerAbilities(&quot;poison&quot;);
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
     &lt;&lt;/script&gt;&gt;
   &lt;&lt;/link&gt;&gt;

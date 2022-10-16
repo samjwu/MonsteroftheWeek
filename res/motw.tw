@@ -488,11 +488,11 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability4").prop("checked")) {
         setup.addPlayerAbilities("puma");
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("rabies");
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
     <</script>>
   <</link>>
@@ -519,11 +519,13 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   <span class="yellow">This ability will increase your speed by one level</span>
 
-  <label><input type="checkbox" id="ability4">Eagle Eye</label>
+  <label><input type="checkbox" id="ability4">Hollow Bones</label>
 
-  Your eyes are as sharp as an eagle's! But not as sharp as Hawkeye's.
+  Due to your light bones, you become faster and harder to catch, even if an enemy has a bone to pick with you.
 
-  <span class="yellow">With this ability, you will never miss</span>
+  If you didn't find that humerus, it's because you're a birdbrain.
+
+  <span class="yellow">This ability will increase your speed by one level</span>
 
   <label><input type="checkbox" id="ability5">Eleven Lungs</label>
 
@@ -548,8 +550,8 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
         setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($("#ability4").prop("checked")) {
-        setup.addPlayerAbilities("eagle");
-        setup.changePlayerAccuracy(100);
+        setup.addPlayerAbilities("bones");
+        setup.changePlayerCoreStats(0, 0, 1);
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("eleven");
@@ -617,7 +619,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("venom");
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
     <</script>>
   <</link>>
@@ -679,7 +681,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
       }
       if ($("#ability5").prop("checked")) {
         setup.addPlayerAbilities("poison");
-        setup.changePlayerDamage(10);
+        setup.changePlayerDamage(25);
       }
     <</script>>
   <</link>>

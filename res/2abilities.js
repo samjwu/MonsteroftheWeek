@@ -8,7 +8,7 @@ window.abilityMap = new Map([
     ["beak", "Peak Beak"],
     ["feathers", "Carbon Fiber Feathers"],
     ["wings", "Jet-Black Wings"],
-    ["eagle", "Eagle Eye"],
+    ["bones", "Hollow Bones"],
     ["eleven", "Eleven Lungs"],
 
     ["fangs", "Snake Fangs"],
