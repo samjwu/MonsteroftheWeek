@@ -837,6 +837,8 @@ Turn #<<print window.player.turnNumber>>:
 
 <<if window.currentEnemy.currentStamina <= 0>>
   You win!
+
+  [[Next Fight|Enemy Encounter]]
 <<elseif window.player.currentStamina <= 0>>
   You lose!
 <<else>>
