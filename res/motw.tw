@@ -823,7 +823,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
   <</link>>
 <<else>>
   [[Pick Race]]
-<<endif>>
+<</if>>
 
 <<script>> setup.restrictAbilities(); <</script>>
 
@@ -905,15 +905,15 @@ Turn #<<print window.player.turnNumber>>:
     You hit the enemy for <<print window.previousTurn.dealt>> stamina.
   <<else>>
     You missed the enemy.
-  <<endif>>
+  <</if>>
   Additionally, the enemy loses <<print window.previousTurn.enemyDrain>> stamina due to stamina drain.
   <<if window.previousTurn.dodgeFailed == true>>
     The enemy hit you for <<print window.previousTurn.taken>> stamina.
   <<else>>
     The enemy missed you.
-  <<endif>>
+  <</if>>
   Additionally, you lose <<print window.previousTurn.playerDrain>> stamina due to stamina drain.
-<<endif>>
+<</if>>
 
 <<if window.currentEnemy.currentStamina <= 0>>
   You win!
@@ -951,7 +951,7 @@ Turn #<<print window.player.turnNumber>>:
       setup.calculateTurn(window.player, window.currentEnemy, 2);
     <</script>>
   <</link>>
-<<endif>>
+<</if>>
 
 <span class="yellow">Lighter attacks have higher accuracy, but lower damage. The reverse is true for heavier attacks.</span>
 
@@ -964,4 +964,4 @@ Your final score is <<print (window.player.roundsSurvived * window.player.fame)>
 
 <<if window.player.fame == 0>>
   <span class="yellow">Hint: Try playing on a higher fame level to get a nonzero score</span>
-<<endif>>
+<</if>>
