@@ -113,6 +113,7 @@ You become a bird-based monster.
 <</script>>
 
 :: Reptiles {"position":"500,400"}
+<img src="res/img/reptiles.png" width="512" height="512">
 As a reptile-based monster, you would become a burst damage-dealer, with good offensive capabilities but slower movement.
 
 <span class="yellow">This base form would give you high attack, decent defense, and low speed.</span>
@@ -122,6 +123,7 @@ As a reptile-based monster, you would become a burst damage-dealer, with good of
 [[Pick another form|Pick Race]]
 
 :: Reptiles Yes {"position":"500,600"}
+<img src="res/img/reptiles.png" width="512" height="512">
 You become a reptile-based monster.
 
 [[Continue|Pick Flaw]]
@@ -131,6 +133,7 @@ You become a reptile-based monster.
 <</script>>
 
 :: Amphibians {"position":"700,400"}
+<img src="res/img/amphibians.png" width="512" height="256">
 As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
 
 <span class="yellow">This base form would give you low attack, decent defense, and high speed.</span>
@@ -140,6 +143,7 @@ As an amphibian-based monster, you would become an evasion tank, with good mobil
 [[Pick another form|Pick Race]]
 
 :: Amphibians Yes {"position":"700,600"}
+<img src="res/img/amphibians.png" width="512" height="256">
 You become an amphibian-based monster.
 
 [[Continue|Pick Flaw]]
@@ -149,6 +153,7 @@ You become an amphibian-based monster.
 <</script>>
 
 :: Fish {"position":"900,400"}
+<img src="res/img/fish.png" width="384" height="512">
 As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
 
 <span class="yellow">This base form would give you decent attack, high defense, and low speed.</span>
@@ -158,6 +163,7 @@ As a fish-based monster, you would become a conventional tank, with good defensi
 [[Pick another form|Pick Race]]
 
 :: Fish Yes {"position":"900,600"}
+<img src="res/img/fish.png" width="384" height="512">
 You become a fish-based monster.
 
 [[Continue|Pick Flaw]]
