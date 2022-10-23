@@ -31,7 +31,8 @@ A CYOA Game
 <<script>> setup.initializeStats(); <</script>>
 
 :: Intro [story] {"position":"300,200"}
-A group of people wearing black shades and trenchcoats barge into your laboratory. A man steps forward and addresses you.
+<img src="res/img/suits.png" width="256" height="256">
+A group of people wearing black shades and suits barge into your laboratory. A man steps forward and addresses you.
 
 <span class="red">"I'm sorry, <span class="textshadow">Harlowe</span>, but given the high cost and relative lack of success of your research, the Illuminati has decided to stop your funding."</span>
 
@@ -52,13 +53,13 @@ You are a monster researcher with the knowledge to monsterize humans and improve
 
 Without the support of the Illuminati, you do not have access to any test subjects and must perform the experiment on yourself.
 
+<img src="res/img/lab.png" width="512" height="256">
 <span class="yellow">
   Your specialty will determine you base stat distribution.
   Attack increases your damage.
   Defense reduces damage taken.
   Speed increases your chance to evade attacks.
 </span>
-
 What is your specialty?
 
 [[Mammals]]
