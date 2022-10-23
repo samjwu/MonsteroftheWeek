@@ -73,6 +73,7 @@ What is your specialty?
 [[Fish]]
 
 :: Mammals {"position":"100,400"}
+<img src="res/img/mammals.png" width="512" height="256">
 As a mammal-based monster, you would become an all-rounder, with no particular strengths or weaknesses.
 
 <span class="yellow">This base form would give you decent attack, defense, and speed.</span>
@@ -82,6 +83,7 @@ As a mammal-based monster, you would become an all-rounder, with no particular s
 [[Pick another form|Pick Race]]
 
 :: Mammals Yes {"position":"100,600"}
+<img src="res/img/mammals.png" width="512" height="256">
 You become a mammal-based monster.
 
 [[Continue|Pick Flaw]]
@@ -91,6 +93,7 @@ You become a mammal-based monster.
 <</script>>
 
 :: Birds {"position":"300,400"}
+<img src="res/img/birds.png" width="384" height="512">
 As a bird-based monster, you would become a speedster, with good mobility and the ability to fly, but be fragile and have a smaller health pool.
 
 <span class="yellow">This base form would give you decent attack, low defense, and high speed.</span>
@@ -100,6 +103,7 @@ As a bird-based monster, you would become a speedster, with good mobility and th
 [[Pick another form|Pick Race]]
 
 :: Birds Yes {"position":"300,600"}
+<img src="res/img/birds.png" width="384" height="512">
 You become a bird-based monster.
 
 [[Continue|Pick Flaw]]
