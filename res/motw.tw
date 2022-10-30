@@ -434,6 +434,7 @@ People fear you. Or at least you think they do. Maybe.
 
 Whatever! Even if they don't fear you now, you'll give them a reason to be scared, probably.
 
+<img src="res/img/drfrankenstein.png" width="500" height="300">
 <span class="yellow">Just try to stay alive long enough to get your revenge.</span>
 
 [[Pick this notoriety level|Accept Mad Scientist]]
@@ -441,6 +442,7 @@ Whatever! Even if they don't fear you now, you'll give them a reason to be scare
 [[Pick another notoriety level|Pick Fame]]
 
 :: Accept Mad Scientist {"position":"500,1800"}
+<img src="res/img/drfrankenstein.png" width="500" height="300">
 Before joining the Illuminati, you were a mad scientist.
 
 Even before you joined the Illuminati, people knew you were bad news.
