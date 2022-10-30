@@ -409,6 +409,7 @@ Ergo, you're about as notorious as any other rando scientist of the street.
 
 In other words, you're barely better than a nobody.
 
+<img src="res/img/walterwhite.png" width="500" height="300">
 <span class="yellow">At least those government agencies won't be knocking on your door anytime soon.</span>
 
 [[Pick this notoriety level|Accept Rando]]
@@ -416,6 +417,7 @@ In other words, you're barely better than a nobody.
 [[Pick another notoriety level|Pick Fame]]
 
 :: Accept Rando {"position":"300,1800"}
+<img src="res/img/walterwhite.png" width="500" height="300">
 Before joining the Illuminati, you were a rando.
 
 And since no one knows the Illuminati exists, you are still a rando. Good for you.
