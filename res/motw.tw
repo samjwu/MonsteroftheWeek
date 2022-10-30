@@ -383,6 +383,7 @@ Guess that explains why they were letting you go.
 
 But hey! You somehow managed to succeed anyway, so maybe there's something to you after all.
 
+<img src="res/img/eggman.png" width="384" height="256">
 <span class="yellow">On the positive side, becausey you are a nobody, there is nobody looking for you, so you have plenty of time to improve.</span>
 
 [[Pick this notoriety level|Accept Nobody]]
@@ -390,6 +391,7 @@ But hey! You somehow managed to succeed anyway, so maybe there's something to yo
 [[Pick another notoriety level|Pick Fame]]
 
 :: Accept Nobody {"position":"100,1800"}
+<img src="res/img/eggman.png" width="384" height="256">
 Before joining the Illuminati, you were a nobody.
 
 Being a former member of the Illuminati would give you some street cred, if people knew they existed.
@@ -511,6 +513,7 @@ You are capable of world domination, and in fact have achieved that already mult
 
 I wonder why you failed so hard this time around with the Illuminati. Better luck next time, eh?
 
+<img src="res/img/nerdook.png" width="60" height="80">
 <span class="yellow">Due to your notoriety, everyone, and I mean EVERYONE, including your old organization(s), your mom, your dog, those interns that you still haven't paid since the last time you took over the world, and maybe some of your clones, will be after you.</span>
 
 [[Pick this notoriety level|Accept Super Mega Ultra Evil Genius]]
@@ -518,9 +521,10 @@ I wonder why you failed so hard this time around with the Illuminati. Better luc
 [[Pick another notoriety level|Pick Fame]]
 
 :: Accept Super Mega Ultra Evil Genius {"position":"1100,1800"}
+<img src="res/img/nerdook.png" width="60" height="80">
 Before joining the Illuminati, you were a Super Mega Ultra Evil Genius.
 
-The Illuminati is kiddy stuff. Something stupid to do to kill the time. Nothing short of world domination is good enough for you.
+The Illuminati is kiddy stuff. Something stupid to do to kill time. Nothing short of world domination is good enough for you.
 
 Good luck. You'll be needing it.
 
