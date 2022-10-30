@@ -265,6 +265,7 @@ Your brain chemistry was altered during the monsterization.
 
 You become more reckless with your attacks, hitting harder at the cost of exposing yourself to retaliation.
 
+<img src="res/img/brain.png" width="384" height="256">
 <span class="yellow">You will gain one level of attack, but lose two levels of speed.</span>
 
 [[Pick this flaw|Accept Blinding rage]]
@@ -272,6 +273,7 @@ You become more reckless with your attacks, hitting harder at the cost of exposi
 [[Pick another flaw|Pick Flaw]]
 
 :: Accept Blinding rage {"position":"700,1200"}
+<img src="res/img/brain.png" width="384" height="256">
 You hit harder at the cost of less evasion.
 
 [[Continue|Pick Fame]]
@@ -285,6 +287,7 @@ Your skin was unexpectedly altered during the monsterization.
 
 You become tougher at the cost of your mobility.
 
+<img src="res/img/skin.png" width="384" height="256">
 <span class="yellow">You will gain one level of defense, but lose two levels of speed.</span>
 
 [[Pick this flaw|Accept Carbonized skin]]
@@ -292,6 +295,7 @@ You become tougher at the cost of your mobility.
 [[Pick another flaw|Pick Flaw]]
 
 :: Accept Carbonized skin {"position":"900,1200"}
+<img src="res/img/skin.png" width="384" height="256">
 You become tougher at the cost of your mobility.
 
 [[Continue|Pick Fame]]
@@ -307,6 +311,7 @@ Due to your incomplete development, you are weaker and softer than expected.
 
 However, you are also much lighter and faster.
 
+<img src="res/img/runner.png" width="384" height="256">
 <span class="yellow">You will gain two levels of speed, but lose one level of attack and one level of defense.</span>
 
 [[Pick this flaw|Accept Incomplete development]]
@@ -314,6 +319,7 @@ However, you are also much lighter and faster.
 [[Pick another flaw|Pick Flaw]]
 
 :: Accept Incomplete development {"position":"1100,1200"}
+<img src="res/img/runner.png" width="384" height="256">
 You become faster, but weaker and softer.
 
 [[Continue|Pick Fame]]
@@ -325,6 +331,7 @@ You become faster, but weaker and softer.
 :: Hyperactive metabolism {"position":"1300,1000"}
 Your new body burns through your energy stores faster than normal.
 
+<img src="res/img/tired.png" width="384" height="256">
 <span class="yellow">You will run out of stamina faster than normal.</span>
 
 [[Pick this flaw|Accept Hyperactive metabolism]]
@@ -332,6 +339,7 @@ Your new body burns through your energy stores faster than normal.
 [[Pick another flaw|Pick Flaw]]
 
 :: Accept Hyperactive metabolism {"position":"1300,1200"}
+<img src="res/img/tired.png" width="384" height="256">
 Your metabolism requires you to consume more food to survive.
 
 [[Continue|Pick Fame]]
