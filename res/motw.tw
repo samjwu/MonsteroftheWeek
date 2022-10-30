@@ -73,9 +73,9 @@ What is your specialty?
 [[Fish]]
 
 :: Mammals {"position":"100,400"}
-<img src="res/img/mammals.png" width="512" height="256">
 As a mammal-based monster, you would become an all-rounder, with no particular strengths or weaknesses.
 
+<img src="res/img/mammals.png" width="512" height="256">
 <span class="yellow">This base form would give you decent attack, defense, and speed.</span>
 
 [[Choose this form|Mammals Yes]]
@@ -93,9 +93,9 @@ You become a mammal-based monster.
 <</script>>
 
 :: Birds {"position":"300,400"}
-<img src="res/img/birds.png" width="384" height="512">
 As a bird-based monster, you would become a speedster, with good mobility and the ability to fly, but be fragile and have a smaller health pool.
 
+<img src="res/img/birds.png" width="384" height="512">
 <span class="yellow">This base form would give you decent attack, low defense, and high speed.</span>
 
 [[Choose this form|Birds Yes]]
@@ -113,9 +113,9 @@ You become a bird-based monster.
 <</script>>
 
 :: Reptiles {"position":"500,400"}
-<img src="res/img/reptiles.png" width="512" height="512">
 As a reptile-based monster, you would become a burst damage-dealer, with good offensive capabilities but slower movement.
 
+<img src="res/img/reptiles.png" width="384" height="384">
 <span class="yellow">This base form would give you high attack, decent defense, and low speed.</span>
 
 [[Choose this form|Reptiles Yes]]
@@ -123,7 +123,7 @@ As a reptile-based monster, you would become a burst damage-dealer, with good of
 [[Pick another form|Pick Race]]
 
 :: Reptiles Yes {"position":"500,600"}
-<img src="res/img/reptiles.png" width="512" height="512">
+<img src="res/img/reptiles.png" width="384" height="384">
 You become a reptile-based monster.
 
 [[Continue|Pick Flaw]]
@@ -133,9 +133,9 @@ You become a reptile-based monster.
 <</script>>
 
 :: Amphibians {"position":"700,400"}
-<img src="res/img/amphibians.png" width="512" height="256">
 As an amphibian-based monster, you would become an evasion tank, with good mobility but poor offensive capabilities.
 
+<img src="res/img/amphibians.png" width="512" height="256">
 <span class="yellow">This base form would give you low attack, decent defense, and high speed.</span>
 
 [[Choose this form|Amphibians Yes]]
@@ -153,9 +153,9 @@ You become an amphibian-based monster.
 <</script>>
 
 :: Fish {"position":"900,400"}
-<img src="res/img/fish.png" width="384" height="512">
 As a fish-based monster, you would become a conventional tank, with good defensive capabilities but slow movement.
 
+<img src="res/img/fish.png" width="384" height="512">
 <span class="yellow">This base form would give you decent attack, high defense, and low speed.</span>
 
 [[Choose this form|Fish Yes]]
@@ -176,7 +176,6 @@ You become a fish-based monster.
 Unfortunately, due to your lack of time and funding, there were some mistakes made in the monsterization process, and your new form has a flaw.
 
 <img src="res/img/dnadoublehelix.png" width="512" height="256">
-
 <span class="yellow">Your flaw will give you a disadvantage. You must pick a flaw.</span>
 
 What is your flaw?
@@ -200,6 +199,7 @@ Your new body is unable to produce enough amylase needed to properly digest carb
 
 The energy available to your body is lower than normal.
 
+<img src="res/img/alphaamylase.png" width="256" height="256">
 <span class="yellow">As a result, your speed will be reduced by one level.</span>
 
 [[Pick this flaw|Accept Inefficient amylase production]]
@@ -207,6 +207,7 @@ The energy available to your body is lower than normal.
 [[Pick another flaw|Pick Flaw]]
 
 :: Accept Inefficient amylase production {"position":"100,1200"}
+<img src="res/img/alphaamylase.png" width="256" height="256">
 Your speed goes down by one level.
 
 [[Continue|Pick Fame]]
@@ -220,6 +221,7 @@ Your new body is unable to produce enough protease needed to properly digest pro
 
 The amino acids levels your body needs to build muscle are lower than normal.
 
+<img src="res/img/protease.png" width="256" height="256">
 <span class="yellow">As a result, your attack will be reduced by one level.</span>
 
 [[Pick this flaw|Accept Inefficient protease production]]
@@ -227,6 +229,7 @@ The amino acids levels your body needs to build muscle are lower than normal.
 [[Pick another flaw|Pick Flaw]]
 
 :: Accept Inefficient protease production {"position":"300,1200"}
+<img src="res/img/protease.png" width="256" height="256">
 Your attack goes down by one level.
 
 [[Continue|Pick Fame]]
@@ -240,6 +243,7 @@ Your new body is unable to produce enough lipase needed to properly digest fats.
 
 Your body's fat stores are lower than normal.
 
+<img src="res/img/lipase.png" width="384" height="256">
 <span class="yellow">As a result, your defense will be reduced by one level.</span>
 
 [[Pick this flaw|Accept Inefficient lipase production]]
@@ -247,6 +251,7 @@ Your body's fat stores are lower than normal.
 [[Pick another flaw|Pick Flaw]]
 
 :: Accept Inefficient lipase production {"position":"500,1200"}
+<img src="res/img/lipase.png" width="384" height="256">
 Your defense goes down by one level.
 
 [[Continue|Pick Fame]]
