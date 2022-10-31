@@ -461,6 +461,7 @@ You are one of the greats.
 
 Well, almost. If you were really that good, you wouldn't have been dropped by the Illuminati, now would you?
 
+<img src="res/img/docbrown.png" width="500" height="300">
 <span class="yellow">You better improve quickly, since your notoriety means that all those government agencies will be hunting you down.</span>
 
 [[Pick this notoriety level|Accept Mastermind]]
@@ -468,6 +469,7 @@ Well, almost. If you were really that good, you wouldn't have been dropped by th
 [[Pick another notoriety level|Pick Fame]]
 
 :: Accept Mastermind {"position":"700,1800"}
+<img src="res/img/docbrown.png" width="500" height="300">
 Before joining the Illuminati, you were a mastermind.
 
 You were too good for them anyways. Probably.
