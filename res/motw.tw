@@ -494,6 +494,7 @@ A Megamind is THE mastermind. Other masterminds look at you and tear out their h
 
 Anyway, if you're so smart, that begs the question of why you didn't produce results earlier.
 
+<img src="res/img/drevil.png" width="384" height="300">
 <span class="yellow">Oh well. You better use those smarts now, because if you didn't have the support of the Illuminati, you would already be dead.</span>
 
 [[Pick this notoriety level|Accept Megamind]]
@@ -501,6 +502,7 @@ Anyway, if you're so smart, that begs the question of why you didn't produce res
 [[Pick another notoriety level|Pick Fame]]
 
 :: Accept Megamind {"position":"900,1800"}
+<img src="res/img/drevil.png" width="384" height="300">
 Before joining the Illuminati, you were a Megamind.
 
 The Illuminati? Seriously? You could have done better.
