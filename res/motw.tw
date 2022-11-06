@@ -574,6 +574,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   You can pounce like a puma! But not quite as well as Black Panther.
 
+  <img src="res/img/puma.png" width="500" height="300">
   <span class="yellow">This ability allows you to hit harder</span>
   
   <label><input type="checkbox" id="ability5">Mammal Rabies</label>
