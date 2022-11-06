@@ -567,6 +567,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   You're as fast as a cheetah! No animal on Earth can run faster! You still only get one level faster though.
 
+  <img src="res/img/cheetah.png" width="500" height="300">
   <span class="yellow">This ability will increase your speed by one level</span>
   
   <label><input type="checkbox" id="ability4">Puma Pounce</label>
