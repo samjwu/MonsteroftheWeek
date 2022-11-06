@@ -581,6 +581,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   You have rabies! Fortunately, you are immune to its negative effects, but you can still infect and harm others.
 
+  <img src="res/img/rabies.png" width="500" height="300">
   <span class="yellow">Your attacks will deal additional damage</span>
 
   <<link "Continue" "Accept Abilities">>
