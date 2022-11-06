@@ -819,6 +819,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Piranhas, angler fish, even salmon and tuna!
 
+  <img src="res/img/jaws.png" width="500" height="300">
   <span class="yellow">This ability will increase your attack by one level</span>
   
   <label><input type="checkbox" id="ability2">Scale Mail</label>
@@ -831,12 +832,14 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   All in mail, never clinking.
 
+  <img src="res/img/scales.png" width="500" height="300">
   <span class="yellow">This ability will increase your defense by one level</span>
 
   <label><input type="checkbox" id="ability3">Fish Fins</label>
 
   You're really fast... in the water.
 
+  <img src="res/img/fins.png" width="500" height="300">
   <span class="yellow">This ability will increase your speed by one level</span>
 
   <label><input type="checkbox" id="ability4">Cold Blooded</label>
@@ -845,6 +848,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Just kidding. Your cold blood reduces the amount of food you need.
 
+  <img src="res/img/cold.png" width="500" height="300">
   <span class="yellow">You will have stamina recovery instead of stamina drain</span>
 
   <label><input type="checkbox" id="ability5">Swim Bladder</label>
@@ -855,6 +859,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   At least you will be faster, somehow.
 
+  <img src="res/img/swimbladder.png" width="500" height="300">
   <span class="yellow">This ability will increase your speed by one level</span>
 
   <<link "Continue" "Accept Abilities">>
