@@ -550,9 +550,10 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
 <<if player.class == mammal.class>>
   <label><input type="checkbox" id="ability1">Gorilla Grip</label>
-  
+
   You're as strong as a gorilla! And not just figuratively.
 
+  <img src="res/img/gorilla.png" width="500" height="300">
   <span class="yellow">This ability will increase your attack by one level</span>
   
   <label><input type="checkbox" id="ability2">Hippo Hide</label>
