@@ -560,6 +560,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   You're as heavy as a hippo! And your skin is tough too.
   
+  <img src="res/img/hippo.png" width="500" height="333">
   <span class="yellow">This ability will increase your defense by one level</span>
   
   <label><input type="checkbox" id="ability3">Cheetah Speed</label>
