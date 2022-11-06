@@ -679,18 +679,21 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Fangs, also known as "long pointy teeth".
 
+  <img src="res/img/fangs.png" width="500" height="300">
   <span class="yellow">This ability will increase your attack by one level</span>
   
   <label><input type="checkbox" id="ability2">King Cobra Cape</label>
 
   Technically, it's a hood, but cape sounds cooler.
 
+  <img src="res/img/cobra.png" width="500" height="300">
   <span class="yellow">This ability will increase your defense by one level</span>
 
   <label><input type="checkbox" id="ability3">Slithering Snake</label>
 
   Because Slytherin snake was a bit too easy.
 
+  <img src="res/img/slither.png" width="500" height="300">
   <span class="yellow">This ability will increase your speed by one level</span>
 
   <label><input type="checkbox" id="ability4">Pit Organs</label>
@@ -701,6 +704,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Think <s>Mark</s> <span class="textshadow">Harlowe</span>, think! Snakes don't have armpits!
   
+  <img src="res/img/pitorgans.png" width="500" height="300">
   <span class="yellow">With this ability, you will never miss</span>
 
   <label><input type="checkbox" id="ability5">Viper Venom</label>
@@ -713,7 +717,9 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   If you bite it and you receive the toxin, then it's poise, son!
 
+  <img src="res/img/venom.png" width="500" height="300">
   <span class="yellow">Your attacks will deal additional damage</span>
+
   <<link "Continue" "Accept Abilities">>
     <<script>>
       if ($("#ability1").prop("checked")) {
@@ -776,6 +782,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
   You got poise, son!
 
   <span class="yellow">This ability will increase your defense by one level</span>
+
   <<link "Continue" "Accept Abilities">>
     <<script>>
       if ($("#ability1").prop("checked")) {
@@ -844,6 +851,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
   At least you will be faster, somehow.
 
   <span class="yellow">This ability will increase your speed by one level</span>
+
   <<link "Continue" "Accept Abilities">>
     <<script>>
       if ($("#ability1").prop("checked")) {
