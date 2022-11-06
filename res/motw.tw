@@ -613,6 +613,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   You are a master at destroying your enemies with verbal abuse. And the sharp beak on your face.
 
+  <img src="res/img/beak.png" width="500" height="300">
   <span class="yellow">This ability will increase your attack by one level</span>
 
   <label><input type="checkbox" id="ability2">Carbon Fiber Feathers</label>
@@ -621,14 +622,14 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
   
   If you were actually a scientist, you'd probably know this. Maybe.
 
-  Plausible deniability and all that.
-
+  <img src="res/img/feather.png" width="500" height="300">
   <span class="yellow">This ability will increase your defense by one level</span>
 
   <label><input type="checkbox" id="ability3">Jet-Black Wings</label>
 
   To defeat the <s>Dark Reunion</s> Illuminati, you have grown wings to increase your mobility.
 
+  <img src="res/img/blackwings.png" width="500" height="300">
   <span class="yellow">This ability will increase your speed by one level</span>
 
   <label><input type="checkbox" id="ability4">Hollow Bones</label>
@@ -637,6 +638,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   If you didn't find that humerus, it's because you're a birdbrain.
 
+  <img src="res/img/hollowbones.png" width="500" height="300">
   <span class="yellow">This ability will increase your speed by one level</span>
 
   <label><input type="checkbox" id="ability5">Eleven Lungs</label>
@@ -645,6 +647,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Technically, birds only have 2 lungs and 9 air sacs, but this seems close enough.
 
+  <img src="res/img/airsacs.png" width="500" height="300">
   <span class="yellow">You will have better max stamina and reduced stamina drain</span>
 
   <<link "Continue" "Accept Abilities">>
