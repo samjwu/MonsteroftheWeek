@@ -751,6 +751,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   In your case, your muscles swell up. You're swole, bro.
 
+  <img src="res/img/swollen.png" width="500" height="300">
   <span class="yellow">This ability will increase your attack by one level</span>
   
   <label><input type="checkbox" id="ability2">Slimy Skin</label>
@@ -759,6 +760,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   Well, you're right, you slimy amphibian.
 
+  <img src="res/img/slime.png" width="500" height="300">
   <span class="yellow">This ability will increase your defense by one level</span>
 
   <label><input type="checkbox" id="ability3">Frog Legs</label>
@@ -767,12 +769,14 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   It's said that frog legs taste like chicken. Wonder what yours would taste like...
 
+  <img src="res/img/frogjump.png" width="500" height="300">
   <span class="yellow">This ability will increase your speed by one level</span>
 
   <label><input type="checkbox" id="ability4">Cutaneous Respiration</label>
 
   Many amphibians can breathe through their skin. And now, so can you!
 
+  <img src="res/img/subcutaneousrespirationsalamander.png" width="500" height="300">
   <span class="yellow">You will have stamina recovery instead of stamina drain</span>
 
   <label><input type="checkbox" id="ability5">Poison Skin</label>
@@ -781,6 +785,7 @@ What special abilities do you have? Pick up to <<print maxAbilities>>.
 
   You got poise, son!
 
+  <img src="res/img/poison.png" width="500" height="300">
   <span class="yellow">This ability will increase your defense by one level</span>
 
   <<link "Continue" "Accept Abilities">>
