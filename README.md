@@ -6,3 +6,4 @@ Pick and choose from a selection of stats and abilities to create synergies for 
 
 Play it here on [GitHub](https://samjwu.github.io/MonsteroftheWeek/)
 
+![Screenshot](screenshot.PNG)
